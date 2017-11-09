@@ -9,6 +9,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors();
+        http
+                .cors()
+                .and()
+                //line below is for seeing h2 database console in browser
+                .headers().frameOptions().disable()
+                .and()
+                .csrf().disable();
     }
 }
