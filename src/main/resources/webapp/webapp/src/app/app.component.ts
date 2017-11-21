@@ -1,6 +1,7 @@
-import {Component, Injectable} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/map'
+import {DataService} from "./data.service";
 
 @Component({
   selector: 'app-root',
@@ -9,14 +10,15 @@ import 'rxjs/add/operator/map'
 })
 
 @Injectable()
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'JavasampleApproach HelloWord Angular4 App';
-  http : Http;
   data : string;
 
 
-  constructor(_http : Http) {
-    this.http = _http;
+  constructor(private http : Http, private dataService: DataService) {
+  }
+
+  ngOnInit(): void {
   }
 
   getData(){
