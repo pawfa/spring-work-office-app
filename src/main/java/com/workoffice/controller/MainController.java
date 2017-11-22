@@ -1,10 +1,13 @@
 package com.workoffice.controller;
 import com.workoffice.entity.Employee;
+import com.workoffice.entity.Offer;
 import com.workoffice.service.EmployeeService;
+import com.workoffice.service.OffersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -13,10 +16,12 @@ import java.util.UUID;
 public class MainController {
 
     private EmployeeService employeeService;
+    private OffersService offersService;
 
     @Autowired
-    public MainController(EmployeeService employeeService) {
+    public MainController(EmployeeService employeeService, OffersService offersService) {
         this.employeeService = employeeService;
+        this.offersService = offersService;
     }
 
     @RequestMapping("/")
@@ -42,6 +47,18 @@ public class MainController {
         model.put("id", id);
         model.put("content", "Hello World");
         return model;
+    }
+
+    @GetMapping("/get/offers")
+    public List<Offer> getOffers() {
+        List<Offer> lista = offersService.findAll();
+        return lista;
+    }
+
+    @GetMapping("/put/offer")
+    public void putOffer() {
+        Offer offer = new Offer("1","asd", "asd");
+        offersService.save(offer);
     }
 
     @GetMapping("/all")
