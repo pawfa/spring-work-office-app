@@ -8,13 +8,15 @@ import {Observable} from "rxjs/Observable";
   styleUrls: ['./offers-preview.component.css']
 })
 export class OffersPreviewComponent implements OnInit {
-  data : Observable<any>;
+  data : Array<any>;
 
   constructor(private dataService : DataService) {
   }
 
   ngOnInit() {
-    this.data = this.dataService.getOffers();
+    this.dataService.getOffers().subscribe(
+      (data) => this.data = data
+    );
   }
 
 }

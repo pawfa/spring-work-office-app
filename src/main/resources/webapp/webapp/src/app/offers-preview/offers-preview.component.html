@@ -1,11 +1,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-6">
-      <app-offer [offerData]="data"></app-offer>
-    </div>
-    <div class="col-lg-6">
-      <app-offer [offerData]="data"></app-offer>
+    <div class="col-lg-6"*ngFor="let off of data">
+      <app-offer  [offerData]="off"></app-offer>
     </div>
   </div>
 </div>

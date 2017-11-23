@@ -12,7 +12,7 @@ export class DataService {
   constructor(private http : Http) {
   }
 
-    getOffers(): Observable <any>{
+    getOffers(): Observable <Array<any>>{
     return this.http.get(this.server).map(res => res.json());
   }
 }

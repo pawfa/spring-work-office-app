@@ -7,24 +7,19 @@ import {Observable} from "rxjs/Observable";
   styleUrls: ['./offer.component.css']
 })
 export class OfferComponent implements OnInit {
+  category: String;
   title: String;
   description : String;
-  @Input() offerData: Observable<any>;
+  @Input() offerData: any;
 
   constructor() {
 
   }
 
   ngOnInit() {
-    this.offerData.subscribe(
-      (data) => {
-        console.log(data);
-        this.title = JSON.stringify(data[0].title);
-        this.description = JSON.stringify(data[0].description);
-
-      }
-    );
-
+    console.log(this.offerData.id)
+    this.title = this.offerData.title;
+    this.description = this.offerData.description;
   }
 
 }
