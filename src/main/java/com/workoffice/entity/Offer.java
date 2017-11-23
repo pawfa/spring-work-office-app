@@ -12,7 +12,10 @@ public class Offer {
     private String title;
     private String description;
 
-    public Offer( String title, String description) {
+    public Offer() {
+    }
+
+    public Offer(String title, String description) {
         this.title = title;
         this.description = description;
     }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../data.service";
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-offers-preview',
@@ -7,17 +8,13 @@ import {DataService} from "../data.service";
   styleUrls: ['./offers-preview.component.css']
 })
 export class OffersPreviewComponent implements OnInit {
-  offers : String;
+  data : Observable<any>;
 
   constructor(private dataService : DataService) {
   }
 
   ngOnInit() {
-    this.dataService.getOffers().subscribe(
-      (data) => {
-        this.offers = JSON.stringify(data);
-      }
-    );
+    this.data = this.dataService.getOffers();
   }
 
 }

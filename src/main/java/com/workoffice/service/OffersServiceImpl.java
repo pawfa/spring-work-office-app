@@ -19,7 +19,6 @@ public class OffersServiceImpl implements OffersService {
 
     @Override
     public List<Offer> findAll() {
-
         return offersRepository.findAll();
     }
 

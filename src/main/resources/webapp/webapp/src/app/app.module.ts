@@ -10,6 +10,7 @@ import { NewsComponent } from './news/news.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { OffersPreviewComponent } from './offers-preview/offers-preview.component';
 import {DataService} from "./data.service";
+import { OfferComponent } from './offer/offer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {DataService} from "./data.service";
     CentralComponent,
     OffersComponent,
     NewsComponent,
-    OffersPreviewComponent
+    OffersPreviewComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,

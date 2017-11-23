@@ -1,4 +1,5 @@
 package com.workoffice.controller;
+import com.mongodb.util.JSON;
 import com.workoffice.entity.Employee;
 import com.workoffice.entity.Offer;
 import com.workoffice.service.EmployeeService;
@@ -55,9 +56,10 @@ public class MainController {
         return lista;
     }
 
-    @GetMapping("/put/offer")
-    public void putOffer() {
-        Offer offer = new Offer("1","asd", "asd");
+    @PostMapping("/put/offer")
+    public void putOffer(@RequestBody Offer offer) {
+        System.out.println(offer);
+        System.out.println(offer.getDescription());
         offersService.save(offer);
     }
 
