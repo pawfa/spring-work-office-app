@@ -11,13 +11,15 @@ public class Offer {
 
     private String title;
     private String description;
+    private String category;
 
     public Offer() {
     }
 
-    public Offer(String title, String description) {
+    public Offer(String title, String description, String category) {
         this.title = title;
         this.description = description;
+        this.category = category;
     }
 
     public String getId() {
@@ -30,6 +32,10 @@ public class Offer {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getCategory() {
+        return category;
     }
 
     @Override

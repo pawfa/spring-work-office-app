@@ -17,9 +17,10 @@ export class OfferComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.offerData.id)
+    console.log(this.offerData.category)
     this.title = this.offerData.title;
     this.description = this.offerData.description;
+    this.category = this.offerData.category;
   }
 
 }
