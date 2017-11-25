@@ -1,7 +1,7 @@
 import {Component, Injectable, OnInit} from '@angular/core';
-import {Http} from "@angular/http";
 import 'rxjs/add/operator/map'
 import {DataService} from "./data.service";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -15,14 +15,14 @@ export class AppComponent implements OnInit {
   data : string;
 
 
-  constructor(private http : Http, private dataService: DataService) {
+  constructor(private http : HttpClient, private dataService: DataService) {
   }
 
   ngOnInit(): void {
   }
 
   getData(){
-    return this.http.get("http://localhost:8080/").map(res => res.json()).subscribe(
+    return this.http.get("http://localhost:8080/").subscribe(
       data => this.data = JSON.stringify(data)
     )
 
