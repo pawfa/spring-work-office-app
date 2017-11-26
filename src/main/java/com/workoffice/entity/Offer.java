@@ -1,9 +1,8 @@
 package com.workoffice.entity;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+
 public class Offer {
 
     @Id

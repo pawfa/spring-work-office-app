@@ -2,7 +2,6 @@ package com.workoffice.entity;
 
 import javax.persistence.*;
 
-@Entity
 public class News {
 
     @Id
