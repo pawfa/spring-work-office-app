@@ -6,6 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./offer-item.component.css']
 })
 export class OfferComponent implements OnInit {
+  id: String;
   category: String;
   title: String;
   description : String;
@@ -17,6 +18,7 @@ export class OfferComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.offerData.category)
+    this.id = this.offerData.id;
     this.title = this.offerData.title;
     this.description = this.offerData.description;
     this.category = this.offerData.category;

@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
-
+  id: String;
   header: String;
   paragraph : String;
   @Input() newsData: any;
@@ -15,6 +15,7 @@ export class NewsItemComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.newsData);
+    this.id = this.newsData.id;
     this.header = this.newsData.header;
     this.paragraph = this.newsData.paragraph;
   }

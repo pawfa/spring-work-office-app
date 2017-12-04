@@ -1,8 +1,5 @@
-.container{
-  border: solid 1px black;
-}
 .col{
-  border: solid 1px red;
+  padding: 0;
 }
 .offer{
   border: solid 1px gray;
