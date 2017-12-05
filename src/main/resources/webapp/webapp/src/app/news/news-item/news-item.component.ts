@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DataService} from "../../data.service";
 
 @Component({
   selector: 'app-news-item',
@@ -6,18 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
-  id: String;
-  header: String;
-  paragraph : String;
-  @Input() newsData: any;
 
-  constructor() { }
+
+  constructor(private dataService : DataService) { }
 
   ngOnInit() {
-    console.log(this.newsData);
-    this.id = this.newsData.id;
-    this.header = this.newsData.header;
-    this.paragraph = this.newsData.paragraph;
+
+
   }
 
 }

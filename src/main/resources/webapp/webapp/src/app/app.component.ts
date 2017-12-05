@@ -11,20 +11,11 @@ import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class AppComponent implements OnInit {
-  title = 'JavasampleApproach HelloWord Angular4 App';
-  data : string;
 
-
-  constructor(private http : HttpClient, private dataService: DataService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  getData(){
-    return this.http.get("http://localhost:8080/").subscribe(
-      data => this.data = JSON.stringify(data)
-    )
 
   }
 }

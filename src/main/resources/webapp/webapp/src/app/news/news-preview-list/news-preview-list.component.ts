@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from "../data.service";
+import {DataService} from "../../data.service";
 
 @Component({
-  selector: 'app-news',
-  templateUrl: './news.component.html',
-  styleUrls: ['./news.component.css']
+  selector: 'app-news-preview-list',
+  templateUrl: './news-preview-list.component.html',
+  styleUrls: ['./news-preview-list.component.css']
 })
-export class NewsComponent implements OnInit {
+export class NewsPreviewListComponent implements OnInit {
 
   data : Array<any>;
 
