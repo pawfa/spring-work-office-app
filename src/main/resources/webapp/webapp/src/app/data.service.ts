@@ -6,20 +6,18 @@ import {HttpClient} from "@angular/common/http";
 export class DataService {
 
   private server = "http://localhost:8080/";
-  offers: Observable<any>;
-  news: Observable<any>;
+  private offers : Observable<any>;
 
   constructor(private http: HttpClient) {
   }
 
   getOffers(): Observable<any> {
-    return this.news = this.http.get(this.server + "get/offers");
-
+      return this.http.get(this.server + "get/offers");
   }
 
   getNews(): Observable<any> {
-    this.offers = this.http.get(this.server + "get/news");
-    return this.offers;
+    return this.http.get(this.server + "get/news");
+
   }
 
 }
