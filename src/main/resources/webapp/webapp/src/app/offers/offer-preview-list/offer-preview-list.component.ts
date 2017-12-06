@@ -8,7 +8,7 @@ import {Observable} from "rxjs/Observable";
   styleUrls: ['./offer-preview-list.component.css']
 })
 export class OfferPreviewListComponent implements OnInit {
-  data : Array<any>;
+  data : any[];
 
   constructor(private dataService : DataService) {
   }

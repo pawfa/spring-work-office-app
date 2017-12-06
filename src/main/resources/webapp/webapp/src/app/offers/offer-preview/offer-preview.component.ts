@@ -15,7 +15,6 @@ export class OfferPreviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.offerData.category)
     this.id = this.offerData.id;
     this.title = this.offerData.title;
     this.description = this.offerData.description;

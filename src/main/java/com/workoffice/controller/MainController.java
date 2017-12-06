@@ -4,6 +4,8 @@ import com.workoffice.entity.Employee;
 import com.workoffice.entity.Offer;
 import com.workoffice.service.EmployeeService;
 import com.workoffice.service.OffersService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,7 @@ public class MainController {
 
     private EmployeeService employeeService;
     private OffersService offersService;
+    private final Log logger = LogFactory.getLog(getClass());
 
     @Autowired
     public MainController(EmployeeService employeeService, OffersService offersService) {
@@ -53,6 +56,7 @@ public class MainController {
     @GetMapping("/get/offers")
     public List<Offer> getOffers() {
         List<Offer> lista = offersService.findAll();
+        logger.info("Pobieram oferty");
         return lista;
     }
 

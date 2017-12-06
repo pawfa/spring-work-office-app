@@ -13,12 +13,13 @@ export class DataService {
   }
 
   getOffers(): Observable<any> {
-    this.news = this.http.get(this.server + "get/offers");
-    return this.news;
+    return this.news = this.http.get(this.server + "get/offers");
+
   }
 
   getNews(): Observable<any> {
     this.offers = this.http.get(this.server + "get/news");
     return this.offers;
   }
+
 }

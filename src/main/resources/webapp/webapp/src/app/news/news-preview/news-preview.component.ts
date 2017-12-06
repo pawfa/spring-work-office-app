@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-news-preview',
@@ -14,7 +14,6 @@ export class NewsPreviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.newsData);
     this.id = this.newsData.id;
     this.header = this.newsData.header;
     this.paragraph = this.newsData.paragraph;

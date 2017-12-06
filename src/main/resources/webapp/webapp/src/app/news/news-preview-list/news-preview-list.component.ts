@@ -8,7 +8,7 @@ import {DataService} from "../../data.service";
 })
 export class NewsPreviewListComponent implements OnInit {
 
-  data : Array<any>;
+  data : any[];
 
   constructor(private dataService : DataService) { }
 
@@ -16,6 +16,7 @@ export class NewsPreviewListComponent implements OnInit {
     this.dataService.getNews().subscribe(
       (data) => this.data = data
     );
+
   }
 
 }
