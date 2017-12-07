@@ -1,23 +1,34 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {HttpClient} from "@angular/common/http";
+import { ApiService } from './api.service';
+import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 @Injectable()
 export class DataService {
 
-  private server = "http://localhost:8080/";
-  private offers : Observable<any>;
+  private _data: BehaviorSubject<any> = new BehaviorSubject(([]));
+  data: any[];
 
-  constructor(private http: HttpClient) {
+  constructor(private apiService : ApiService) {
+    this.getHomePageData();
   }
 
-  getOffers(): Observable<any> {
-      return this.http.get(this.server + "get/offers");
+  getHomePageData(){
+    this.apiService.getHomePageData().subscribe(
+      (data) => {
+        this.data = data;
+        this._data.next(this.data)
+      }
+    );
   }
 
-  getNews(): Observable<any> {
-    return this.http.get(this.server + "get/news");
-
+  getOffers() {
+      return this._data.asObservable();
   }
+
+
+  getNews() {
+    return this._data.asObservable();
+  }
+
 
 }

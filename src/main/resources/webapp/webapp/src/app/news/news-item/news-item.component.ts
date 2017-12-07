@@ -16,9 +16,10 @@ export class NewsItemComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
+
     this.dataService.getNews()
       .subscribe((data)=>
-      {let d = data.filter( off => (off.id === this.id))[0];
+      {let d = data[1].filter( off => (off.id === this.id))[0];
         this.header = d.header;
         this.paragraph = d.paragraph});
   }

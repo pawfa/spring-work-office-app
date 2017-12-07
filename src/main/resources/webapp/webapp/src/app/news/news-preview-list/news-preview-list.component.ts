@@ -13,10 +13,10 @@ export class NewsPreviewListComponent implements OnInit {
   constructor(private dataService : DataService) { }
 
   ngOnInit() {
+
     this.dataService.getNews().subscribe(
-      (data) => this.data = data
+      (data) => this.data = data[1]
     );
 
   }
-
 }

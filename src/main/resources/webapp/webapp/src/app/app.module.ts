@@ -14,6 +14,8 @@ import { NewsItemComponent } from './news/news-item/news-item.component';
 import { NewsPreviewComponent } from './news/news-preview/news-preview.component';
 import { OfferPreviewListComponent } from "./offers/offer-preview-list/offer-preview-list.component";
 import { NewsPreviewListComponent } from "./news/news-preview-list/news-preview-list.component";
+import { NewsEditorComponent } from './news/news-editor/news-editor.component';
+import {ApiService} from "./api.service";
 
 @NgModule({
   declarations: [
@@ -26,14 +28,15 @@ import { NewsPreviewListComponent } from "./news/news-preview-list/news-preview-
     LoginHeaderComponent,
     NewsItemComponent,
     NewsPreviewComponent,
-    NewsPreviewListComponent
+    NewsPreviewListComponent,
+    NewsEditorComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [DataService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

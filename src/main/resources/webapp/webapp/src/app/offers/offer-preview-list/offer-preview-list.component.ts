@@ -14,8 +14,8 @@ export class OfferPreviewListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.getOffers().subscribe(
-      (data) => this.data = data
+    this.dataService.getNews().subscribe(
+      (data) => this.data = data[0]
     );
   }
 

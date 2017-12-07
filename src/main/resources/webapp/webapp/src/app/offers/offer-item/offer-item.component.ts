@@ -16,10 +16,8 @@ export class OfferItemComponent implements OnInit {
   title: String;
   description: String;
   category: String;
-  result;
 
-
-  constructor(private dataService : DataService,private route: ActivatedRoute, private http : HttpClient) {
+  constructor(private dataService : DataService,private route: ActivatedRoute) {
 
   }
 
@@ -27,7 +25,7 @@ export class OfferItemComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.dataService.getOffers()
       .subscribe((data)=>
-      {let d = data.filter( off => (off.id === this.id))[0];
+      { let d = data[0].filter( off => (off.id === this.id))[0];
         this.title = d.title;
         this.description = d.description;
         this.category = d.category;});
