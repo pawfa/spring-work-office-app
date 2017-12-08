@@ -30,7 +30,7 @@ public class OffersController {
 
     @PostMapping("/put/offer")
     public void putOffer(@RequestBody Offer offer) {
-        offersService.save(offer);
+        offersService.insert(offer);
     }
 
 }

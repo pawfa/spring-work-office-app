@@ -24,7 +24,7 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public <S extends News> S save(S s) {
+    public <S extends News> S insert(S s) {
         return newsRepository.save(s);
     }
 }

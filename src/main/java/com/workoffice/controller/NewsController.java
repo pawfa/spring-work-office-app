@@ -30,7 +30,10 @@ public class NewsController {
 
     @PostMapping("/put/news")
     public void putNews(@RequestBody News news) {
-        newsService.save(news);
+
+        System.out.println("Otrzymalem newsa "+ news.getParagraph());
+        System.out.println("Otrzymalem newsa o id "+ news.getId());
+        newsService.insert(news);
     }
 
 }

@@ -13,5 +13,6 @@ public interface NewsRepository extends MongoRepository<News, String> {
     List<News> findAll();
 
     @Override
-    <S extends News> S save(S s);
+    <S extends News> S insert(S s);
+
 }

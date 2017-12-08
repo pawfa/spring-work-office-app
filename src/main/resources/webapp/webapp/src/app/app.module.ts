@@ -16,6 +16,7 @@ import { OfferPreviewListComponent } from "./offers/offer-preview-list/offer-pre
 import { NewsPreviewListComponent } from "./news/news-preview-list/news-preview-list.component";
 import { NewsEditorComponent } from './news/news-editor/news-editor.component';
 import {ApiService} from "./api.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {ApiService} from "./api.service";
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [DataService, ApiService],
   bootstrap: [AppComponent]

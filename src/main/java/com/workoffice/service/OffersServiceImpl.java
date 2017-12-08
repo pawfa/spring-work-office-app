@@ -23,7 +23,7 @@ public class OffersServiceImpl implements OffersService {
     }
 
     @Override
-    public <S extends Offer> S save(S s) {
+    public <S extends Offer> S insert(S s) {
         return offersRepository.save(s);
     }
 }

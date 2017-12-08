@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface OffersService {
     List<Offer> findAll();
-    <S extends Offer> S save(S s);
+    <S extends Offer> S insert(S s);
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {News} from "../../shared/news";
+import {DataService} from "../../data.service";
 
 @Component({
   selector: 'app-news-editor',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsEditorComponent implements OnInit {
 
-  constructor() { }
+
+
+  private model = new News(null,"","");
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+
+  }
+
+  onSubmit() {
+
+    this.dataService.putNews(this.model);
   }
 
 }
