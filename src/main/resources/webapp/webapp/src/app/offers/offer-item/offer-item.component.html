@@ -1,11 +1,22 @@
 <div class="container-fluid">
-<div class="card">
-  <div class="card-header">
-    {{category}}
+  <div class="card">
+    <div class="card-header">
+      <ul class="nav nav-pills">
+      <span class="navbar-text mr-3">
+        {{category}}
+      </span>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary mx-3">Primary</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </li>
+
+      </ul>
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{title}}</h4>
+      <p class="card-text">{{description}}</p>
+    </div>
   </div>
-  <div class="card-body">
-    <h4 class="card-title">{{title}}</h4>
-    <p class="card-text">{{description}}</p>
-  </div>
-</div>
 </div>

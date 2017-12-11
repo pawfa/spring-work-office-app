@@ -8,6 +8,7 @@ import {NewsEditorComponent} from "./news/news-editor/news-editor.component";
 const routes = [
   {path: '', component: CentralComponent, pathMatch: "full"},
   {path: 'news/editor', component: NewsEditorComponent,pathMatch: "full"},
+  {path: 'news/editor/:id', component: NewsEditorComponent,pathMatch: "full"},
   {path: 'offers/:id', component: OfferItemComponent,pathMatch: "full"},
   {path: 'news/:id', component: NewsItemComponent, pathMatch: "full"},
   {path: '**', redirectTo: ''}

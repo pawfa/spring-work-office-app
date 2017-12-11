@@ -32,7 +32,6 @@ export class DataService {
   }
 
   putNews(news: News){
-    console.log(news);
     this.apiService.createNews(news);
   }
 
