@@ -1,0 +1,34 @@
+<div class="container" *ngIf="type === 'news'">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="posterInput">Poster input</label>
+      <input type="file" class="form-control-file" id="posterInput">
+    </div>
+    <div class="form-group">
+      <label for="header">Header</label>
+      <input class="form-control" id="header" placeholder="This is header" name="header" [(ngModel)]="newsModel.header">
+    </div>
+    <div class="form-group">
+      <label for="paragraph">News content</label>
+      <textarea class="form-control" id="paragraph" rows="3" name="paragraph" [(ngModel)]="newsModel.paragraph"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div class="container" *ngIf="type === 'offers'">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" id="title" placeholder="This is title" name="title" [(ngModel)]="offerModel.title">
+    </div>
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input class="form-control" id="category" placeholder="This is category" name="category" [(ngModel)]="offerModel.category">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" rows="3" name="description" [(ngModel)]="offerModel.description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

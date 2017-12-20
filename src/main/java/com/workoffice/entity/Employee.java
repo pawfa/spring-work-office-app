@@ -20,10 +20,10 @@ public class Employee {
 //    @NotEmpty
     private String lastName;
 
-    @Column(name = "mail")
+    @Column(name = "email")
 //    @NotEmpty
     @Email
-    private String mail;
+    private String email;
 
     @Column(name = "password")
 //    @NotEmpty
@@ -55,11 +55,11 @@ public class Employee {
     }
 
     public String getMail() {
-        return mail;
+        return email;
     }
 
     public void setMail(String mail) {
-        this.mail = mail;
+        this.email = mail;
     }
 
     public String getPassword() {
@@ -76,7 +76,7 @@ public class Employee {
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", mail='" + mail + '\'' +
+                ", mail='" + email + '\'' +
                 '}';
     }
 }

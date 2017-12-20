@@ -29,7 +29,6 @@ export class OfferItemComponent implements OnInit {
         this.title = d.title;
         this.description = d.description;
         this.category = d.category;});
-
   }
 
 }

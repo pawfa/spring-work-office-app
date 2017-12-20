@@ -8,5 +8,5 @@ public interface NewsService {
 
     List<News> findAll();
 
-    <S extends News> S insert(S s);
+    <S extends News> S save(S s);
 }
