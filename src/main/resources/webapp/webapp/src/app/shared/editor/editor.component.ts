@@ -19,6 +19,7 @@ export class EditorComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+
     this.id = this.route.snapshot.params['id'];
     this.type = this.route.snapshot.url[0].path;
     if(this.type === "news" && !isNullOrUndefined(this.route.snapshot.params['id'])){

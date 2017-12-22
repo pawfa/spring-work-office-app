@@ -24,4 +24,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public <S extends Employee> S save(S s) {
         return employeeRepository.save(s);
     }
+
+    @Override
+    public Employee findByEmail(String email) {
+        return null;
+    }
 }

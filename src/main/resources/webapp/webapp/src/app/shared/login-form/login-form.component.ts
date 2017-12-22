@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {User} from "../user";
+import {AuthenticationService} from "../authentication.service";
 
 @Component({
   selector: 'app-login-form',
@@ -7,17 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
+  private userModel = new User(null,null,null);
+  private errorMsg : String;
 
-  constructor() { }
+
+  constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
   }
 
-  loginUser(e){
-    // let mail = e.elements[0];
-    // let password = e.elements[1];
-    // console.log(mail, password);
-    console.log(e.elements);
+  loginUser() {
+    console.log(this.userModel.email);
+    console.log(this.userModel.password)
+
+    this.authService.login(this.userModel)
+      .subscribe(
+        () => {
+          console.log("User is logged in");
+        },
+      (err) => this.errorMsg = err
+      );
   }
 
 

@@ -6,8 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
-        Iterable<Employee> findAll();
 
+        Iterable<Employee> findAll();
         @Override
         <S extends Employee> S save(S s);
+        Employee findByEmail(String email);
 }

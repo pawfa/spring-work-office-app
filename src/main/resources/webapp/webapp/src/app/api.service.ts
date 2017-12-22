@@ -7,11 +7,11 @@ import {News} from "./shared/news";
 export class ApiService {
 
   private server = "http://localhost:8080/";
-  private httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
+  private httpOptions;
 
   constructor(private http: HttpClient) {
+   this.httpOptions = new Headers();
+    this.httpOptions.append('Content-Type', 'application/json');
 
   }
 
@@ -30,6 +30,10 @@ export class ApiService {
   createNews(news: News){
     return this.http.post(this.server + "put/news", news, this.httpOptions ).subscribe();
 
+  }
+  login(user){
+    console.log(user.email);
+    return this.http.post("http://localhost:8080/login", JSON.stringify({username: "admin", password: "aasd"}),{headers : this.httpOptions});
   }
 
   createOffer(){

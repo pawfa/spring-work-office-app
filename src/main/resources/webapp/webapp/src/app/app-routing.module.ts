@@ -15,6 +15,7 @@ const routes = [
   {path: 'offers/editor/:id', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/:id', component: OfferItemComponent,pathMatch: "full"},
   {path: 'news/:id', component: NewsItemComponent, pathMatch: "full"},
+  { path: 'login', name: 'Login', component: LoginFormComponent},
   {path: '**', redirectTo: ''}
 ];
 

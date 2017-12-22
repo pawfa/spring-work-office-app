@@ -7,4 +7,5 @@ public interface EmployeeService {
 
     Iterable<Employee> findAll();
     <S extends Employee> S save(S s);
+    Employee findByEmail(String email);
 }

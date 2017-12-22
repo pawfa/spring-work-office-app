@@ -26,13 +26,19 @@ public class MainController {
         this.offersService = offersService;
     }
 
-    //    @RequestMapping("/")
-//    public Map<String,Object> home() {
-//        Map<String,Object> model = new HashMap<String,Object>();
-//        model.put("id", UUID.randomUUID().toString());
-//        model.put("content", "Hello World");
-//        return model;
+    @RequestMapping("/users")
+    public @ResponseBody String getUsers() {
+        return "{\"users\":[{\"firstname\":\"Richard\", \"lastname\":\"Feynman\"}," +
+                "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
+    }
+
+//    @RequestMapping("/login")
+//    public String getLogin(@RequestBody String s) {
+//        logger.info(s+"tutaj");
+//
+//        return "hejaa";
 //    }
+
     @GetMapping("/")
     public List<Object> getHomePageData() {
         List<Offer> offerList = offersService.findAll();

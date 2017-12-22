@@ -18,6 +18,7 @@ import {EditorComponent} from './shared/editor/editor.component';
 import {ApiService} from "./api.service";
 import {FormsModule} from "@angular/forms";
 import { LoginFormComponent } from './shared/login-form/login-form.component';
+import {AuthenticationService} from "./shared/authentication.service";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { LoginFormComponent } from './shared/login-form/login-form.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [DataService, ApiService],
+  providers: [DataService, ApiService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
