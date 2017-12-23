@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient}from "@angular/common/http";
 import {News} from "./shared/news";
 
 @Injectable()
@@ -33,7 +33,9 @@ export class ApiService {
   }
   login(user){
     console.log(user.email);
-    return this.http.post("http://localhost:8080/login", JSON.stringify({username: "admin", password: "aasd"}),{headers : this.httpOptions});
+    console.log(user);
+    console.log(JSON.stringify(user));
+    return this.http.post("http://localhost:8080/login", JSON.stringify(user),{headers : this.httpOptions});
   }
 
   createOffer(){

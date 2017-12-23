@@ -1,5 +1,7 @@
 package com.workoffice.security;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -29,16 +31,20 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req, HttpServletResponse res)
             throws AuthenticationException, IOException, ServletException {
-        res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-        res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
-        res.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
-        res.setHeader("Access-Control-Expose-Headers", "custom-header1, custom-header2");
-        res.setHeader("Access-Control-Allow-Credentials", "false");
-        res.setHeader("Access-Control-Max-Age", "4800");
+//        res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+//        res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
+//        res.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
+//        res.setHeader("Access-Control-Expose-Headers", "custom-header1, custom-header2");
+//        res.setHeader("Access-Control-Allow-Credentials", "false");
+//        res.setHeader("Access-Control-Max-Age", "4800");
 
         //objectmapper is creating pojo object from json and next it is checking if credentials are correct
-        AccountCredentials creds = new ObjectMapper()
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        AccountCredentials creds = objectMapper
                 .readValue(req.getInputStream(), AccountCredentials.class);
+        logger.info(creds.getUsername());
+        logger.info(creds.getPassword());
         return getAuthenticationManager().authenticate(
                 new UsernamePasswordAuthenticationToken(
                         creds.getUsername(),
