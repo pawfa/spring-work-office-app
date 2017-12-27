@@ -32,11 +32,11 @@ public class MainController {
                 "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
     }
 
-//    @RequestMapping("/login")
-//    public String getLogin(@RequestBody String s) {
-//        logger.info(s+"tutaj");
+//    @PostMapping("/login")
+//    public @ResponseBody String getLogin() {
 //
-//        return "hejaa";
+//        return "{\"users\":[{\"firstname\":\"Richard\", \"lastname\":\"Feynman\"}," +
+//                "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
 //    }
 
     @GetMapping("/")

@@ -1,22 +1,39 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
-import {User} from "./user";
 import {ApiService} from "../api.service";
+import {Observable} from "rxjs/Observable";
+import {HttpClient} from "@angular/common/http";
+
 
 @Injectable()
 export class AuthenticationService {
 
-  users = [
-    new User(null,'admin@admin.com','adm9'),
-    new User(null,'user1@gmail.com','a23')
-  ];
+  token: String;
 
-  constructor(private _router: Router, private apiService: ApiService) { }
+  constructor(private apiService : ApiService) {
+  }
 
-  login(user){
+  login(user) {
+     return this.apiService.login(user);
+  }
 
-    return this.apiService.login(user);
+  private handleError(error: any) {
+    let errMsg = (error.message) ? error.message :
+      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
+    console.error(errMsg);
+    return Observable.throw(errMsg);
+  }
 
+  logout(): void {
+    // clear token remove user from local storage to log user out
+    this.token = null;
+    localStorage.removeItem('currentUser');
+  }
+
+  getToken(): String {
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let token = currentUser && currentUser.token;
+    return token ? token : "";
   }
 
 }

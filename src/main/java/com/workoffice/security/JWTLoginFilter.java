@@ -31,12 +31,6 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req, HttpServletResponse res)
             throws AuthenticationException, IOException, ServletException {
-//        res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-//        res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
-//        res.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
-//        res.setHeader("Access-Control-Expose-Headers", "custom-header1, custom-header2");
-//        res.setHeader("Access-Control-Allow-Credentials", "false");
-//        res.setHeader("Access-Control-Max-Age", "4800");
 
         //objectmapper is creating pojo object from json and next it is checking if credentials are correct
         ObjectMapper objectMapper = new ObjectMapper();

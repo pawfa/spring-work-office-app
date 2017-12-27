@@ -11,21 +11,20 @@ export class LoginFormComponent implements OnInit {
 
   private userModel = new User(null,null,null);
   private errorMsg : String;
-
+  private loading = false;
 
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
+
+    this.authService.logout();
   }
 
   loginUser() {
-    console.log(this.userModel.email);
-    console.log(this.userModel.password)
-
     this.authService.login(this.userModel)
       .subscribe(
-        () => {
-          console.log("User is logged in");
+        (data) => {
+          console.log("User is logged in"+data);
         },
       (err) => this.errorMsg = err
       );

@@ -27,6 +27,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee findByEmail(String email) {
-        return null;
+        return employeeRepository.findByEmail(email);
     }
 }

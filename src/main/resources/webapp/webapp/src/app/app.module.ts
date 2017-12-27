@@ -41,7 +41,11 @@ import {AuthenticationService} from "./shared/authentication.service";
     AppRoutingModule,
     FormsModule
   ],
-  providers: [DataService, ApiService, AuthenticationService],
+  providers: [
+    DataService,
+    ApiService,
+    AuthenticationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

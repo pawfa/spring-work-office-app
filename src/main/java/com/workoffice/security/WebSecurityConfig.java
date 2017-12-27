@@ -1,5 +1,6 @@
 package com.workoffice.security;
 
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -19,8 +20,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
 
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers( "/login").permitAll()
+                .antMatchers("/","/h2/*").permitAll()
+                .antMatchers( HttpMethod.POST,"/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 // We filter the api/login requests
@@ -38,7 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Create a default account
         auth.inMemoryAuthentication()
                 .withUser("admin")
-                .password("password")
+                .password("pass")
                 .roles("ADMIN");
     }
 }

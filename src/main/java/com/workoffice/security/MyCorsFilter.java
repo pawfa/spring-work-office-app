@@ -15,15 +15,13 @@ public class MyCorsFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpServletRequest request = (HttpServletRequest) servletRequest;
-        response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+        response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
-        response.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
-        response.setHeader("Access-Control-Expose-Headers", "custom-header1, custom-header2");
-        response.setHeader("Access-Control-Allow-Credentials", "false");
-        response.setHeader("Access-Control-Max-Age", "4800");
+//        response.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
+//        response.setHeader("Access-Control-Allow-Credentials", "true");
+//        response.setHeader("Access-Control-Max-Age", "4800");
         filterChain.doFilter(request, response);
     }
 

@@ -20,7 +20,7 @@ public class Employee {
 //    @NotEmpty
     private String lastName;
 
-    @Column(name = "email")
+    @Column(name = "EMAIL")
 //    @NotEmpty
     @Email
     private String email;

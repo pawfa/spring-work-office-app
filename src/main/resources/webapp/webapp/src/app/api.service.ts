@@ -12,7 +12,6 @@ export class ApiService {
   constructor(private http: HttpClient) {
    this.httpOptions = new Headers();
     this.httpOptions.append('Content-Type', 'application/json');
-
   }
 
   getHomePageData(): Observable<any>{
@@ -32,9 +31,6 @@ export class ApiService {
 
   }
   login(user){
-    console.log(user.email);
-    console.log(user);
-    console.log(JSON.stringify(user));
     return this.http.post("http://localhost:8080/login", JSON.stringify(user),{headers : this.httpOptions});
   }
 
