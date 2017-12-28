@@ -21,13 +21,13 @@ export class LoginFormComponent implements OnInit {
   }
 
   loginUser() {
-    this.authService.login(this.userModel)
-      .subscribe(
-        (data) => {
-          console.log("User is logged in"+data);
-        },
-      (err) => this.errorMsg = err
-      );
+    this.authService.login(this.userModel);
+      // .subscribe(
+      //   (data) => {
+      //     console.log("User is logged in"+data);
+      //   },
+      // (err) => this.errorMsg = err
+      // );
   }
 
 

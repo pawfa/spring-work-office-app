@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {HttpClient}from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {News} from "./shared/news";
 
 @Injectable()
@@ -10,8 +10,14 @@ export class ApiService {
   private httpOptions;
 
   constructor(private http: HttpClient) {
-   this.httpOptions = new Headers();
+   this.httpOptions = new HttpHeaders();
     this.httpOptions.append('Content-Type', 'application/json');
+  }
+
+  login(user){
+    return this.http.post("http://localhost:8080/login", JSON.stringify(user),{headers : this.httpOptions}).subscribe(
+      (event) => console.log(event)
+    );
   }
 
   getHomePageData(): Observable<any>{
@@ -30,9 +36,7 @@ export class ApiService {
     return this.http.post(this.server + "put/news", news, this.httpOptions ).subscribe();
 
   }
-  login(user){
-    return this.http.post("http://localhost:8080/login", JSON.stringify(user),{headers : this.httpOptions});
-  }
+
 
   createOffer(){
 

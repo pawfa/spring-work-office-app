@@ -14,7 +14,11 @@ export class AuthenticationService {
   }
 
   login(user) {
-     return this.apiService.login(user);
+     this.apiService.login(user);
+       // .subscribe(
+       // (data) => {
+       //   console.log("User is logged in"+data);
+       // });
   }
 
   private handleError(error: any) {
