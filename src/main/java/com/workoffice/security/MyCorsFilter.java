@@ -5,6 +5,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,12 +21,18 @@ public class MyCorsFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpServletRequest request = (HttpServletRequest) servletRequest;
-        response.setHeader("Access-Control-Allow-Origin", "*");
+        response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
         response.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, OPTIONS, DELETE");
-//        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-//        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Max-Age", "3600");
+        response.setHeader("Access-Control-Allow-Headers", "Origin, Authorization ,Content-Type, Xsrf-token, X-requested-with, Accept");
+        response.setHeader("Access-Control-Expose-Headers", "Authorization");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        if ("OPTIONS".equals(request.getMethod())) {
+            response.setStatus(HttpServletResponse.SC_OK);
+        } else {
+            filterChain.doFilter(request, response);
+        }
 
-        filterChain.doFilter(request, response);
     }
 
     @Override
@@ -39,6 +46,3 @@ public class MyCorsFilter implements Filter {
     }
 
 }
-//        response.setHeader("Access-Control-Allow-Headers", "X-Auth-Token, Content-Type");
-//        response.setHeader("Access-Control-Allow-Credentials", "true");
-//        response.setHeader("Access-Control-Max-Age", "4800");

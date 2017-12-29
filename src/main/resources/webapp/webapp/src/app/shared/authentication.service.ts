@@ -14,11 +14,7 @@ export class AuthenticationService {
   }
 
   login(user) {
-     this.apiService.login(user);
-       // .subscribe(
-       // (data) => {
-       //   console.log("User is logged in"+data);
-       // });
+    this.apiService.login(user);
   }
 
   private handleError(error: any) {

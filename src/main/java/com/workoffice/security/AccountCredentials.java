@@ -4,9 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AccountCredentials {
 
-    @JsonProperty("_email")
+//    @JsonProperty("_email")
     private String username;
-    @JsonProperty("_password")
+//    @JsonProperty("_password")
     private String password;
 
     public String getUsername() {
