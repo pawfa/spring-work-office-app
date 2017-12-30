@@ -15,18 +15,7 @@ export class ApiService {
   }
 
   login(user) {
-    //   return this.http.post("http://localhost:8080/login", JSON.stringify(user),{headers : this.httpOptions}).subscribe(
-    //     (event) => console.log(event)
-    //   );
-    // }
-
-    this.test = this.http.post("http://localhost:8080/login", JSON.stringify({
-      username: "admin",
-      password: "pass"
-    }), {observe: 'response', headers: this.headers, withCredentials: true});
-    this.test.subscribe(
-      (resp) => console.log(resp.headers.get('Authorization'))
-    );
+    return this.test = this.http.post("http://localhost:8080/login", JSON.stringify(user), {observe: 'response', headers: this.headers, withCredentials: true});
   }
 
   getHomePageData(): Observable<any> {

@@ -33,7 +33,7 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
 
         //objectmapper is creating pojo object from json and next it is checking if credentials are correct
         ObjectMapper objectMapper = new ObjectMapper();
-//        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         AccountCredentials creds = objectMapper
                 .readValue(req.getInputStream(), AccountCredentials.class);
         logger.info(creds.getUsername());

@@ -19,6 +19,7 @@ import {ApiService} from "./api.service";
 import {FormsModule} from "@angular/forms";
 import { LoginFormComponent } from './shared/login-form/login-form.component';
 import {AuthenticationService} from "./shared/authentication.service";
+import {AuthGuard} from "./shared/auth.guard";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import {AuthenticationService} from "./shared/authentication.service";
     FormsModule
   ],
   providers: [
+    AuthGuard,
     DataService,
     ApiService,
     AuthenticationService

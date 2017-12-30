@@ -2,26 +2,38 @@ import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
 import {ApiService} from "../api.service";
 import {Observable} from "rxjs/Observable";
-import {HttpClient} from "@angular/common/http";
-
 
 @Injectable()
 export class AuthenticationService {
 
-  token: String;
+  private token: string;
 
   constructor(private apiService : ApiService) {
+
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    this.token = currentUser && currentUser.token;
   }
 
-  login(user) {
-    this.apiService.login(user);
-  }
+  login(user): Observable<any> {
+    return this.apiService.login(user).map(
+      (resp) => {
+        let token = resp.headers.get('Authorization').substr(7);
+        if (token) {
+          // set token property
+          this.token = token;
+          // store username and jwt token in local storage to keep user logged in between page refreshes
+          localStorage.setItem('currentUser', JSON.stringify({username: user.email, token: token}));
 
-  private handleError(error: any) {
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg);
-    return Observable.throw(errMsg);
+          // return true to indicate successful login
+          return true;
+        } else {
+          // return false to indicate failed login
+          return false;
+        }
+      }
+        // this.token = resp.headers.get('Authorization').substr(7);
+        // localStorage.setItem(user.email,this.token)}
+    ).catch((error) => Observable.throw(error));
   }
 
   logout(): void {

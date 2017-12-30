@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../user";
 import {AuthenticationService} from "../authentication.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-login-form',
@@ -10,24 +11,32 @@ import {AuthenticationService} from "../authentication.service";
 export class LoginFormComponent implements OnInit {
 
   private userModel = new User(null,null,null);
-  private errorMsg : String;
+  private error : string;
   private loading = false;
+  private returnUrl;
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-
     this.authService.logout();
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   loginUser() {
-    this.authService.login(this.userModel);
-      // .subscribe(
-      //   (data) => {
-      //     console.log("User is logged in"+data);
-      //   },
-      // (err) => this.errorMsg = err
-      // );
+    this.loading = true;
+    this.authService.login(this.userModel).subscribe(result => {
+      if (result === true) {
+        this.router.navigateByUrl(this.returnUrl);
+      } else {
+        this.error = 'Invalid username or password';
+      }
+    },
+      (error) =>{
+      if(error.status == 401){
+        this.error = "Invalid username or password";
+        this.loading = false;
+      }
+      });
   }
 
 
