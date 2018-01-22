@@ -15,7 +15,7 @@ export class ApiService {
   }
 
   login(user) {
-    return this.test = this.http.post("http://localhost:8080/login", JSON.stringify(user), {observe: 'response', headers: this.headers, withCredentials: true});
+    return this.http.post("http://localhost:8080/login", JSON.stringify(user), {headers: this.headers,observe: "response"});
   }
 
   getHomePageData(): Observable<any> {

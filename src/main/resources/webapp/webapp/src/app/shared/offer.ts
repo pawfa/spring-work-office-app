@@ -1,6 +1,5 @@
 export class Offer {
 
-
   constructor(public id: String,
               public _title: String,
               public _description: String,

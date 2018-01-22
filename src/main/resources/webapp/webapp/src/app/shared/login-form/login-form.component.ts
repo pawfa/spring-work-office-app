@@ -24,8 +24,8 @@ export class LoginFormComponent implements OnInit {
 
   loginUser() {
     this.loading = true;
-    this.authService.login(this.userModel).subscribe(result => {
-      if (result === true) {
+    this.authService.login(this.userModel).subscribe(response => {
+      if (response === true) {
         this.router.navigateByUrl(this.returnUrl);
       } else {
         this.error = 'Invalid username or password';

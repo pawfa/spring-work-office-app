@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Router} from "@angular/router";
 import {ApiService} from "../api.service";
 import {Observable} from "rxjs/Observable";
 
@@ -15,9 +14,13 @@ export class AuthenticationService {
   }
 
   login(user): Observable<any> {
+
+
     return this.apiService.login(user).map(
       (resp) => {
+        console.log(resp.headers.get('authorization'));
         let token = resp.headers.get('Authorization').substr(7);
+        console.log(token);
         if (token) {
           // set token property
           this.token = token;
