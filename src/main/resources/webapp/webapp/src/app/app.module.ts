@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { CentralComponent } from './central/central.component';
 import { OfferPreviewComponent } from './offers/offer-preview/offer-preview.component';
@@ -20,6 +20,8 @@ import {FormsModule} from "@angular/forms";
 import { LoginFormComponent } from './shared/login-form/login-form.component';
 import {AuthenticationService} from "./shared/authentication.service";
 import {AuthGuard} from "./shared/auth.guard";
+import {PagerService} from "./shared/pager.service";
+import {TokenInterceptor} from "./shared/token-interceptor";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,11 @@ import {AuthGuard} from "./shared/auth.guard";
     AuthGuard,
     DataService,
     ApiService,
-    AuthenticationService
+    AuthenticationService,
+    PagerService,
+    {provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true}
   ],
   bootstrap: [AppComponent]
 })

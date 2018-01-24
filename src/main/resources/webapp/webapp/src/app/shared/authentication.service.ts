@@ -18,14 +18,12 @@ export class AuthenticationService {
 
     return this.apiService.login(user).map(
       (resp) => {
-        console.log(resp.headers.get('authorization'));
         let token = resp.headers.get('Authorization').substr(7);
-        console.log(token);
         if (token) {
           // set token property
           this.token = token;
           // store username and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser', JSON.stringify({username: user.email, token: token}));
+          localStorage.setItem('currentUser',  token);
 
           // return true to indicate successful login
           return true;
@@ -34,8 +32,6 @@ export class AuthenticationService {
           return false;
         }
       }
-        // this.token = resp.headers.get('Authorization').substr(7);
-        // localStorage.setItem(user.email,this.token)}
     ).catch((error) => Observable.throw(error));
   }
 

@@ -39,11 +39,15 @@ export class EditorComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.route.snapshot.url);
-    console.log(this.newsModel.header);
-    console.log(this.offerModel.title);
-    // this.dataService.putNews(this.model);
-    // this.router.navigate(['/'])
+
+    if(this.type === "offers"){
+      console.log("offers");
+      this.dataService.putOffer(this.offerModel)
+    }else{
+      console.log("news")
+      this.dataService.putNews(this.newsModel);
+    }
+    this.router.navigate(['/'])
   }
 
 }

@@ -5,6 +5,7 @@ import {Component, Input, OnChanges, OnInit } from '@angular/core';
   templateUrl: './news-preview.component.html',
   styleUrls: ['./news-preview.component.css']
 })
+
 export class NewsPreviewComponent implements OnInit {
   id: String;
   header: String;

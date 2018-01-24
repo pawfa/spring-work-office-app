@@ -2,13 +2,13 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {News} from "./shared/news";
+import {Offer} from "./shared/offer";
 
 @Injectable()
 export class ApiService {
 
   private server = "http://localhost:8080/";
   private headers: HttpHeaders;
-  private test;
 
   constructor(private http: HttpClient) {
     this.headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -31,13 +31,13 @@ export class ApiService {
   }
 
   createNews(news: News) {
-    return this.http.post(this.server + "put/news", news, {headers: this.headers}).subscribe();
+    this.http.post(this.server + "put/news", news, {headers: this.headers}).subscribe();
 
   }
 
 
-  createOffer() {
-
+  createOffer(offer: Offer) {
+    this.http.post(this.server + "put/offer", offer, {headers: this.headers}).subscribe();
   }
 
   updateOffer() {
