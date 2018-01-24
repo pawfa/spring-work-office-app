@@ -32,13 +32,6 @@ public class MainController {
                 "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
     }
 
-//    @PostMapping("/login")
-//    public @ResponseBody String getLogin() {
-//
-//        return "{\"users\":[{\"firstname\":\"Richard\", \"lastname\":\"Feynman\"}," +
-//                "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
-//    }
-
     @GetMapping("/")
     public List<Object> getHomePageData() {
         List<Offer> offerList = offersService.findAll();

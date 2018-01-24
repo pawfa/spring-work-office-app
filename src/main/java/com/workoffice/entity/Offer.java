@@ -7,7 +7,6 @@ public class Offer {
 
     @Id
     private String id;
-
     private String title;
     private String description;
     private String category;

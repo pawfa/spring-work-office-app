@@ -19,7 +19,7 @@ export class NewsPreviewListComponent implements OnInit {
   ngOnInit() {
 
     this.dataService.getNews().subscribe(
-      (data) => this.data = data[1],
+      (data) => {this.data = data[1]; console.log(data[1])},
       error => console.log("Error: ", error),
       () => this.setPage(1)
     );

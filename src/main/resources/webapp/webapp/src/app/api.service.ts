@@ -31,7 +31,8 @@ export class ApiService {
   }
 
   createNews(news: News) {
-    this.http.post(this.server + "put/news", news, {headers: this.headers}).subscribe();
+    console.log(news);
+    this.http.post(this.server + "put/news",  news, {headers: this.headers}).subscribe();
 
   }
 

@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {ApiService} from './api.service';
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {News} from "./shared/news";
 import {Offer} from "./shared/offer";
 import {ReplaySubject} from "rxjs/ReplaySubject";
@@ -8,7 +7,6 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 @Injectable()
 export class DataService {
 
-  // private _data: BehaviorSubject<any> = new BehaviorSubject(([]));
   private _data: ReplaySubject<any> = new ReplaySubject(100);
   data: any[];
 

@@ -14,8 +14,8 @@ export class EditorComponent implements OnInit {
   type : String;
   id: String = null;
 
-  private newsModel = new News(null,"","");
-  private offerModel = new Offer(null,"","","");
+  private newsModel = new News();
+  private offerModel = new Offer();
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -39,15 +39,14 @@ export class EditorComponent implements OnInit {
   }
 
   onSubmit() {
-
     if(this.type === "offers"){
-      console.log("offers");
       this.dataService.putOffer(this.offerModel)
     }else{
-      console.log("news")
       this.dataService.putNews(this.newsModel);
     }
+    this.dataService.getHomePageData();
     this.router.navigate(['/'])
+
   }
 
 }

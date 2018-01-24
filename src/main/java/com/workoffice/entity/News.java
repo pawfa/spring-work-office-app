@@ -1,12 +1,12 @@
 package com.workoffice.entity;
 
+
 import javax.persistence.*;
 
 public class News {
 
     @Id
     private String id;
-
     private String header;
     private String paragraph;
 
