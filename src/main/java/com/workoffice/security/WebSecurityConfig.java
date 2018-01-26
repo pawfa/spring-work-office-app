@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
 
                 .authorizeRequests()
-                .antMatchers("/","/h2/*").permitAll()
+                .antMatchers("/","/h2/*", "/profile/user/").permitAll()
                 .antMatchers( HttpMethod.POST,"/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -42,12 +42,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // Create a default account
-        auth.inMemoryAuthentication()
-                .withUser("admin")
-                .password("pass")
-                .roles("ADMIN");
-    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        // Create a default account
+//        auth.inMemoryAuthentication()
+//                .withUser("admin")
+//                .password("pass")
+//                .roles("ADMIN");
+//    }
 }

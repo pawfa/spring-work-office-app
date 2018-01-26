@@ -19,7 +19,7 @@ export class NewsPreviewListComponent implements OnInit {
   ngOnInit() {
 
     this.dataService.getNews().subscribe(
-      (data) => {this.data = data[1]; console.log(data[1])},
+      (data) => {this.data = data[1]},
       error => console.log("Error: ", error),
       () => this.setPage(1)
     );
@@ -29,7 +29,6 @@ export class NewsPreviewListComponent implements OnInit {
     if (page < 1 || page > this.pager.totalPages) {
       return;
     }
-    console.log("working");
     // get pager object from service
     this.pager = this.pagerService.getPager(this.data.length, page);
 

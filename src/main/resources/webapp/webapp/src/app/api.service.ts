@@ -1,8 +1,9 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {News} from "./shared/news";
 import {Offer} from "./shared/offer";
+import {User} from "./users/user";
 
 @Injectable()
 export class ApiService {
@@ -22,31 +23,26 @@ export class ApiService {
     return this.http.get(this.server);
   }
 
+  createNews(news: News) {
+    this.http.post(this.server + "put/news",  news, {headers: this.headers}).subscribe();
+
+  }
+
+  createOffer(offer: Offer) {
+    this.http.post(this.server + "put/offer", offer, {headers: this.headers}).subscribe();
+  }
+
+  getUserData(){
+    return this.http.get(this.server+"/profile/user", {headers: this.headers});
+
+  }
+
   getAllOffers(): Observable<any> {
     return this.http.get(this.server + "get/offers");
   }
 
   getAllNews(): Observable<any> {
     return this.http.get(this.server + "get/news");
-  }
-
-  createNews(news: News) {
-    console.log(news);
-    this.http.post(this.server + "put/news",  news, {headers: this.headers}).subscribe();
-
-  }
-
-
-  createOffer(offer: Offer) {
-    this.http.post(this.server + "put/offer", offer, {headers: this.headers}).subscribe();
-  }
-
-  updateOffer() {
-
-  }
-
-  updateNews() {
-
   }
 
   deleteOffer() {

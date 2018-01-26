@@ -1,10 +1,11 @@
 package com.workoffice.security;
 
-import com.workoffice.entity.Employee;
-import com.workoffice.service.EmployeeService;
+import com.workoffice.entity.User;
+import com.workoffice.service.UserService;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -16,10 +17,12 @@ import java.util.Collection;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService{
 
-    EmployeeService employeeService;
+    UserService userService;
+    private final Log logger = LogFactory.getLog(getClass());
+
     @Autowired
-    public UserDetailsServiceImpl(EmployeeService employeeService) {
-        this.employeeService = employeeService;
+    public UserDetailsServiceImpl(UserService userService) {
+        this.userService = userService;
     }
 
     @Override
@@ -27,12 +30,12 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
         authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-        Employee emp = employeeService.findByEmail(s);
+        User user = userService.findByEmail(s);
 
-        if(emp == null){
+        if(user == null){
             throw new UsernameNotFoundException("username not found");
         }
 
-        return new User(emp.getMail(),emp.getPassword(),authorities);
+        return new org.springframework.security.core.userdetails.User(user.getEmail(),user.getPassword(),authorities);
     }
 }

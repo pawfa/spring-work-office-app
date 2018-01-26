@@ -6,6 +6,8 @@ import {OfferItemComponent} from "./offers/offer-item/offer-item.component";
 import {EditorComponent} from "./shared/editor/editor.component";
 import {LoginFormComponent} from "./shared/login-form/login-form.component";
 import {AuthGuard} from "./shared/auth.guard";
+import {EmpComponent} from "./users/emp/emp.component";
+import {UserComponent} from "./users/user/user.component";
 
 const routes = [
   {path: '', component: CentralComponent, pathMatch: "full"},
@@ -15,6 +17,8 @@ const routes = [
   {path: 'offers/editor', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/editor/:id', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/:id', component: OfferItemComponent,pathMatch: "full", canActivate: [AuthGuard]},
+  {path: 'profile/user', component: UserComponent,pathMatch: "full", canActivate: [AuthGuard]},
+  {path: 'profile/emp', component: EmpComponent,pathMatch: "full", canActivate: [AuthGuard]},
   {path: 'news/:id', component: NewsItemComponent, pathMatch: "full"},
   { path: 'login', name: 'Login', component: LoginFormComponent},
   {path: '**', redirectTo: ''}

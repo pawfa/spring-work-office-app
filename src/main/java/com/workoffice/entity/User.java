@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 
 @Entity
-public class Employee {
+public class User {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -29,6 +29,9 @@ public class Employee {
 //    @NotEmpty
     private String password;
 
+    @Column(name = "cv")
+//    @NotEmpty
+    private String cv;
 
     public int getId() {
         return id;
@@ -54,14 +57,6 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public String getMail() {
-        return email;
-    }
-
-    public void setMail(String mail) {
-        this.email = mail;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -70,13 +65,19 @@ public class Employee {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "Owner{" +
-                "id='" + id + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", mail='" + email + '\'' +
-                '}';
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getCv() {
+        return cv;
+    }
+
+    public void setCv(String cv) {
+        this.cv = cv;
     }
 }

@@ -5,10 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountCredentials {
 
     //name of user field in angular client
-    @JsonProperty("_email")
+    @JsonProperty("email")
     private String username;
     //name of user field in angular client
-    @JsonProperty("_password")
     private String password;
 
     public String getUsername() {

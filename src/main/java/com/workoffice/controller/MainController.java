@@ -43,22 +43,22 @@ public class MainController {
         return list;
     }
 
-    @GetMapping("/get/")
-    public Map<String, Object> get(@RequestParam(value = "key") String key) {
-        Map<String, Object> model = new HashMap<String, Object>();
-        model.put("id", UUID.randomUUID().toString());
-        model.put("content", "Hello World");
-        model.put("key", key);
-        return model;
-    }
-
-    @GetMapping("/get/{id}")
-    public Map<String, Object> getId(@PathVariable(value = "id") String id) {
-        Map<String, Object> model = new HashMap<String, Object>();
-        model.put("id", id);
-        model.put("content", "Hello World");
-        return model;
-    }
+//    @GetMapping("/get/")
+//    public Map<String, Object> get(@RequestParam(value = "key") String key) {
+//        Map<String, Object> model = new HashMap<String, Object>();
+//        model.put("id", UUID.randomUUID().toString());
+//        model.put("content", "Hello World");
+//        model.put("key", key);
+//        return model;
+//    }
+//
+//    @GetMapping("/get/{id}")
+//    public Map<String, Object> getId(@PathVariable(value = "id") String id) {
+//        Map<String, Object> model = new HashMap<String, Object>();
+//        model.put("id", id);
+//        model.put("content", "Hello World");
+//        return model;
+//    }
 
 
 }

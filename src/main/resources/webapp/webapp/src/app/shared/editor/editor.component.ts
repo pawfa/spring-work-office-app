@@ -23,12 +23,14 @@ export class EditorComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     this.type = this.route.snapshot.url[0].path;
     if(this.type === "news" && !isNullOrUndefined(this.route.snapshot.params['id'])){
+      this.newsModel.id = this.id;
       this.dataService.getNews()
         .subscribe((data)=>
         {let d = data[1].filter( off => (off.id === this.id))[0];
           this.newsModel.header = d.header;
           this.newsModel.paragraph = d.paragraph});
     }else if(this.type === "offers" && !isNullOrUndefined(this.route.snapshot.params['id'])){
+      this.offerModel.id = this.id;
       this.dataService.getOffers()
         .subscribe((data)=>
         { let d = data[0].filter( off => (off.id === this.id))[0];
@@ -40,11 +42,20 @@ export class EditorComponent implements OnInit {
 
   onSubmit() {
     if(this.type === "offers"){
-      this.dataService.putOffer(this.offerModel)
+      if(this.newsModel.id == null){
+        this.dataService.saveOffer(this.offerModel)
+      }else{
+        this.dataService.putOffer(this.offerModel)
+      }
+
     }else{
-      this.dataService.putNews(this.newsModel);
+      if(this.newsModel.id == null){
+        this.dataService.saveNews(this.newsModel);
+      }else{
+        this.dataService.putNews(this.newsModel);
+      }
+
     }
-    this.dataService.getHomePageData();
     this.router.navigate(['/'])
 
   }

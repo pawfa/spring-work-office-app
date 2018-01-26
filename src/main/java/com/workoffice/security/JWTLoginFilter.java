@@ -35,8 +35,8 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         AccountCredentials creds = objectMapper
                 .readValue(req.getInputStream(), AccountCredentials.class);
-        logger.info(creds.getUsername());
-        logger.info(creds.getPassword());
+//        logger.info(creds.getUsername());
+//        logger.info(creds.getPassword());
         return getAuthenticationManager().authenticate(
                 new UsernamePasswordAuthenticationToken(
                         creds.getUsername(),

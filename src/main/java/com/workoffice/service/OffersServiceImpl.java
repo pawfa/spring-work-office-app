@@ -3,6 +3,7 @@ package com.workoffice.service;
 import com.workoffice.entity.Offer;
 import com.workoffice.repository.OffersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public class OffersServiceImpl implements OffersService {
 
     @Override
     public List<Offer> findAll() {
-        return offersRepository.findAll();
+        return offersRepository.findAll(new Sort(Sort.Direction.DESC, "_id"));
     }
 
     @Override
