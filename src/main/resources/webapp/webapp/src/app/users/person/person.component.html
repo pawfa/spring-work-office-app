@@ -2,7 +2,7 @@
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
   <div class="form-group">
     <label for="inputEmail">Email</label>
-    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email" [(ngModel)]="inputEmail" [disabled]="disable" required minlength="4" #inputEmailVal="ngModel">
+    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email" [ngModel]="inputEmail" [disabled]="disable" required minlength="4" #inputEmailVal="ngModel">
     <div *ngIf="inputEmailVal.invalid && (inputEmailVal.dirty || inputEmailVal.touched)"
          class="alert alert-danger">
     <div *ngIf="inputEmailVal.errors.required">
@@ -15,7 +15,7 @@
   </div>
   <div class="form-group">
     <label for="inputPassword">Password</label>
-    <input type="password" class="form-control" name ="inputPassword" id="inputPassword" placeholder="Password" [(ngModel)]="inputPassword" [disabled]="disable" required required minlength="4" #inputPasswordVal="ngModel">
+    <input type="password" class="form-control" name ="inputPassword" id="inputPassword" placeholder="Password" [ngModel]="inputPassword" [disabled]="disable" required required minlength="4" #inputPasswordVal="ngModel">
     <div *ngIf="inputPasswordVal.invalid && (inputPasswordVal.dirty || inputPasswordVal.touched)"
          class="alert alert-danger">
       <div *ngIf="inputPasswordVal.errors.required">
@@ -28,7 +28,7 @@
   </div>
   <div class="form-group">
     <label for="cvDescription">Opis CV</label>
-    <textarea class="form-control" id="cvDescription" rows="6" name="cvDescription" [(ngModel)]="inputCvDescription"></textarea>
+    <textarea class="form-control" id="cvDescription" rows="6" name="cvDescription" [ngModel]="inputCvDescription"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlFile1">Plik CV</label>

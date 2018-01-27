@@ -1,7 +1,5 @@
-import {MainUser} from "../shared/mainUser";
+import {User} from "../shared/user";
 
-export class Emp extends MainUser {
+export class Emp extends User {
    companyName: String;
-   cv: String;
-
 }

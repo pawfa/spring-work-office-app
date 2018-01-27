@@ -3,7 +3,8 @@ import {Observable} from "rxjs/Observable";
 import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {News} from "./shared/news";
 import {Offer} from "./shared/offer";
-import {User} from "./users/user";
+import {Emp} from "./users/emp";
+import {Person} from "./users/person";
 
 @Injectable()
 export class ApiService {
@@ -34,7 +35,14 @@ export class ApiService {
 
   getUserData(){
     return this.http.get(this.server+"/profile/user", {headers: this.headers});
+  }
 
+  addPerson(person: Person){
+    this.http.post(this.server + "add/user", person, {headers: this.headers}).subscribe();
+  }
+
+  addEmp(emp: Emp){
+    this.http.post(this.server + "add/emp", emp, {headers: this.headers}).subscribe();
   }
 
   getAllOffers(): Observable<any> {

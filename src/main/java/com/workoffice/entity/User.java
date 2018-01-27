@@ -1,83 +1,45 @@
 package com.workoffice.entity;
 
 import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 
 @Entity
-public class User {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "user_type")
+public abstract class User {
 
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private int id;
+        @Id
+        @GeneratedValue(strategy= GenerationType.AUTO)
+        private int id;
 
-    @Column(name = "first_name")
-//    @NotEmpty
-    private String firstName;
+        @Column(name = "email")
+        @Email
+        private String email;
+        @Column(name = "password")
+        private String password;
 
-    @Column(name = "last_name")
-//    @NotEmpty
-    private String lastName;
+        public int getId() {
+                return id;
+        }
 
-    @Column(name = "EMAIL")
-//    @NotEmpty
-    @Email
-    private String email;
+        public void setId(int id) {
+                this.id = id;
+        }
 
-    @Column(name = "password")
-//    @NotEmpty
-    private String password;
+        public String getEmail() {
+                return email;
+        }
 
-    @Column(name = "cv")
-//    @NotEmpty
-    private String cv;
+        public void setEmail(String email) {
+                this.email = email;
+        }
 
-    public int getId() {
-        return id;
-    }
+        public String getPassword() {
+                return password;
+        }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCv() {
-        return cv;
-    }
-
-    public void setCv(String cv) {
-        this.cv = cv;
-    }
+        public void setPassword(String password) {
+                this.password = password;
+        }
 }

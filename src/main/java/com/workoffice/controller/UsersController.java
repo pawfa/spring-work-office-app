@@ -1,6 +1,8 @@
 package com.workoffice.controller;
 
+import com.workoffice.entity.Emp;
 import com.workoffice.entity.User;
+import com.workoffice.entity.Person;
 import com.workoffice.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -8,11 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 
 
 @CrossOrigin
@@ -33,9 +30,18 @@ public class UsersController {
         return userService.findAll();
     }
 
-    @PostMapping("/add")
-    public User addEmployee(@RequestBody User emp) {
-        return userService.save(emp);
+    @PostMapping("/add/person")
+    public Person addUser(@RequestBody Person person) {
+        logger.info(person.getFirstName());
+//        return userService.save(person);
+        return null;
+    }
+
+    @PostMapping("/add/emp")
+    public Emp addEmployee(@RequestBody Emp emp) {
+        logger.info(emp.getDescription());
+//        return userService.save(emp);
+        return null;
     }
 
     @GetMapping("/profile/user/")

@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
 
                 .authorizeRequests()
-                .antMatchers("/","/h2/*", "/profile/user/").permitAll()
+                .antMatchers("/","/h2/*", "/profile/user/","/add/*" ).permitAll()
                 .antMatchers( HttpMethod.POST,"/login").permitAll()
                 .anyRequest().authenticated()
                 .and()
@@ -41,13 +41,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // this disables session creation on Spring Security
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        // Create a default account
-//        auth.inMemoryAuthentication()
-//                .withUser("admin")
-//                .password("pass")
-//                .roles("ADMIN");
-//    }
 }

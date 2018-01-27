@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MainUser} from "../mainUser";
+import {User} from "../user";
 import {AuthenticationService} from "../authentication.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
@@ -10,7 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class LoginFormComponent implements OnInit {
 
-  private userModel = new MainUser();
+  private userModel = new User();
   private error : string;
   private loading = false;
   private returnUrl;
