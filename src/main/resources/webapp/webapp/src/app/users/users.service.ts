@@ -16,7 +16,7 @@ export class UsersService implements OnInit {
   }
 
   addUser(user: User, typeOfAccount: string){
-      if(typeOfAccount === 'company'){
+      if(typeOfAccount === 'Company'){
         this.apiService.addEmp(<Emp>user);
       }else{
         this.apiService.addPerson(<Person>user)

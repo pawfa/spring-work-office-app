@@ -24,7 +24,8 @@ import {PagerService} from "./shared/pager.service";
 import {TokenInterceptor} from "./shared/token-interceptor";
 import { PersonComponent } from './users/person/person.component';
 import { EmpComponent } from './users/emp/emp.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationComponent } from './users/registration/registration.component';
+import {UsersService} from "./users/users.service";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ApiService,
     AuthenticationService,
     PagerService,
+    UsersService,
     {provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true}

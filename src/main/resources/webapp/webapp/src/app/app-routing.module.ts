@@ -8,10 +8,13 @@ import {LoginFormComponent} from "./shared/login-form/login-form.component";
 import {AuthGuard} from "./shared/auth.guard";
 import {EmpComponent} from "./users/emp/emp.component";
 import {PersonComponent} from "./users/person/person.component";
+import {RegistrationComponent} from "./users/registration/registration.component";
+
 
 const routes = [
   {path: '', component: CentralComponent, pathMatch: "full"},
   {path: 'login', component: LoginFormComponent,pathMatch: "full"},
+  {path: 'registration', component: RegistrationComponent,pathMatch: "full"},
   {path: 'news/editor', component: EditorComponent,pathMatch: "full"},
   {path: 'news/editor/:id', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/editor', component: EditorComponent,pathMatch: "full"},

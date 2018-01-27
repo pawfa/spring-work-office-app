@@ -7,13 +7,15 @@ import {User} from "../../shared/user";
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
+
 export class RegistrationComponent implements OnInit {
-  mainUser: User = new User();
+  user: User;
   typeOfAccunt: string;
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {
+    this.user = new User();
   }
 
   onSubmit(submittedForm){
@@ -21,6 +23,6 @@ export class RegistrationComponent implements OnInit {
     if(submittedForm.invalid){
       return;
     }
-    this.usersService.addUser(this.mainUser,this.typeOfAccunt)
+    this.usersService.addUser(this.user,this.typeOfAccunt)
   }
 }

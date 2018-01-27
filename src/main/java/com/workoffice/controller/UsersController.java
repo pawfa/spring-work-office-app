@@ -32,16 +32,17 @@ public class UsersController {
 
     @PostMapping("/add/person")
     public Person addUser(@RequestBody Person person) {
-        logger.info(person.getFirstName());
-//        return userService.save(person);
-        return null;
+//        logger.info(person.getFirstName());
+        return userService.save(person);
+//        return null;
     }
 
     @PostMapping("/add/emp")
     public Emp addEmployee(@RequestBody Emp emp) {
-        logger.info(emp.getDescription());
-//        return userService.save(emp);
-        return null;
+//        logger.info(emp.getDescription());
+        logger.info(emp.getPassword());
+        return userService.save(emp);
+//        return null;
     }
 
     @GetMapping("/profile/user/")

@@ -38,10 +38,11 @@ export class ApiService {
   }
 
   addPerson(person: Person){
-    this.http.post(this.server + "add/user", person, {headers: this.headers}).subscribe();
+    this.http.post(this.server + "add/person", person, {headers: this.headers}).subscribe();
   }
 
   addEmp(emp: Emp){
+    console.log(emp);
     this.http.post(this.server + "add/emp", emp, {headers: this.headers}).subscribe();
   }
 
