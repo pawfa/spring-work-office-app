@@ -34,7 +34,7 @@ export class ApiService {
   }
 
   getUserData(){
-    return this.http.get(this.server+"/profile/user", {headers: this.headers});
+    return this.http.get(this.server+"profile", {headers: this.headers});
   }
 
   addPerson(person: Person){

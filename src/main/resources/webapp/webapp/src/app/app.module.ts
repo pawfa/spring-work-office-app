@@ -22,7 +22,7 @@ import {AuthenticationService} from "./shared/authentication.service";
 import {AuthGuard} from "./shared/auth.guard";
 import {PagerService} from "./shared/pager.service";
 import {TokenInterceptor} from "./shared/token-interceptor";
-import { PersonComponent } from './users/person/person.component';
+import { UserComponent } from './users/user/user.component';
 import { EmpComponent } from './users/emp/emp.component';
 import { RegistrationComponent } from './users/registration/registration.component';
 import {UsersService} from "./users/users.service";
@@ -41,7 +41,7 @@ import {UsersService} from "./users/users.service";
     NewsPreviewListComponent,
     EditorComponent,
     LoginFormComponent,
-    PersonComponent,
+    UserComponent,
     EmpComponent,
     RegistrationComponent
   ],

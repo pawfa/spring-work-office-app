@@ -32,7 +32,7 @@ public class UsersController {
 
     @PostMapping("/add/person")
     public Person addUser(@RequestBody Person person) {
-//        logger.info(person.getFirstName());
+        logger.info(person.getFirstName());
         return userService.save(person);
 //        return null;
     }
@@ -45,7 +45,7 @@ public class UsersController {
 //        return null;
     }
 
-    @GetMapping("/profile/user/")
+    @GetMapping("/profile")
     public User getUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();

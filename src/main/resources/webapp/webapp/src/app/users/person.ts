@@ -1,5 +1,6 @@
 import {User} from "../shared/user";
 
 export class Person extends User {
-   lastName: String;
+  firstName: string;
+  lastName: string;
 }

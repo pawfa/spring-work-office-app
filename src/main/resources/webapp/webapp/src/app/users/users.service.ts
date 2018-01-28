@@ -16,11 +16,14 @@ export class UsersService implements OnInit {
   }
 
   addUser(user: User, typeOfAccount: string){
-      if(typeOfAccount === 'Company'){
+      if(typeOfAccount === 'emp' || typeOfAccount === 'Company'){
         this.apiService.addEmp(<Emp>user);
       }else{
         this.apiService.addPerson(<Person>user)
       }
+  }
 
+  getUser(){
+    return this.apiService.getUserData();
   }
 }

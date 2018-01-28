@@ -31,6 +31,9 @@
     </ul>
 
   </div>
-  <app-login-header></app-login-header>
+
+  <button (click)="onLogout()" *ngIf="isLoggedIn | async">Logout</button>
+  <!--<app-login-header></app-login-header>-->
+  <app-login-header *ngIf="!(isLoggedIn | async)"></app-login-header>
 </nav>
 </div>
