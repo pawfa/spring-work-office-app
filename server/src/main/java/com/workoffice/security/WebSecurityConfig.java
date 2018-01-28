@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
 
                 .authorizeRequests()
-                .antMatchers("/","/h2/*", "/profile/user/","/add/*", "/resources/**" ).permitAll()
+                .antMatchers("/**","/h2/*", "/profile/user/","/add/*", "/resources/**" ).permitAll()
                 .antMatchers( HttpMethod.POST,"/login").permitAll()
                 .anyRequest().authenticated();
 //                .and()

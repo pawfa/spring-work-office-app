@@ -1,0 +1,39 @@
+<div class="container">
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" [(ngModel)]="user.email" email required minlength="4" #inputEmailVal="ngModel">
+    <div *ngIf="inputEmailVal.invalid && (inputEmailVal.dirty || inputEmailVal.touched)"
+         class="alert alert-danger">
+      <div *ngIf="inputEmailVal.errors.required">
+        Email is required.
+      </div>
+      <div *ngIf="inputEmailVal.errors.email">
+        Wrong email address
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password"  name="password" required minlength="4" #inputPasswordVal="ngModel">
+    <div *ngIf="inputPasswordVal.invalid && (inputPasswordVal.dirty || inputPasswordVal.touched)"
+         class="alert alert-danger">
+      <div *ngIf="inputPasswordVal.errors.required">
+        Password is required.
+      </div>
+      <div *ngIf="inputPasswordVal.errors.minlength">
+        Password must be at least 4 characters long.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="typeOfAccount">Choose account type</label>
+    <select class="form-control" id="typeOfAccount" [(ngModel)]="typeOfAccunt" name="typeOfAccount">
+      <option>Student/Graduate</option>
+      <option>Company</option>
+    </select>
+  </div>
+  <button type="submit"  class="btn btn-primary">Submit</button>
+
+</form>
+</div>
