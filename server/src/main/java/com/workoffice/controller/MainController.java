@@ -26,11 +26,11 @@ public class MainController {
         this.offersService = offersService;
     }
 
-    @RequestMapping("/users")
-    public @ResponseBody String getUsers() {
-        return "{\"users\":[{\"firstname\":\"Richard\", \"lastname\":\"Feynman\"}," +
-                "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
-    }
+//    @RequestMapping("/")
+//    public @ResponseBody String getUsers() {
+//        return "{\"users\":[{\"firstname\":\"Richard\", \"lastname\":\"Feynman\"}," +
+//                "{\"firstname\":\"Marie\",\"lastname\":\"Curie\"}]}";
+//    }
 
     @GetMapping("/")
     public List<Object> getHomePageData() {

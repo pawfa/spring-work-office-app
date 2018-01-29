@@ -9,7 +9,7 @@ import {Person} from "./users/person";
 @Injectable()
 export class ApiService {
 
-  private server = "http://localhost:8080/";
+  private server = "http://back_office.pawfa.usermd.net:8088/";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
@@ -17,7 +17,7 @@ export class ApiService {
   }
 
   login(user) {
-    return this.http.post("http://localhost:8080/login", JSON.stringify(user), {headers: this.headers,observe: "response"});
+    return this.http.post(this.server+"login", JSON.stringify(user), {headers: this.headers,observe: "response"});
   }
 
   getHomePageData(): Observable<any> {

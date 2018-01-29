@@ -69,27 +69,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>exec-npm-run-tsc</id>
-            <phase>generate-sources</phase>
-            <configuration>
-              <workingDirectory>${project.basedir}/src/main/resources</workingDirectory>
-              <executable>npm</executable>
-              <arguments>
-                <argument>run</argument>
-                <argument>tsc</argument>
-              </arguments>
-            </configuration>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
   </build>
 
