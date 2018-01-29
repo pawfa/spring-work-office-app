@@ -9,9 +9,6 @@ public class Emp extends User {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "description")
-    private String description;
-
     public String getName() {
         return name;
     }
@@ -20,11 +17,4 @@ public class Emp extends User {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

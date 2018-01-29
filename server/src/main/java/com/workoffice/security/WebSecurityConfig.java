@@ -27,18 +27,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/**","/h2/*", "/profile/user/","/add/*", "/resources/**" ).permitAll()
                 .antMatchers( HttpMethod.POST,"/login").permitAll()
-                .anyRequest().authenticated();
-//                .and()
+                .anyRequest().authenticated()
+                .and()
 
                 // We filter the api/login requests
-//                .addFilterBefore(new MyCorsFilter(), ChannelProcessingFilter.class)
-//                .addFilterBefore(new JWTLoginFilter("/login", authenticationManager()),
-//                        UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new MyCorsFilter(), ChannelProcessingFilter.class)
+                .addFilterBefore(new JWTLoginFilter("/login", authenticationManager()),
+                        UsernamePasswordAuthenticationFilter.class)
 
                 // And filter other requests to check the presence of JWT in header
-//                .addFilterBefore(new JWTAuthenticationFilter(),
-//                        UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new JWTAuthenticationFilter(),
+                        UsernamePasswordAuthenticationFilter.class)
                 // this disables session creation on Spring Security
-//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 }

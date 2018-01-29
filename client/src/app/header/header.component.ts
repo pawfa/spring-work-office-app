@@ -10,11 +10,13 @@ import {AuthenticationService} from "../shared/authentication.service";
 export class HeaderComponent implements OnInit {
 
   isLoggedIn: Observable<boolean>;
+  typeOfUser: Observable<string[]>;
 
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit() {
     this.isLoggedIn = this.authService.isLoggedIn;
+    this.typeOfUser = this.authService.getTypeOfUser();
   }
 
   onLogout(){

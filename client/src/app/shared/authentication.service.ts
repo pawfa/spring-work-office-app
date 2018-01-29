@@ -9,9 +9,10 @@ import * as jwt_decode from 'jwt-decode';
 export class AuthenticationService {
 
   private loggedIn = new BehaviorSubject<boolean>(false);
+  private userType = new BehaviorSubject<string[]>([]);
   private token: string;
 
-  constructor(private apiService : ApiService, private router: Router) {
+  constructor(private apiService: ApiService, private router: Router) {
     this.token = localStorage.getItem('currentUser')
   }
 
@@ -20,12 +21,14 @@ export class AuthenticationService {
       (resp) => {
         let token = resp.headers.get('Authorization').substr(7);
         if (token) {
+          // this.userType.next(user.user_type);
           // set token property
           this.token = token;
           // store username and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser',  token);
+          localStorage.setItem('currentUser', token);
 
           // return true to indicate successful login
+          this.getTypeOfUser();
           this.loggedIn.next(true);
           return true;
         } else {
@@ -40,7 +43,8 @@ export class AuthenticationService {
     this.loggedIn.next(!this.isTokenExpired());
     return this.loggedIn.asObservable();
   }
-  getTokenExpirationDate(token){
+
+  getTokenExpirationDate(token) {
     const decoded = jwt_decode(token);
     if (decoded.exp === undefined) return null;
     const date = new Date(0);
@@ -48,18 +52,20 @@ export class AuthenticationService {
     return date;
   }
 
-  isTokenExpired(){
-    if(!this.token) return true;
+  isTokenExpired() {
+    if (!this.token) return true;
     const date = this.getTokenExpirationDate(this.token);
-    if(date === undefined) return false;
+    if (date === undefined) return false;
     return !(date.valueOf() > new Date().valueOf());
   }
 
   logout(): void {
     // clear token remove user from local storage to log user out
-    this.loggedIn.next(false);
+
+    this.loggedIn.next(false)
     this.token = null;
     localStorage.removeItem('currentUser');
+    this.getTypeOfUser();
     this.router.navigate(['/']);
   }
 
@@ -67,6 +73,18 @@ export class AuthenticationService {
     let currentUser = JSON.parse(localStorage.getItem('currentUser'));
     let token = currentUser && currentUser.token;
     return token ? token : "";
+  }
+
+  getTypeOfUser(): Observable<string[]> {
+    // if(this.token == null) return this.userType.next([]);
+    if (this.token) {
+      const decoded = jwt_decode(this.token);
+      this.userType.next(decoded.user_type);
+      return this.userType.asObservable();
+    }
+    this.userType.next([]);
+    return this.userType.asObservable();
+
   }
 
 }

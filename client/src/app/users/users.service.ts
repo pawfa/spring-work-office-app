@@ -26,4 +26,5 @@ export class UsersService implements OnInit {
   getUser(){
     return this.apiService.getUserData();
   }
+
 }

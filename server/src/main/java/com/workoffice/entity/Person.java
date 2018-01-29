@@ -13,9 +13,6 @@ public class Person extends User {
     private String lastName;
 
 
-    @Column(name = "cv")
-    private String cv;
-
     public String getFirstName() {
         return firstName;
     }
@@ -32,11 +29,4 @@ public class Person extends User {
         this.lastName = lastName;
     }
 
-    public String getCv() {
-        return cv;
-    }
-
-    public void setCv(String cv) {
-        this.cv = cv;
-    }
 }

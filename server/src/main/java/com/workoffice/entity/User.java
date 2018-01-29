@@ -22,6 +22,9 @@ public abstract class User {
         @Column(name = "user_type", insertable = false, updatable = false)
         private String userType;
 
+        @Column(name = "cv")
+        private String cv;
+
         public int getId() {
                 return id;
         }
@@ -48,5 +51,17 @@ public abstract class User {
 
         public String getUserType() {
                 return userType;
+        }
+
+        public void setUserType(String userType) {
+                this.userType = userType;
+        }
+
+        public String getCv() {
+                return cv;
+        }
+
+        public void setCv(String cv) {
+                this.cv = cv;
         }
 }

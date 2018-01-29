@@ -9,7 +9,8 @@ import {Person} from "./users/person";
 @Injectable()
 export class ApiService {
 
-  private server = "http://back_office.pawfa.usermd.net:8088/";
+  // private server = "http://back_office.pawfa.usermd.net:8088/";
+  private server = "http://localhost:8080/";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
@@ -42,7 +43,6 @@ export class ApiService {
   }
 
   addEmp(emp: Emp){
-    console.log(emp);
     this.http.post(this.server + "add/emp", emp, {headers: this.headers}).subscribe();
   }
 
