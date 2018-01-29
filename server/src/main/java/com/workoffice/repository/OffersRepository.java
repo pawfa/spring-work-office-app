@@ -12,7 +12,8 @@ public interface OffersRepository extends MongoRepository<Offer, String> {
 
     @Override
     List<Offer> findAll(Sort sort);
-
     @Override
     <S extends Offer> S save(S s);
+    Offer findOfferById(String id);
+
 }

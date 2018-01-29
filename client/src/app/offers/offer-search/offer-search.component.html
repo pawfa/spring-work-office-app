@@ -1,0 +1,24 @@
+<form>
+  <div class="form-group">
+    <label for="searchTerm">Search term</label>
+    <input type="text" class="form-control" id="searchTerm" [(ngModel)]="searchTerm" name="searchTerm">
+  </div>
+  <div class="form-group">
+    <label for="category">Language</label>
+    <select class="form-control" id="category" [(ngModel)]="category" name="category">
+      <option>Architecture</option>
+      <option>Chemistry</option>
+      <option>Finances</option>
+      <option>Information Technology</option>
+      <option>Logistics</option>
+    </select>
+  </div>
+</form>
+
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let off of offers">
+      <app-offer-item></app-offer-item>
+    </div>
+  </div>
+</div>

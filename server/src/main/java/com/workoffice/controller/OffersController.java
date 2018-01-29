@@ -33,4 +33,11 @@ public class OffersController {
         offersService.insert(offer);
     }
 
+    @GetMapping("/get/offer/{id}")
+    public Offer getOfferFromId(@PathVariable(value = "id") String id) {
+        Offer offer = offersService.findOfferById(id);
+        logger.info("Zwracam oferte o id "+id);
+        return offer;
+    }
+
 }

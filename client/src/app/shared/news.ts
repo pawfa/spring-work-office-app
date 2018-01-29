@@ -1,5 +1,5 @@
 export class News {
-  id: String;
-  header: String;
-  paragraph: String;
+  id: string;
+  header: string;
+  paragraph: string;
 }

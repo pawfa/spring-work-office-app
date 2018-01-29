@@ -11,8 +11,8 @@ import {Offer} from "../offer";
   styleUrls: ['./editor.component.css']
 })
 export class EditorComponent implements OnInit {
-  type : String;
-  id: String = null;
+  type : string;
+  id: string = null;
 
   private newsModel = new News();
   private offerModel = new Offer();
@@ -31,12 +31,12 @@ export class EditorComponent implements OnInit {
           this.newsModel.paragraph = d.paragraph});
     }else if(this.type === "offers" && !isNullOrUndefined(this.route.snapshot.params['id'])){
       this.offerModel.id = this.id;
-      this.dataService.getOffers()
-        .subscribe((data)=>
-        { let d = data[0].filter( off => (off.id === this.id))[0];
-          this.offerModel.title = d.title;
-          this.offerModel.description = d.description;
-          this.offerModel.category = d.category;});
+      this.dataService.getOfferFromId(this.id)
+        .subscribe((data:Offer)=>
+        {
+          this.offerModel.title = data.title;
+          this.offerModel.description = data.description;
+          this.offerModel.category = data.category;});
     }
   }
 

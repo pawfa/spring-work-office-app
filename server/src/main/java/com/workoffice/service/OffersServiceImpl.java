@@ -27,4 +27,9 @@ public class OffersServiceImpl implements OffersService {
     public <S extends Offer> S insert(S s) {
         return offersRepository.save(s);
     }
+
+    @Override
+    public Offer findOfferById(String id) {
+        return offersRepository.findOfferById(id);
+    }
 }

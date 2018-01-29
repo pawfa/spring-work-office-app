@@ -8,6 +8,7 @@ import {LoginFormComponent} from "./shared/login-form/login-form.component";
 import {AuthGuard} from "./shared/auth.guard";
 import {RegistrationComponent} from "./users/registration/registration.component";
 import {UserComponent} from "./users/user/user.component";
+import {OfferSearchComponent} from "./offers/offer-search/offer-search.component";
 
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
   {path: 'registration', component: RegistrationComponent,pathMatch: "full"},
   {path: 'news/editor', component: EditorComponent,pathMatch: "full"},
   {path: 'news/editor/:id', component: EditorComponent,pathMatch: "full"},
+  {path: 'offers', component: OfferSearchComponent,pathMatch: "full"},
   {path: 'offers/editor', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/editor/:id', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/:id', component: OfferItemComponent,pathMatch: "full", canActivate: [AuthGuard]},

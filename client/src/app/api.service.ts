@@ -37,6 +37,9 @@ export class ApiService {
   getUserData(){
     return this.http.get(this.server+"profile", {headers: this.headers});
   }
+  getOfferFromId(id: string){
+    return this.http.get(this.server+"get/offer/"+id, {headers: this.headers});
+  }
 
   addPerson(person: Person){
     this.http.post(this.server + "add/person", person, {headers: this.headers}).subscribe();
@@ -47,7 +50,7 @@ export class ApiService {
   }
 
   getAllOffers(): Observable<any> {
-    return this.http.get(this.server + "get/offers");
+    return this.http.get(this.server + "get/offers",{headers: this.headers});
   }
 
   getAllNews(): Observable<any> {

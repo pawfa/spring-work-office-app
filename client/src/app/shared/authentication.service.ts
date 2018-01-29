@@ -61,11 +61,10 @@ export class AuthenticationService {
 
   logout(): void {
     // clear token remove user from local storage to log user out
-
     this.loggedIn.next(false)
     this.token = null;
     localStorage.removeItem('currentUser');
-    this.getTypeOfUser();
+    this.userType.next([]);
     this.router.navigate(['/']);
   }
 

@@ -5,17 +5,18 @@ import {HttpClient} from "@angular/common/http";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/Rx';
+import {Offer} from "../../shared/offer";
 
 @Component({
-  selector: 'app-offer',
+  selector: 'app-offer-item',
   templateUrl: './offer-item.component.html',
   styleUrls: ['./offer-item.component.css']
 })
 export class OfferItemComponent implements OnInit {
-  id: String;
-  title: String;
-  description: String;
-  category: String;
+  id: string;
+  title: string;
+  description: string;
+  category: string;
 
   constructor(private dataService : DataService,private route: ActivatedRoute) {
 
@@ -23,12 +24,12 @@ export class OfferItemComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    this.dataService.getOffers()
-      .subscribe((data)=>
-      { let d = data[0].filter( off => (off.id === this.id))[0];
-        this.title = d.title;
-        this.description = d.description;
-        this.category = d.category;});
+    this.dataService.getOfferFromId(this.id)
+      .subscribe((data: Offer)=>
+      {
+        this.title = data.title;
+        this.description = data.description;
+        this.category = data.category;});
   }
 
 }

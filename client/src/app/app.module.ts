@@ -26,6 +26,7 @@ import { UserComponent } from './users/user/user.component';
 import { EmpComponent } from './users/emp/emp.component';
 import { RegistrationComponent } from './users/registration/registration.component';
 import {UsersService} from "./users/users.service";
+import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {UsersService} from "./users/users.service";
     LoginFormComponent,
     UserComponent,
     EmpComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    OfferSearchComponent
   ],
   imports: [
     BrowserModule,
