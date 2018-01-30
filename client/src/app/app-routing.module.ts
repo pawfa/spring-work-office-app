@@ -17,7 +17,7 @@ const routes = [
   {path: 'registration', component: RegistrationComponent,pathMatch: "full"},
   {path: 'news/editor', component: EditorComponent,pathMatch: "full"},
   {path: 'news/editor/:id', component: EditorComponent,pathMatch: "full"},
-  {path: 'offers', component: OfferSearchComponent,pathMatch: "full"},
+  {path: 'offers', component: OfferSearchComponent,pathMatch: "full", canActivate: [AuthGuard]},
   {path: 'offers/editor', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/editor/:id', component: EditorComponent,pathMatch: "full"},
   {path: 'offers/:id', component: OfferItemComponent,pathMatch: "full", canActivate: [AuthGuard]},

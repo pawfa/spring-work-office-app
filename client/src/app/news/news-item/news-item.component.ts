@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DataService} from "../../data.service";
 import {ActivatedRoute} from "@angular/router";
+import {News} from "../../shared/news";
 
 @Component({
   selector: 'app-news-item',
@@ -8,20 +9,20 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
-  id : String;
-  header : String;
-  paragraph : String;
+  id : string;
+  header : string;
+  paragraph : string;
 
   constructor(private dataService : DataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
 
-    this.dataService.getNews()
-      .subscribe((data)=>
-      {let d = data[1].filter( off => (off.id === this.id))[0];
-        this.header = d.header;
-        this.paragraph = d.paragraph});
+    this.dataService.getNewsFromId(this.id)
+      .subscribe((data: News)=>
+      {
+        this.header = data.header;
+        this.paragraph = data.paragraph});
   }
 
 }

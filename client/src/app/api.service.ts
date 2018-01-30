@@ -21,24 +21,10 @@ export class ApiService {
     return this.http.post(this.server+"login", JSON.stringify(user), {headers: this.headers,observe: "response"});
   }
 
-  getHomePageData(): Observable<any> {
-    return this.http.get(this.server);
-  }
-
-  createNews(news: News) {
-    this.http.post(this.server + "put/news",  news, {headers: this.headers}).subscribe();
-
-  }
-
-  createOffer(offer: Offer) {
-    this.http.post(this.server + "put/offer", offer, {headers: this.headers}).subscribe();
-  }
+  /*-------- User part --------*/
 
   getUserData(){
     return this.http.get(this.server+"profile", {headers: this.headers});
-  }
-  getOfferFromId(id: string){
-    return this.http.get(this.server+"get/offer/"+id, {headers: this.headers});
   }
 
   addPerson(person: Person){
@@ -49,20 +35,41 @@ export class ApiService {
     this.http.post(this.server + "add/emp", emp, {headers: this.headers}).subscribe();
   }
 
+  /*-------- Offer part --------*/
+
+  createOffer(offer: Offer) {
+    this.http.post(this.server + "put/offer", offer, {headers: this.headers}).subscribe();
+  }
+
+  getOfferFromId(id: string){
+    return this.http.get(this.server+"get/offer/"+id, {headers: this.headers});
+  }
+
+  getTwoNewestOffers() {
+    return this.http.get(this.server + "get/offers",{headers: this.headers});
+  }
+
   getAllOffers(): Observable<any> {
     return this.http.get(this.server + "get/offers",{headers: this.headers});
   }
 
+  /*-------- News part --------*/
+
+  createNews(news: News) {
+    this.http.post(this.server + "put/news",  news, {headers: this.headers}).subscribe();
+  }
+
   getAllNews(): Observable<any> {
-    return this.http.get(this.server + "get/news");
+    return this.http.get(this.server + "get/news",{headers: this.headers});
   }
 
-  deleteOffer() {
-
+  getNewsFromId(id: string){
+    return this.http.get(this.server + "get/news/"+id,{headers: this.headers});
   }
 
-  deleteNews() {
+  getOfferFromSearchTerm(searchTerm: string, category: string) {
+    let params = new HttpParams().set('searchTerm', searchTerm).set('category',category);
+    return this.http.get(this.server + "search",{headers: this.headers, params: params});
 
   }
-
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../../data.service";
 import {Observable} from "rxjs/Observable";
+import {Offer} from "../../shared/offer";
 
 @Component({
   selector: 'app-offer-preview-list',
@@ -14,9 +15,10 @@ export class OfferPreviewListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dataService.getNews().subscribe(
-      (data) => this.data = data[0]
-    );
+    this.dataService.getTwoNewestOffers().subscribe(
+      (data:Offer[]) => {
+        this.data = data
+      });
   }
 
 }

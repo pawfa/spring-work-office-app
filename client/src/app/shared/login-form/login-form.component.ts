@@ -13,12 +13,17 @@ export class LoginFormComponent implements OnInit {
   private userModel = new User();
   private error : string;
   private loading = false;
-  private returnUrl;
+  private returnUrl: string;
+  private message: string;
 
   constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    let queryParams = this.route.snapshot.queryParams['returnUrl'];
+    this.returnUrl = queryParams || '/';
+    if(queryParams){
+      this.message = "You are not logged in";
+    }
   }
 
   loginUser() {

@@ -28,4 +28,9 @@ public class NewsServiceImpl implements NewsService {
     public <S extends News> S save(S s) {
         return newsRepository.save(s);
     }
+
+    @Override
+    public News findNewsById(String id) {
+        return newsRepository.findNewsById(id);
+    }
 }

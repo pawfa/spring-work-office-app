@@ -32,4 +32,12 @@ public class OffersServiceImpl implements OffersService {
     public Offer findOfferById(String id) {
         return offersRepository.findOfferById(id);
     }
+
+    @Override
+    public List<Offer> searchOffer( String category,String searchTerm) {
+        if(category.equals("All")){
+            return offersRepository.findAll();
+        }
+        return offersRepository.findOfferByCategoryAndDescriptionOrTitleContaining(category,searchTerm);
+    }
 }

@@ -42,4 +42,11 @@ public class NewsController {
         newsService.save(news);
     }
 
+    @GetMapping("/get/news/{id}")
+    public News getNewsFromId(@PathVariable(value = "id") String id) {
+        News news = newsService.findNewsById(id);
+        logger.info("Zwracam oferte o id "+id);
+        return news;
+    }
+
 }

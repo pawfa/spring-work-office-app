@@ -36,8 +36,15 @@ public class OffersController {
     @GetMapping("/get/offer/{id}")
     public Offer getOfferFromId(@PathVariable(value = "id") String id) {
         Offer offer = offersService.findOfferById(id);
-        logger.info("Zwracam oferte o id "+id);
         return offer;
+    }
+
+
+    @GetMapping(value = "/search", params = {"searchTerm","category"})
+    public List<Offer> getOfferFromSearchTerm(@RequestParam(value = "searchTerm") String searchTerm, @RequestParam(value = "category") String category) {
+        List<Offer> offers = offersService.searchOffer(category,searchTerm);
+        logger.info(searchTerm);
+        return offers;
     }
 
 }

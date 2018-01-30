@@ -32,9 +32,6 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 
         User user = userService.findByEmail(s);
         logger.info(user.getUserType());
-//        if(user == null){
-//            throw new UsernameNotFoundException("username not found");
-//        }
         authorities.add(new SimpleGrantedAuthority(user.getUserType()));
 
 

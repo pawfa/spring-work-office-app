@@ -1,4 +1,5 @@
 <div class="container">
+  <div *ngIf="message" class="alert alert-danger">{{message}}</div>
 <form #form="ngForm" (ngSubmit)="loginUser()">
   <div class="form-group">
     <label for="email">Email address</label>

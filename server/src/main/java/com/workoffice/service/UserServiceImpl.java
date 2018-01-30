@@ -37,4 +37,6 @@ public class UserServiceImpl implements UserService {
         logger.info(email);
         return userRepository.findByEmail(email);
     }
+
+
 }

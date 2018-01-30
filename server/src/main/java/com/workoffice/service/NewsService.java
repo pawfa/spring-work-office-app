@@ -9,4 +9,6 @@ public interface NewsService {
     List<News> findAll();
 
     <S extends News> S save(S s);
+
+    News findNewsById(String id);
 }

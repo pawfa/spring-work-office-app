@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @DiscriminatorValue("person")
+
 public class Person extends User {
 
     @Column(name = "first_name")
