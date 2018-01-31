@@ -13,13 +13,14 @@ import {Offer} from "../offer";
 export class EditorComponent implements OnInit {
   type : string;
   id: string = null;
+  categories: string[];
 
   private newsModel = new News();
   private offerModel = new Offer();
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-
+    this.categories = this.dataService.getCategories().slice(1);
     this.id = this.route.snapshot.params['id'];
     this.type = this.route.snapshot.url[0].path;
     if(this.type === "news" && !isNullOrUndefined(this.route.snapshot.params['id'])){

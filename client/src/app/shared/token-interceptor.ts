@@ -2,12 +2,12 @@
 import { Injectable } from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
+import {SpinnerService} from "./spinner/spinner.service";
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
 
-
-  constructor() {
+  constructor(private spinnerService: SpinnerService) {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
@@ -20,11 +20,19 @@ export class TokenInterceptor implements HttpInterceptor {
           "Bearer " + idToken)
       });
 
-      return next.handle(cloned);
+      return next.handle(cloned).do(()=>{this.turnOnModal()}).finally(()=>{this.turnOffModal()});
     }
     else {
       return next.handle(req);
     }
   }
 
+  private turnOnModal() {
+    this.spinnerService.show()
+  }
+
+  private turnOffModal() {
+    this.spinnerService.hide();
+
+  }
 }

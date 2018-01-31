@@ -23,7 +23,9 @@
     </div>
     <div class="form-group">
       <label for="category">Category</label>
-      <input class="form-control" id="category" placeholder="This is category" name="category" [(ngModel)]="offerModel.category">
+      <select class="form-control" id="category" [(ngModel)]="offerModel.category" name="category" >
+        <option *ngFor="let cat of categories">{{cat}}</option>
+      </select>
     </div>
     <div class="form-group">
       <label for="description">Description</label>

@@ -1,8 +1,4 @@
 import {Component, Injectable, OnInit} from '@angular/core';
-import 'rxjs/add/operator/map'
-import {DataService} from "./data.service";
-import {HttpClient} from "@angular/common/http";
-import {ApiService} from "./api.service";
 
 @Component({
   selector: 'app-root',

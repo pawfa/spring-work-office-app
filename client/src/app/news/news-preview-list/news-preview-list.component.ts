@@ -17,7 +17,6 @@ export class NewsPreviewListComponent implements OnInit {
   }
 
   ngOnInit() {
-  console.log("working");
     this.dataService.getNews().subscribe(
       (data) => {this.data = data},
       error => console.log("Error: ", error),

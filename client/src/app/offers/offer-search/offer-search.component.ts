@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../../data.service";
 import {Offer} from "../../shared/offer";
-import {Observable} from "rxjs/Observable";
 import {Subject} from "rxjs/Subject";
 
 @Component({
@@ -11,13 +10,14 @@ import {Subject} from "rxjs/Subject";
 })
 export class OfferSearchComponent implements OnInit {
   searchTerm: string = "";
-  categories: string[] = ["All","Architecture","Chemistry","Finances","Information Technology","Logistics"];
-  selectedCategory: string = this.categories[0];
+  categories: string[];
+  selectedCategory: string;
   offers: Offer[];
   searchTerms = new Subject<string[]>();
 
   constructor(private dataService: DataService) {
-
+    this.categories = this.dataService.getCategories();
+    this.selectedCategory = this.categories[0];
     this.dataService.search(this.searchTerms)
       .subscribe((results: Offer[]) => {
         this.offers = results;

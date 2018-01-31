@@ -8,6 +8,8 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class DataService {
 
+  categories: string[] = ["All","Architecture","Chemistry","Finances","Information Technology","Logistics"];
+
   constructor(private apiService: ApiService) {
 
   }
@@ -51,5 +53,7 @@ export class DataService {
   }
 
 
-
+  getCategories() {
+    return this.categories;
+  }
 }

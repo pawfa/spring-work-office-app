@@ -27,6 +27,8 @@ import { EmpComponent } from './users/emp/emp.component';
 import { RegistrationComponent } from './users/registration/registration.component';
 import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import {SpinnerService} from "./shared/spinner/spinner.service";
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { OfferSearchComponent } from './offers/offer-search/offer-search.compone
     UserComponent,
     EmpComponent,
     RegistrationComponent,
-    OfferSearchComponent
+    OfferSearchComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { OfferSearchComponent } from './offers/offer-search/offer-search.compone
     AuthenticationService,
     PagerService,
     UsersService,
+    SpinnerService,
     {provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true}

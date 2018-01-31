@@ -10,7 +10,7 @@ import {Person} from "./users/person";
 export class ApiService {
 
   // private server = "http://back_office.pawfa.usermd.net:8088/";
-  private server = "http://localhost:8080/";
+  private server = "http://localhost:8088/";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
@@ -46,6 +46,7 @@ export class ApiService {
   }
 
   getTwoNewestOffers() {
+    console.log("uruchamian ")
     return this.http.get(this.server + "get/offers",{headers: this.headers});
   }
 
