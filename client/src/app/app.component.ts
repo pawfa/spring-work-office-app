@@ -1,8 +1,10 @@
-import {Component, Injectable, OnDestroy, OnInit} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
+import {fadeInAnimation} from "./shared/animations/fade-in.animation";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  animations: [fadeInAnimation],
   styleUrls: ['./app.component.css']
 })
 
@@ -14,8 +16,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
 
-
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
   }
 
 }

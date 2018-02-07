@@ -25,13 +25,8 @@ export class UserComponent implements OnInit {
     );
   }
 
-  onSubmit(submittedForm){
-    console.log(this.type);
-    // console.log(submittedForm);
-    // if(submittedForm.invalid){
-    //   return;
-    // }
-    // console.log(this.user.firstName)
+  onSubmit(){
+
     this.usersService.addUser(this.user, this.type);
   }
 }

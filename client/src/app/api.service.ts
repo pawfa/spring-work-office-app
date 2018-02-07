@@ -46,7 +46,6 @@ export class ApiService {
   }
 
   getTwoNewestOffers() {
-    console.log("uruchamian ")
     return this.http.get(this.server + "get/offers",{headers: this.headers});
   }
 
