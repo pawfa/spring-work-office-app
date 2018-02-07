@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
@@ -29,6 +28,8 @@ import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import {SpinnerService} from "./shared/spinner/spinner.service";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,9 @@ import {SpinnerService} from "./shared/spinner/spinner.service";
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [
     AuthGuard,

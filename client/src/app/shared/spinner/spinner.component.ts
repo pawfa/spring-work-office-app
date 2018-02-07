@@ -4,16 +4,16 @@ import {SpinnerService} from "./spinner.service";
 @Component({
   selector: 'app-spinner',
   template: '' +
-  '<div class="loader" *ngIf="show"></div>',
+  '<mat-spinner></mat-spinner>',
   styleUrls: ['./spinner.component.css']
 })
 export class SpinnerComponent implements OnInit {
 
-  // @Input()
+  @Input()
   public show: boolean;
 
   constructor(private spinnerService: SpinnerService) {
-    spinnerService.register(this);
+
   }
 
   ngOnInit() {
@@ -28,5 +28,4 @@ export class SpinnerComponent implements OnInit {
     console.log("chowam");
     this.show = false;
   }
-
 }

@@ -28,11 +28,11 @@ export class TokenInterceptor implements HttpInterceptor {
   }
 
   private turnOnModal() {
-    this.spinnerService.show()
+    // this.spinnerService.show()
   }
 
   private turnOffModal() {
-    this.spinnerService.hide();
+    // this.spinnerService.hide();
 
   }
 }
