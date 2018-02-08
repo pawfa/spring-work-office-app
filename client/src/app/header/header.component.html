@@ -8,17 +8,14 @@
       <li class="nav-item active">
         <a class="nav-link" routerLink="/">Start <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" >
         <a class="nav-link" routerLink="/offers">Offers</a>
       </li>
-      <li class="nav-item"*ngIf="(typeOfUser | async).includes('admin')">
+      <li class="nav-item"*ngIf="(typeOfUser | async).includes('admin')" >
         <a class="nav-link" routerLink="/news/editor">Editor</a>
       </li>
-      <li class="nav-item"*ngIf="(typeOfUser | async).includes('emp')">
-        <a class="nav-link" routerLink="/offers/editor">Add offer</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/profile">Profil</a>
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="/profile" >Profile</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
@@ -30,8 +27,12 @@
           <a class="dropdown-item" href="#">Bytom</a>
         </div>
       </li>
-      <li class="nav-item" *ngIf="!(isLoggedIn | async)">
-        <a class="nav-link" routerLink="/registration">Registration</a>
+      <li class="nav-item" >
+        <a class="nav-link" *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)" id="registration" routerLink="/registration">Registration</a>
+        <a class="nav-link" *ngIf="(typeOfUser | async).includes('emp')" [@linkAnimation]="(isLoggedIn | async)" id="editor" routerLink="/offers/editor">Add offer</a>
+      </li>
+      <li class="nav-item"  >
+
       </li>
     </ul>
 
