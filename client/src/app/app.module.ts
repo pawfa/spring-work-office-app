@@ -27,6 +27,7 @@ import { RegistrationComponent } from './users/registration/registration.compone
 import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -45,14 +46,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserComponent,
     EmpComponent,
     RegistrationComponent,
-    OfferSearchComponent,
+    OfferSearchComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [
     AuthGuard,
