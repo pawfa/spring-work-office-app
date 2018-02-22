@@ -28,6 +28,8 @@ import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [
     AuthGuard,

@@ -45,6 +45,8 @@ export class LoginHeaderComponent implements OnInit {
 
   }
   openSnack(){
-    this.snackBar.open(this.error, "action");
+    this.snackBar.open(this.error, "Undo",{
+      duration: 3000
+    });
   }
 }

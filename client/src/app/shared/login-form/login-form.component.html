@@ -1,16 +1,42 @@
+<!--<div class="container">-->
+<!--<div *ngIf="message" class="alert alert-danger">{{message}}</div>-->
+<!--<form #form="ngForm" (ngSubmit)="loginUser()">-->
+<!--<div class="form-group">-->
+<!--<label for="email">Email address</label>-->
+<!--<input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="userModel.email">-->
+<!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label for="password">Password</label>-->
+<!--<input type="password" name="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="userModel.password">-->
+<!--</div>-->
+<!--<div *ngIf="error" class="alert alert-danger">{{error}}</div>-->
+<!--<button type="submit" class="btn btn-primary">Submit</button>-->
+<!--</form>-->
+<!--</div>-->
 <div class="container">
-  <div *ngIf="message" class="alert alert-danger">{{message}}</div>
-<form #form="ngForm" (ngSubmit)="loginUser()">
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="userModel.email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" name="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="userModel.password">
-  </div>
-  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+  <form class="example-form" #form="ngForm" (ngSubmit)="loginUser()">
+    <div class="row">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" [(ngModel)]="userModel.email" #emailFormControl="ngModel" name="email"
+               required email>
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Password" [(ngModel)]="userModel.password" #passwordFormControl="ngModel"
+               name="password" required>
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" type="submit">Primary</button>
+  </form>
 </div>
