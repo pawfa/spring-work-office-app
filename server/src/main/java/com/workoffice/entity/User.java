@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "user_type")
-@DiscriminatorFormula("case when user_type in ('admin','person') then 'person' else 'emp' end")
+@DiscriminatorFormula("case when user_type='person' then 'person' when user_type='emp' then 'emp' when user_type='admin' then 'admin' end")
 public abstract class User {
 
         @Id

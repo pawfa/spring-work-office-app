@@ -75,7 +75,6 @@ export class AuthenticationService {
   }
 
   getTypeOfUser(): Observable<string[]> {
-    // if(this.token == null) return this.userType.next([]);
     if (this.token) {
       const decoded = jwt_decode(this.token);
       this.userType.next(decoded.user_type);

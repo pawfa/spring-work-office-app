@@ -11,9 +11,7 @@
       <li class="nav-item" >
         <a class="nav-link" routerLink="/offers">Offers</a>
       </li>
-      <li class="nav-item"*ngIf="(typeOfUser | async).includes('admin')" >
-        <a class="nav-link" routerLink="/news/editor">Editor</a>
-      </li>
+
       <li class="nav-item" >
         <a class="nav-link" routerLink="/profile" >Profile</a>
       </li>
@@ -29,10 +27,10 @@
       </li>
       <li class="nav-item" >
         <a class="nav-link" *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)" id="registration" routerLink="/registration">Registration</a>
-        <a class="nav-link" *ngIf="(typeOfUser | async).includes('emp')" [@linkAnimation]="(isLoggedIn | async)" id="editor" routerLink="/offers/editor">Add offer</a>
+        <a class="nav-link" *ngIf="(typeOfUser | async).includes('emp') || (typeOfUser | async).includes('admin')" [@linkAnimation]="(isLoggedIn | async)" id="editor" routerLink="/offers/editor">Add offer</a>
       </li>
-      <li class="nav-item"  >
-
+      <li class="nav-item" >
+        <a class="nav-link" routerLink="/news/editor" *ngIf="(typeOfUser | async).includes('admin')" [@linkAnimation]="(isLoggedIn | async)">News editor</a>
       </li>
     </ul>
 
