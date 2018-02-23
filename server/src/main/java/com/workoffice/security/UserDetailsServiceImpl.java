@@ -29,12 +29,14 @@ public class UserDetailsServiceImpl implements UserDetailsService{
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
 
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
-
-        User user = userService.findByEmail(s);
-        logger.info(user.getUserType());
-        authorities.add(new SimpleGrantedAuthority(user.getUserType()));
-
-
-        return new org.springframework.security.core.userdetails.User(user.getEmail(),user.getPassword(),authorities);
+        //checking if user is in database
+        User user;
+        try {
+            user = userService.findByEmail(s);
+            authorities.add(new SimpleGrantedAuthority(user.getUserType()));
+            return new org.springframework.security.core.userdetails.User(user.getEmail(),user.getPassword(),authorities);
+        } catch (Exception e) {
+            throw new UsernameNotFoundException("User not found");
+        }
     }
 }

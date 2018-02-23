@@ -1,10 +1,9 @@
-<form class="form-inline" (ngSubmit) = loginUser(myForm) #myForm="ngForm">
-  <div class="form-group">
-
-    <input type="email" class="form-control" placeholder="Email" name="email" id="email" [(ngModel)]="userModel.email" [ngClass]="{'is-invalid': error }" #emailVal="ngModel" required>
-  </div>
-  <div class="form-group mx-sm-3">
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]="userModel.password" [ngClass]="{'is-invalid': error }" required >
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+<form (ngSubmit) = loginUser(myForm) #myForm="ngForm">
+  <mat-form-field [ngClass]="{'mat-input-invalid mat-form-field-invalid': error && focus}">
+    <input matInput placeholder="Email" [(ngModel)]="userModel.email" #emailFormControl="ngModel" name="email" email>
+  </mat-form-field>
+  <mat-form-field class="middle" [ngClass]="{'mat-input-invalid mat-form-field-invalid': error && focus}">
+    <input matInput placeholder="Password" type="password" [(ngModel)]="userModel.password" #passwordFormControl="ngModel" name="password">
+  </mat-form-field>
+  <button mat-button type="submit" id="subButton" (focus)="focus = true" (blur)="focus = false">Submit</button>
 </form>

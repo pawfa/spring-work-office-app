@@ -14,6 +14,7 @@ export class LoginHeaderComponent implements OnInit {
   private userModel = new User();
   private error : string;
   private returnUrl;
+  private focus :boolean = false;
 
 
   constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private snackBar: MatSnackBar){}
@@ -23,6 +24,7 @@ export class LoginHeaderComponent implements OnInit {
   }
 
   loginUser(event) {
+
     if(event.valid){
       this.authService.login(this.userModel).subscribe(response => {
           if (response === true) {
@@ -42,8 +44,9 @@ export class LoginHeaderComponent implements OnInit {
       this.error = "Invalid username or password";
       this.openSnack();
     }
-
   }
+
+  //wrong username or password snackbar
   openSnack(){
     this.snackBar.open(this.error, "Undo",{
       duration: 3000

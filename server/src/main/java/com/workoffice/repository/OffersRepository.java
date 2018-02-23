@@ -16,6 +16,7 @@ public interface OffersRepository extends MongoRepository<Offer, String> {
     @Override
     <S extends Offer> S save(S s);
     Offer findOfferById(String id);
+    List<Offer> findFirst2ByOrderByIdDesc();
 
     @Query("{'$and':[{'category' : ?0}, {'$or':[ {'description' : {$regex : '.*?1.*', $options: 'i'}}, {'title' : {$regex : '.*?1.*', $options: 'i'}}]}]}")
     List<Offer> findOfferByCategoryAndDescriptionOrTitleContaining(String category, String searchTerm);

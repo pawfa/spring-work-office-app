@@ -9,4 +9,5 @@ public interface OffersService {
     <S extends Offer> S insert(S s);
     Offer findOfferById(String id);
     List<Offer> searchOffer(String category,String searchTerm);
+    List<Offer> findTwoNewest();
 }

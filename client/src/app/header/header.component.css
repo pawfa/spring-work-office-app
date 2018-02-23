@@ -1,6 +1,7 @@
 .navbar{
   border: 1px lightgray solid;
   border-radius: 5px;
+  font-size: 17px;
 }
 .container{
   margin: 20px auto;

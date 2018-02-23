@@ -46,7 +46,7 @@ export class ApiService {
   }
 
   getTwoNewestOffers() {
-    return this.http.get(this.server + "get/offers",{headers: this.headers});
+    return this.http.get(this.server + "get/newestOffers",{headers: this.headers});
   }
 
   getAllOffers(): Observable<any> {

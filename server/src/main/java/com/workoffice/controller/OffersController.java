@@ -24,7 +24,14 @@ public class OffersController {
     @GetMapping("/get/offers")
     public List<Offer> getOffers() {
         List<Offer> lista = offersService.findAll();
-        logger.info("Pobieram oferty");
+        logger.info("Retrieving all offers from database");
+        return lista;
+    }
+
+    @GetMapping("/get/newestOffers")
+    public List<Offer> getNewstOffers() {
+        List<Offer> lista = offersService.findTwoNewest();
+        logger.info("Retrieving two newest offers from database");
         return lista;
     }
 
@@ -43,7 +50,7 @@ public class OffersController {
     @GetMapping(value = "/search", params = {"searchTerm","category"})
     public List<Offer> getOfferFromSearchTerm(@RequestParam(value = "searchTerm") String searchTerm, @RequestParam(value = "category") String category) {
         List<Offer> offers = offersService.searchOffer(category,searchTerm);
-        logger.info(searchTerm);
+        logger.info("Search term: "+searchTerm);
         return offers;
     }
 

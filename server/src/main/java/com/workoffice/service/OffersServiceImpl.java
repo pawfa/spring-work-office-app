@@ -40,4 +40,9 @@ public class OffersServiceImpl implements OffersService {
         }
         return offersRepository.findOfferByCategoryAndDescriptionOrTitleContaining(category,searchTerm);
     }
+
+    @Override
+    public List<Offer> findTwoNewest() {
+        return offersRepository.findFirst2ByOrderByIdDesc();
+    }
 }
