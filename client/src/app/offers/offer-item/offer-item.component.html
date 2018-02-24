@@ -1,10 +1,10 @@
 <div class="container-fluid">
-  <div class="card">
+  <mz-card>
     <div class="card-header">
       <ul class="nav nav-pills">
-      <span class="navbar-text mr-3">
+      <mz-card-title >
         {{category}}
-      </span>
+      </mz-card-title>
         <li class="nav-item">
           <button [routerLink]="['/offers/editor', id]" type="button" class="btn btn-primary mx-3">Edit</button>
         </li>
@@ -18,5 +18,5 @@
       <h4 class="card-title">{{title}}</h4>
       <p class="card-text">{{description}}</p>
     </div>
-  </div>
+  </mz-card>
 </div>

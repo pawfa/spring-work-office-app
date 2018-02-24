@@ -1,26 +1,27 @@
 <div class="container">
   <form #form="ngForm" (ngSubmit)="loginUser()">
     <div>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Email" [(ngModel)]="userModel.email" #emailFormControl="ngModel" name="email"
-               required email>
-        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-          Please enter a valid email address
-        </mat-error>
-        <mat-error *ngIf="emailFormControl.hasError('required')">
-          Email is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+      <mz-input-container class="full-width">
+        <input mz-input mz-validation required
+               title="email"
+               [(ngModel)]="userModel.email"
+               [errorMessageResource]="errorMessageResources.email"
+               [label]="'Email'"
+               name="email"
+        />
+      </mz-input-container>
     </div>
     <div>
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Password" type="password" [(ngModel)]="userModel.password" #passwordFormControl="ngModel"
-               name="password" required>
-        <mat-error *ngIf="passwordFormControl.hasError('required')">
-          Password is <strong>required</strong>
-        </mat-error>
-      </mat-form-field>
+      <mz-input-container class="full-width">
+        <input mz-input mz-validation required
+               type="password"
+               [(ngModel)]="userModel.password"
+               [errorMessageResource]="errorMessageResources.password"
+               [label]="'Password'"
+               name="password"
+        />
+      </mz-input-container>
     </div>
-    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button type="submit">Submit</button>
   </form>
 </div>

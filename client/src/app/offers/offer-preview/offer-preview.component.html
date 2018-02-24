@@ -1,11 +1,12 @@
-
-<div class="card">
-  <div class="card-header">
+<mz-card>
+  <mz-card-title>
     {{category}}
-  </div>
-  <div class="card-body">
+  </mz-card-title>
+  <mz-card-content>
     <h4 class="card-title">{{title}}</h4>
     <p class="card-text">{{description}}</p>
-    <a href="#" [routerLink]="['/offers', id]" class="btn btn-primary">Read more...</a>
-  </div>
-</div>
+  </mz-card-content>
+  <mz-card-action>
+    <a href="#" [routerLink]="['/offers', id]" >Read more...</a>
+  </mz-card-action>
+</mz-card>

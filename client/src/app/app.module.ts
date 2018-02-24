@@ -27,11 +27,11 @@ import { RegistrationComponent } from './users/registration/registration.compone
 import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from "@angular/material";
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import {
+  MzButtonModule, MzCardModule, MzInputModule, MzNavbarModule, MzToastService,
+  MzValidationModule
+} from "ng2-materialize";
+
 
 @NgModule({
   declarations: [
@@ -58,11 +58,11 @@ import {MatSelectModule} from '@angular/material/select';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSnackBarModule,
-    MatInputModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatSelectModule
+    MzInputModule,
+    MzValidationModule,
+    MzNavbarModule,
+    MzCardModule,
+    MzButtonModule
   ],
   providers: [
     AuthGuard,
@@ -73,7 +73,8 @@ import {MatSelectModule} from '@angular/material/select';
     UsersService,
     {provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
-      multi: true}
+      multi: true},
+    MzToastService
   ],
   bootstrap: [AppComponent]
 })

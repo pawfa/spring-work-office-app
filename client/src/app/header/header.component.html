@@ -1,44 +1,35 @@
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">Start <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item" >
-        <a class="nav-link" routerLink="/offers">Offers</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-          Warszawa
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Warszawa</a>
-          <a class="dropdown-item" href="#">Gdańsk</a>
-          <a class="dropdown-item" href="#">Bytom</a>
-        </div>
-      </li>
-      <li class="nav-item" >
-        <a class="nav-link" *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)" id="registration" routerLink="/registration">Registration</a>
-        <a class="nav-link" *ngIf="(typeOfUser | async).includes('emp') || (typeOfUser | async).includes('admin')" [@linkAnimation]="(isLoggedIn | async)" id="editor" routerLink="/offers/editor">Add offer</a>
-      </li>
-      <li class="nav-item" >
-        <a class="nav-link" routerLink="/news/editor" *ngIf="(typeOfUser | async).includes('admin')" [@linkAnimation]="(isLoggedIn | async)">News editor</a>
-      </li>
-    </ul>
-  </div>
-
-  <app-login-header *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)"></app-login-header>
-  <ul class="navbar-nav" id="profile" *ngIf="(isLoggedIn | async)" [@loginAnimation]="(isLoggedIn | async)">
-  <li class="nav-item" >
-    <a class="nav-link"  routerLink="/profile" >Profile</a>
-  </li>
-    <li>
-      <button mat-button type="button" class="primary" (click)="onLogout()" >Logout</button>
-    </li>
-  </ul>
-</nav>
-</div>
+<mz-navbar>
+  <mz-navbar-item-container>
+    <mz-navbar-item>
+      <a href="#" routerLink="/">Start</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <a routerLink="/offers">Offers</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <a *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)" id="registration"
+         routerLink="/registration">Registration</a>
+      <a *ngIf="(typeOfUser | async).includes('emp') || (typeOfUser | async).includes('admin')"
+         [@linkAnimation]="(isLoggedIn | async)" id="editor" routerLink="/offers/editor">Add offer</a>
+    </mz-navbar-item>
+    <mz-navbar-item>
+      <a routerLink="/news/editor" *ngIf="(typeOfUser | async).includes('admin')"
+         [@linkAnimation]="(isLoggedIn | async)">News editor</a>
+    </mz-navbar-item>
+  </mz-navbar-item-container>
+  <mz-navbar-item-container [align]="'right'">
+    <mz-navbar-item-container>
+      <mz-navbar-item>
+        <app-login-header *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)"></app-login-header>
+      </mz-navbar-item>
+    </mz-navbar-item-container>
+    <mz-navbar-item-container id="profile" *ngIf="(isLoggedIn | async)" [@loginAnimation]="(isLoggedIn | async)">
+      <mz-navbar-item>
+        <a routerLink="/profile">Profile</a>
+      </mz-navbar-item>
+      <mz-navbar-item>
+        <button type="button" (click)="onLogout()">Logout</button>
+      </mz-navbar-item>
+    </mz-navbar-item-container>
+  </mz-navbar-item-container>
+</mz-navbar>

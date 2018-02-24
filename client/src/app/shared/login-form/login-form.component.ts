@@ -15,6 +15,15 @@ export class LoginFormComponent implements OnInit {
   private loading = false;
   private returnUrl: string;
   private message: string;
+  private errorMessageResources = {
+    email: {
+      required: 'Email is required.',
+      pattern: 'Email is invalid.',
+    },
+    password: {
+      required: 'Address is required.',
+    }
+  };
 
   constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute) { }
 

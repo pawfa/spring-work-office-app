@@ -4363,3 +4363,254 @@ java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 2018-02-24 15:58:13.690  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : admin@admin.com
 2018-02-24 15:58:20.588  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
 2018-02-24 15:58:20.589  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 16:05:28.009  INFO 2112 --- [cluster-ClusterId{value='5a9169fba7632908405bfa8d', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server 91.185.191.243:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:142) ~[mongodb-driver-core-3.2.2.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_152]
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_152]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_152]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_152]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_152]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_152]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_152]
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50) ~[mongodb-driver-core-3.2.2.jar:na]
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58) ~[mongodb-driver-core-3.2.2.jar:na]
+	... 3 common frames omitted
+
+2018-02-24 16:07:47.308  INFO 2112 --- [cluster-ClusterId{value='5a9169fba7632908405bfa8d', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:9, serverValue:10047}] to 91.185.191.243:27017
+2018-02-24 16:07:47.337  INFO 2112 --- [cluster-ClusterId{value='5a9169fba7632908405bfa8d', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=27058882}
+2018-02-24 17:38:57.907  INFO 2112 --- [http-nio-8088-exec-1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:9408}] to 91.185.191.243:27017 because there was a socket exception raised on another connection from this pool.
+2018-02-24 17:38:57.911  INFO 2112 --- [http-nio-8088-exec-1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:9409}] to 91.185.191.243:27017 because there was a socket exception raised on another connection from this pool.
+2018-02-24 17:38:58.123  INFO 2112 --- [http-nio-8088-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:10, serverValue:10688}] to 91.185.191.243:27017
+2018-02-24 17:38:58.136  INFO 2112 --- [http-nio-8088-exec-7] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:11, serverValue:10689}] to 91.185.191.243:27017
+2018-02-24 17:38:58.151  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 17:38:58.164  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 17:39:04.693  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 17:39:04.695  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 18:02:08.214  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 18:02:08.223  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 18:58:13.428  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 18:58:13.432  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 18:58:21.414  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 18:58:21.416  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 18:58:54.819  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 18:58:54.824  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:02:15.712  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:02:15.713  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:02:26.461  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:02:26.461  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:15:50.348  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:15:50.348  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:17:46.705  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:17:46.711  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:18:30.470  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:18:30.471  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:19:17.378  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:19:17.379  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:19:26.435  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:19:26.435  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:19:36.387  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:19:36.387  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:20:05.335  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:20:05.341  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:21:15.403  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:21:15.404  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:21:23.343  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:21:23.345  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:23:06.180  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:23:06.181  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:23:21.478  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:23:21.482  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:24:10.350  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:24:10.352  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:25:01.406  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:25:01.409  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:25:22.413  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:25:22.415  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:26:41.811  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:26:41.817  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:26:45.761  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Zwracam oferte o id 5a704027a7632904acd82862
+2018-02-24 19:26:48.523  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:26:48.526  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:27:18.566  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:27:18.568  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:30:28.397  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:30:28.399  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:31:05.487  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:31:05.487  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:31:43.450  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 19:31:43.451  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:31:59.635  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 19:31:59.637  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:08:25.381  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:08:25.391  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:08:35.743  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:08:35.743  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:09:07.459  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:09:07.459  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:09:52.454  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:09:52.454  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:10:34.425  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:10:34.426  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:10:48.671  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:10:48.673  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:11:06.684  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:11:06.685  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:11:21.409  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:11:21.409  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:11:30.411  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:11:30.411  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:11:50.931  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:11:50.932  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:12:23.898  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:12:23.901  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:12:39.390  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:12:39.390  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:12:54.092  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:12:54.094  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:13:09.561  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:13:09.563  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:13:17.466  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:13:17.472  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:14:28.383  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:14:28.384  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:15:18.738  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:15:18.743  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:15:40.558  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:15:40.562  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:16:25.067  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:16:25.067  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:17:00.484  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:17:00.485  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:17:27.411  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:17:27.412  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:17:44.028  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:17:44.034  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:18:06.092  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:18:06.092  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:18:30.637  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:18:30.644  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:20:01.472  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:20:01.474  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:20:41.078  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:20:41.079  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:21:03.267  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:21:03.267  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:21:13.905  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:21:13.907  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:21:59.406  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:21:59.407  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:22:42.226  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:22:42.226  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:23:06.432  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:23:06.433  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:28:09.330  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:28:09.331  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:29:13.558  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:29:13.559  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:32:31.180  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:32:31.184  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:32:57.568  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:32:57.574  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:33:51.604  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:33:51.606  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:34:08.664  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:34:08.665  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:34:55.478  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:34:55.479  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:36:34.680  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:36:34.694  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:37:12.161  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:37:12.162  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:37:26.457  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:37:26.459  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:37:32.644  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:37:32.645  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:37:40.960  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:37:40.960  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:37:47.016  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:37:47.018  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:38:48.764  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:38:48.766  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:39:13.077  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:39:13.079  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:39:20.796  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:39:20.798  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:40:24.354  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:40:24.355  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:40:43.277  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:40:43.278  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:41:07.758  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:41:07.758  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:44:22.508  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:44:22.510  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:44:30.640  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:44:30.640  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:44:44.447  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:44:44.451  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:44:55.311  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:44:55.311  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:48:17.516  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:48:17.516  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:48:57.069  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:48:57.069  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:49:10.230  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:49:10.230  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:49:39.109  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:49:39.111  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:49:49.454  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:49:49.461  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:50:13.237  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:50:13.237  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:50:38.567  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:50:38.568  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:50:56.672  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:50:56.677  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:51:20.898  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:51:20.899  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:52:00.481  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:52:00.484  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:52:14.534  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:52:14.537  INFO 2112 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:52:26.014  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:52:26.016  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:52:43.764  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:52:43.765  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:53:00.786  INFO 2112 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:53:00.787  INFO 2112 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:53:12.044  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:53:12.046  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:53:36.402  INFO 2112 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:53:36.406  INFO 2112 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:54:29.860  INFO 2112 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:54:29.861  INFO 2112 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:56:35.602  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:56:35.604  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:58:21.996  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:58:21.996  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:59:13.240  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:59:13.240  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 20:59:22.490  INFO 2112 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 20:59:22.491  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:04:13.069  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:04:13.079  INFO 2112 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:06:41.322  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:06:41.322  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:07:53.494  INFO 2112 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:07:53.495  INFO 2112 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:09:40.139  INFO 2112 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:09:40.150  INFO 2112 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:09:48.295  INFO 2112 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:09:48.297  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:15:32.884  INFO 2112 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:15:32.886  INFO 2112 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:15:37.084  INFO 2112 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-24 21:15:37.086  INFO 2112 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:16:43.850  INFO 2112 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-24 21:16:43.854  INFO 2112 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy

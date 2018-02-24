@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AuthenticationService} from "../shared/authentication.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../shared/user";
-import {MatSnackBar} from "@angular/material";
+import {MzToastService} from 'ng2-materialize'
 
 @Component({
   selector: 'app-login-header',
@@ -18,7 +18,7 @@ export class LoginHeaderComponent implements OnInit {
 
 
 
-  constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private snackBar: MatSnackBar){}
+  constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private toastService: MzToastService){}
 
   ngOnInit() {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -49,8 +49,6 @@ export class LoginHeaderComponent implements OnInit {
 
   //wrong username or password snackbar
   openSnack(){
-    this.snackBar.open(this.error, "Undo",{
-      duration: 3000
-    });
+    this.toastService.show('I am a toast!', 4000, 'green', () => alert('Toast has been dismissed'));
   }
 }

@@ -1,35 +1,35 @@
 <div class="container">
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
   <div>
-    <mat-form-field class="full-width">
-      <input matInput placeholder="Email" [(ngModel)]="user.email" #emailFormControl="ngModel" name="email"
+    <mz-input-container class="full-width">
+      <input placeholder="Email" [(ngModel)]="user.email" #emailFormControl="ngModel" name="email"
              required email>
-      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-        Please enter a valid email address
-      </mat-error>
-      <mat-error *ngIf="emailFormControl.hasError('required')">
-        Email is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
+      <!--<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
+        <!--Please enter a valid email address-->
+      <!--</mat-error>-->
+      <!--<mat-error *ngIf="emailFormControl.hasError('required')">-->
+        <!--Email is <strong>required</strong>-->
+      <!--</mat-error>-->
+    </mz-input-container>
   </div>
   <div>
-    <mat-form-field class="full-width">
-      <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" #passwordFormControl="ngModel"
+    <mz-input-container class="full-width">
+      <input placeholder="Password" type="password" [(ngModel)]="user.password" #passwordFormControl="ngModel"
              name="password" required>
-      <mat-error *ngIf="passwordFormControl.hasError('required')">
-        Password is <strong>required</strong>
-      </mat-error>
-    </mat-form-field>
+      <!--<mat-error *ngIf="passwordFormControl.hasError('required')">-->
+        <!--Password is <strong>required</strong>-->
+      <!--</mat-error>-->
+    </mz-input-container>
   </div>
   <div>
-  <mat-form-field class="full-width">
-    <mat-select placeholder="Select type of account" [(ngModel)]="typeOfAccunt" name="typeOfAccount">
-      <mat-option value="option">Student/Graduate</mat-option>
-      <mat-option value="option">Company</mat-option>
-    </mat-select>
-  </mat-form-field>
+  <mz-input-container class="full-width">
+    <!--<mat-select placeholder="Select type of account" [(ngModel)]="typeOfAccunt" name="typeOfAccount">-->
+      <!--<mat-option value="option">Student/Graduate</mat-option>-->
+      <!--<mat-option value="option">Company</mat-option>-->
+    <!--</mat-select>-->
+  </mz-input-container>
   </div>
-  <button type="submit"  mat-raised-button color="primary">Submit</button>
+  <button type="submit"  color="primary">Submit</button>
 
 </form>
 </div>
