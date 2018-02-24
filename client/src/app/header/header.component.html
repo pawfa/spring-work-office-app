@@ -11,10 +11,6 @@
       <li class="nav-item" >
         <a class="nav-link" routerLink="/offers">Offers</a>
       </li>
-
-      <li class="nav-item" >
-        <a class="nav-link" routerLink="/profile" >Profile</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
           Warszawa
@@ -33,10 +29,16 @@
         <a class="nav-link" routerLink="/news/editor" *ngIf="(typeOfUser | async).includes('admin')" [@linkAnimation]="(isLoggedIn | async)">News editor</a>
       </li>
     </ul>
-
   </div>
 
-  <button type="button" class="btn btn-primary" (click)="onLogout()" *ngIf="isLoggedIn | async">Logout</button>
-  <app-login-header *ngIf="!(isLoggedIn | async)"></app-login-header>
+  <app-login-header *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)"></app-login-header>
+  <ul class="navbar-nav" id="profile" *ngIf="(isLoggedIn | async)" [@loginAnimation]="(isLoggedIn | async)">
+  <li class="nav-item" >
+    <a class="nav-link"  routerLink="/profile" >Profile</a>
+  </li>
+    <li>
+      <button mat-button type="button" class="primary" (click)="onLogout()" >Logout</button>
+    </li>
+  </ul>
 </nav>
 </div>

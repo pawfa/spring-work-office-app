@@ -9,3 +9,10 @@
 #registration{
   position: absolute;
 }
+button{
+  padding: 3px;
+}
+#profile{
+  position: absolute;
+  right: 0;
+}

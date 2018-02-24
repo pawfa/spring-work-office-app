@@ -1,6 +1,6 @@
 <form (ngSubmit) = loginUser(myForm) #myForm="ngForm">
   <mat-form-field [ngClass]="{'mat-input-invalid mat-form-field-invalid': error && focus}">
-    <input matInput placeholder="Email" [(ngModel)]="userModel.email" #emailFormControl="ngModel" name="email" email>
+    <input matInput placeholder="Email" [(ngModel)]="userModel.email" #emailFormControl="ngModel" name="email">
   </mat-form-field>
   <mat-form-field class="middle" [ngClass]="{'mat-input-invalid mat-form-field-invalid': error && focus}">
     <input matInput placeholder="Password" type="password" [(ngModel)]="userModel.password" #passwordFormControl="ngModel" name="password">

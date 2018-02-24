@@ -17,6 +17,7 @@ export class LoginHeaderComponent implements OnInit {
   private focus :boolean = false;
 
 
+
   constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private snackBar: MatSnackBar){}
 
   ngOnInit() {

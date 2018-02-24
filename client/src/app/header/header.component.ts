@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {AuthenticationService} from "../shared/authentication.service";
 import {linkAnimation} from "../shared/animations/link.animation";
+import {loginAnimation} from "../shared/animations/login.animation";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  animations: [linkAnimation],
+  animations: [linkAnimation, loginAnimation],
   host: { '[@linkAnimation]': '' }
 })
 export class HeaderComponent implements OnInit {
