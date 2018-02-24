@@ -1,6 +1,6 @@
-# Project Title
+# Work Office 
 
-One Paragraph of project description goes here
+Work Office - CRUD web application using REST architecture with user registration, login and token authentication.
 
 ## Getting Started
 
