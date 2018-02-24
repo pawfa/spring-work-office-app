@@ -49,6 +49,6 @@ export class LoginHeaderComponent implements OnInit {
 
   //wrong username or password snackbar
   openSnack(){
-    this.toastService.show('I am a toast!', 4000, 'green', () => alert('Toast has been dismissed'));
+    this.toastService.show('I am a toast!', 4000, 'green');
   }
 }
