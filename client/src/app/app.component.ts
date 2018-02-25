@@ -1,6 +1,5 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import {fadeInAnimation} from "./shared/animations/fade-in.animation";
-import * as jQuery from 'jquery';
 
 @Component({
   selector: 'app-root',

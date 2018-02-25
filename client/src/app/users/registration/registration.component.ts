@@ -11,6 +11,15 @@ import {User} from "../../shared/user";
 export class RegistrationComponent implements OnInit {
   user: User;
   typeOfAccunt: string;
+  private errorMessageResources = {
+    email: {
+      required: 'Email is required.',
+      email: 'Email is invalid.',
+    },
+    password: {
+      required: 'Password is required.',
+    }
+  };
 
   constructor(private usersService: UsersService) { }
 

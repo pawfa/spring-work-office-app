@@ -1,8 +1,7 @@
-<div class="row-fluid" *ngFor="let news of pagedItems">
+<div class="newsPreview" *ngFor="let news of pagedItems">
   <app-news-preview [newsData]="news"></app-news-preview>
-
 </div>
-<div class="row-fluid">
+<div>
   <!-- pager -->
   <nav aria-label="Page navigation example" >
     <ul *ngIf="pager.pages && pager.pages.length" class="pagination">

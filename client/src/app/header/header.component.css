@@ -1,16 +1,9 @@
-.navbar{
-  border: 1px lightgray solid;
-  border-radius: 5px;
-  font-size: 17px;
-}
+
 .container{
   margin: 20px auto;
 }
 #registration{
   position: absolute;
-}
-button{
-  padding: 3px;
 }
 #profile{
   position: absolute;

@@ -1,15 +1,25 @@
-<div class="container">
-  <div class="row">
-    <form (ngSubmit)=loginUser(myForm) #myForm="ngForm">
-      <mz-input-container class="col s12 l4" [inline]="true">
-        <input mz-input mz-validation placeholder="Email" [(ngModel)]="userModel.email" name="email"/>
-      </mz-input-container>
-      <mz-input-container class="col s12 l4" [inline]="true">
-        <input mz-input mz-validation placeholder="Password" type="password" [(ngModel)]="userModel.password" name="password"/>
-      </mz-input-container>
-      <mz-input-container class="col s12 l4" [inline]="true">
-      <button type="submit" mz-button>Submit</button>
-      </mz-input-container>
-    </form>
-  </div>
-</div>
+<form #myForm="ngForm">
+  <mz-input-container class="col s12 l4 xl4">
+    <input mz-input
+           placeholder="Email"
+           type="email"
+           [(ngModel)]="userModel.email"
+           name="email"
+           id="emailHeader"/>
+  </mz-input-container>
+
+  <mz-input-container class="col s12 l4 xl4">
+    <input mz-input
+           placeholder="Password"
+           type="password"
+           [(ngModel)]="userModel.password"
+           name="password"
+           id="passwordHeader"/>
+  </mz-input-container>
+
+  <mz-input-container class="col s12 l4 xl4 center-align">
+    <a type="button" (click)="loginUser(myForm)">Submit</a>
+  </mz-input-container>
+</form>
+
+

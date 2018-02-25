@@ -3,9 +3,11 @@
     <mz-navbar-item>
       <a href="#" routerLink="/">Start</a>
     </mz-navbar-item>
+
     <mz-navbar-item>
       <a routerLink="/offers">Offers</a>
     </mz-navbar-item>
+
     <mz-navbar-item>
       <a *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)" id="registration"
          routerLink="/registration">Registration</a>
@@ -17,10 +19,11 @@
          [@linkAnimation]="(isLoggedIn | async)">News editor</a>
     </mz-navbar-item>
   </mz-navbar-item-container>
+
   <mz-navbar-item-container [align]="'right'">
-    <mz-navbar-item-container>
-      <mz-navbar-item>
-        <app-login-header *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)"></app-login-header>
+    <mz-navbar-item-container >
+      <mz-navbar-item *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)">
+        <app-login-header ></app-login-header>
       </mz-navbar-item>
     </mz-navbar-item-container>
     <mz-navbar-item-container id="profile" *ngIf="(isLoggedIn | async)" [@loginAnimation]="(isLoggedIn | async)">
@@ -28,8 +31,9 @@
         <a routerLink="/profile">Profile</a>
       </mz-navbar-item>
       <mz-navbar-item>
-        <button type="button" (click)="onLogout()">Logout</button>
+        <a type="button" (click)="onLogout()">Logout</a>
       </mz-navbar-item>
     </mz-navbar-item-container>
   </mz-navbar-item-container>
 </mz-navbar>
+

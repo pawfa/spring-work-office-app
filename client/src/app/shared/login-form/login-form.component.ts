@@ -18,10 +18,10 @@ export class LoginFormComponent implements OnInit {
   private errorMessageResources = {
     email: {
       required: 'Email is required.',
-      pattern: 'Email is invalid.',
+      email: 'Email is invalid.',
     },
     password: {
-      required: 'Address is required.',
+      required: 'Password is required.',
     }
   };
 

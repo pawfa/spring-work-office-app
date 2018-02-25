@@ -1,9 +1,8 @@
 <div class="container">
-  <div class="row-fluid">
+  <div class="row">
     <app-header></app-header>
   </div>
-  <div class="row-fluid">
-    <!--<app-spinner></app-spinner>-->
+  <div class="row">
     <main [@fadeInAnimation]="getRouterOutletState(o)">
     <router-outlet #o="outlet"></router-outlet>
     </main>

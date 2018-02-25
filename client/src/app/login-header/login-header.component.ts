@@ -16,8 +16,6 @@ export class LoginHeaderComponent implements OnInit {
   private returnUrl;
   private focus :boolean = false;
 
-
-
   constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private toastService: MzToastService){}
 
   ngOnInit() {
@@ -49,6 +47,6 @@ export class LoginHeaderComponent implements OnInit {
 
   //wrong username or password snackbar
   openSnack(){
-    this.toastService.show('I am a toast!', 4000, 'green');
+    this.toastService.show('Invalid username or password', 2000, 'red');
   }
 }

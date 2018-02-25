@@ -1,27 +1,29 @@
 <div class="container">
   <form #form="ngForm" (ngSubmit)="loginUser()">
     <div>
-      <mz-input-container class="full-width">
-        <input mz-input mz-validation required
-               title="email"
+      <mz-input-container>
+        <input mz-input mz-validation email required
+               type="email"
                [(ngModel)]="userModel.email"
                [errorMessageResource]="errorMessageResources.email"
                [label]="'Email'"
                name="email"
+               id="emailLogin"
         />
       </mz-input-container>
     </div>
     <div>
-      <mz-input-container class="full-width">
+      <mz-input-container>
         <input mz-input mz-validation required
                type="password"
                [(ngModel)]="userModel.password"
                [errorMessageResource]="errorMessageResources.password"
                [label]="'Password'"
                name="password"
+               id="passwordLogin"
         />
       </mz-input-container>
     </div>
-    <button type="submit">Submit</button>
+    <button mz-button type="submit">Submit</button>
   </form>
 </div>

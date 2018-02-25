@@ -1,35 +1,37 @@
 <div class="container">
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
   <div>
-    <mz-input-container class="full-width">
-      <input placeholder="Email" [(ngModel)]="user.email" #emailFormControl="ngModel" name="email"
-             required email>
-      <!--<mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">-->
-        <!--Please enter a valid email address-->
-      <!--</mat-error>-->
-      <!--<mat-error *ngIf="emailFormControl.hasError('required')">-->
-        <!--Email is <strong>required</strong>-->
-      <!--</mat-error>-->
+    <mz-input-container>
+      <input mz-input mz-validation email required
+             type="email"
+             [(ngModel)]="user.email"
+             [errorMessageResource]="errorMessageResources.email"
+             [label]="'Email'"
+             name="email"
+             id="email"
+             >
     </mz-input-container>
   </div>
   <div>
-    <mz-input-container class="full-width">
-      <input placeholder="Password" type="password" [(ngModel)]="user.password" #passwordFormControl="ngModel"
-             name="password" required>
-      <!--<mat-error *ngIf="passwordFormControl.hasError('required')">-->
-        <!--Password is <strong>required</strong>-->
-      <!--</mat-error>-->
+    <mz-input-container>
+      <input mz-input mz-validation required
+             type="password"
+             [(ngModel)]="user.password"
+             [errorMessageResource]="errorMessageResources.password"
+             [label]="'Password'"
+             name="password"
+             id="password"
+      >
     </mz-input-container>
   </div>
   <div>
-  <mz-input-container class="full-width">
-    <!--<mat-select placeholder="Select type of account" [(ngModel)]="typeOfAccunt" name="typeOfAccount">-->
-      <!--<mat-option value="option">Student/Graduate</mat-option>-->
-      <!--<mat-option value="option">Company</mat-option>-->
-    <!--</mat-select>-->
-  </mz-input-container>
+  <mz-select-container class="full-width">
+    <select mz-select placeholder="Select type of account" [(ngModel)]="typeOfAccunt" name="typeOfAccount" required>
+        <option>Student/Graduate</option>
+        <option>Company</option>
+    </select>
+  </mz-select-container>
   </div>
-  <button type="submit"  color="primary">Submit</button>
-
+  <button mz-button type="submit" >Submit</button>
 </form>
 </div>
