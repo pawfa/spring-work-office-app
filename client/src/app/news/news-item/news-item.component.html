@@ -1,17 +1,12 @@
-<div class="container-fluid">
-  <div class="card">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <button [routerLink]="['/news/editor', id]" type="button" class="btn btn-primary mx-3">Edit</button>
-      </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-primary">Primary</button>
-      </li>
-
-    </ul>
-    <div class="card-body">
-      <h4 class="card-title">{{header}}</h4>
-      <p class="card-text">{{paragraph}}</p>
-    </div>
-  </div>
-</div>
+<mz-card>
+  <mz-card-title>
+    <h4 class="card-title">{{header}}</h4>
+  </mz-card-title>
+  <mz-card-content>
+    <p class="card-text">{{paragraph}}</p>
+  </mz-card-content>
+  <mz-card-action>
+    <button [routerLink]="['/news/editor', id]" type="button" class="btn btn-primary mx-3">Edit</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+  </mz-card-action>
+</mz-card>
