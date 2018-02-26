@@ -21,6 +21,7 @@ export class EditorComponent implements OnInit {
 
   ngOnInit() {
     this.categories = this.dataService.getCategories().slice(1);
+    this.offerModel.category = this.categories[0];
     this.id = this.route.snapshot.params['id'];
     this.type = this.route.snapshot.url[0].path;
     if(this.type === "news" && !isNullOrUndefined(this.route.snapshot.params['id'])){

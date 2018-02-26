@@ -8,14 +8,18 @@
            placeholder="Search term"
            (keyup)="searchTerms.next([$event.target.value,selectedCategory])">
   </mz-input-container>
-  <mz-input-container>
-    <select mz-select id="selectedCategory"
+
+  <!--not using ng2-materialize tags because animations are not working with nested child-->
+  <div class="input-field">
+    <select materialize="material_select"
+            id="selectedCategory"
             [(ngModel)]="selectedCategory"
-            name="selectedCategory"
-            (ngModelChange)="searchTerms.next([searchTerm,selectedCategory])">
+            (ngModelChange)="searchTerms.next([searchTerm,selectedCategory])"
+            name="selectedCategory">
       <option *ngFor="let cat of categories">{{cat}}</option>
     </select>
-  </mz-input-container>
+    <label>Select category</label>
+  </div>
 </form>
   <div class="row">
     <div class="col s12 m6 l6 xl6" *ngFor="let off of offers">

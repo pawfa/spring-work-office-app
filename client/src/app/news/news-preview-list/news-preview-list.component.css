@@ -1,17 +1,11 @@
-nav{
-  margin: 20px auto;
-  text-align: center;
-}
-.pagination{
-  float: none;
-  display: block;
-}
-li{
-  display:inline-block;
-}
 .container{
   margin: 20px auto;
 }
-.row-fluid{
-  margin: 20px auto;
+mz-navbar{
+  text-align: center;
 }
+mz-navbar-item-container{
+  display: inline-block;
+}
+
+

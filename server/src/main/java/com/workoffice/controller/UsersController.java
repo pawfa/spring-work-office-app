@@ -3,13 +3,18 @@ package com.workoffice.controller;
 import com.workoffice.entity.Emp;
 import com.workoffice.entity.User;
 import com.workoffice.entity.Person;
+import com.workoffice.service.Exceptions.UserExistsException;
 import com.workoffice.service.UserService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.WebRequest;
 
 
 @CrossOrigin
@@ -18,6 +23,12 @@ public class UsersController {
 
     private UserService userService;
     private final Log logger = LogFactory.getLog(getClass());
+
+    @ExceptionHandler({ UserExistsException.class })
+    public ResponseEntity<Object> handleAccessDeniedException(Exception ex, WebRequest request) {
+        return new ResponseEntity<Object>(
+                ex.getMessage(), new HttpHeaders(), HttpStatus.FORBIDDEN);
+    }
 
     @Autowired
     public UsersController(UserService userService) {
@@ -31,18 +42,15 @@ public class UsersController {
     }
 
     @PostMapping("/add/person")
-    public Person addUser(@RequestBody Person person) {
-        logger.info(person.getFirstName());
+    public Person addUser(@RequestBody Person person) throws UserExistsException {
+        logger.info(person.getEmail());
         return userService.save(person);
-//        return null;
     }
 
     @PostMapping("/add/emp")
-    public Emp addEmployee(@RequestBody Emp emp) {
-//        logger.info(emp.getDescription());
-        logger.info(emp.getPassword());
+    public Emp addEmployee(@RequestBody Emp emp) throws UserExistsException {
+        logger.info(emp.getEmail());
         return userService.save(emp);
-//        return null;
     }
 
     @GetMapping("/profile")

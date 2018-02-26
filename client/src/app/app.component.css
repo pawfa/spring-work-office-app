@@ -1,9 +1,8 @@
-
-:host {
-  display: flex;
-  overflow: hidden;
-  height: 100vh;
-}
+/*:host {*/
+  /*display: flex;*/
+  /*overflow: hidden;*/
+  /*height: 100vh;*/
+/*}*/
 main {
   flex: 1;
   position: relative;
@@ -15,5 +14,5 @@ main {
   height: 100%;
 }
 .container {
-  width:60%;
+  width:50%;
 }

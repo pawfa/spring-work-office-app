@@ -1,36 +1,41 @@
 <div class="container" *ngIf="type === 'news'">
   <form #form="ngForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="posterInput">Poster input</label>
-      <input type="file" class="form-control-file" id="posterInput">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload poster">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="header">Header</label>
-      <input class="form-control" id="header" placeholder="This is header" name="header" [(ngModel)]="newsModel.header">
-    </div>
-    <div class="form-group">
-      <label for="paragraph">News content</label>
-      <textarea class="form-control" id="paragraph" rows="3" name="paragraph" [(ngModel)]="newsModel.paragraph"></textarea>
-    </div>
+    <mz-input-container >
+      <input mz-input id="header" [label]="'Header'" placeholder="This is header" name="header" [(ngModel)]="newsModel.header">
+    </mz-input-container>
+    <mz-textarea-container>
+      <textarea mz-textarea id="paragraph" rows="3" name="paragraph" [(ngModel)]="newsModel.paragraph" [label]="'News content'" placeholder="News content"></textarea>
+    </mz-textarea-container>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
 <div class="container" *ngIf="type === 'offers'">
   <form #form="ngForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="title">Title</label>
-      <input class="form-control" id="title" placeholder="This is title" name="title" [(ngModel)]="offerModel.title">
-    </div>
-    <div class="form-group">
-      <label for="category">Category</label>
-      <select class="form-control" id="category" [(ngModel)]="offerModel.category" name="category" >
+    <mz-input-container>
+      <input mz-input id="title" [label]="'Title'" placeholder="This is title" name="title" [(ngModel)]="offerModel.title">
+    </mz-input-container>
+
+    <!--not using ng2-materialize tags because animations are not working with nested child-->
+    <div class="input-field">
+      <select materialize="material_select" id="category" [(ngModel)]="offerModel.category" name="category">
         <option *ngFor="let cat of categories">{{cat}}</option>
       </select>
+      <label>Select category</label>
     </div>
-    <div class="form-group">
-      <label for="description">Description</label>
-      <textarea class="form-control" id="description" rows="3" name="description" [(ngModel)]="offerModel.description"></textarea>
-    </div>
+
+    <mz-textarea-container>
+      <textarea mz-textarea [label]="'Description'" placeholder="Offer description" id="description" rows="3" name="description" [(ngModel)]="offerModel.description"></textarea>
+    </mz-textarea-container>
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

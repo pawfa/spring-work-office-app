@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "user_type")
-@DiscriminatorFormula("case when user_type='person' then 'person' when user_type='emp' then 'emp' when user_type='admin' then 'admin' end")
+@DiscriminatorColumn(name = "user_type", discriminatorType = DiscriminatorType.STRING)
+//@DiscriminatorFormula("case when user_type='person' then 'person' when user_type='emp' then 'emp' when user_type='admin' then 'admin' end")
 public abstract class User {
 
         @Id
@@ -18,6 +18,7 @@ public abstract class User {
         @Column(name = "email")
         @Email
         private String email;
+
         @Column(name = "password")
         private String password;
 

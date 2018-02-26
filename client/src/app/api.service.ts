@@ -9,8 +9,8 @@ import {Person} from "./users/person";
 @Injectable()
 export class ApiService {
 
-  // private server = "http://back_office.pawfa.usermd.net:8088/";
-  private server = "http://localhost:8088/";
+  private server = "http://back_office.pawfa.usermd.net:8088/";
+  // private server = "http://localhost:8088/";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {

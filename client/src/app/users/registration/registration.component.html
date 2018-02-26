@@ -1,6 +1,6 @@
 <div class="container">
-<form (ngSubmit)="onSubmit(form)" #form="ngForm">
-  <div>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" >
+
     <mz-input-container>
       <input mz-input mz-validation email required
              type="email"
@@ -11,8 +11,7 @@
              id="email"
              >
     </mz-input-container>
-  </div>
-  <div>
+
     <mz-input-container>
       <input mz-input mz-validation required
              type="password"
@@ -23,15 +22,16 @@
              id="password"
       >
     </mz-input-container>
-  </div>
-  <div>
-  <mz-select-container class="full-width">
-    <select mz-select placeholder="Select type of account" [(ngModel)]="typeOfAccunt" name="typeOfAccount" required>
-        <option>Student/Graduate</option>
-        <option>Company</option>
+
+  <!--not using ng2-materialize tags because animations are not working with nested child-->
+  <div class="input-field">
+    <select materialize="material_select" id="category" [(ngModel)]="typeOfAccunt" name="typeOfAccount" required>
+      <option>Student/Graduate</option>
+      <option>Company</option>
     </select>
-  </mz-select-container>
+    <label>Select type of account</label>
   </div>
-  <button mz-button type="submit" >Submit</button>
+    <button mz-button type="submit" >Submit</button>
 </form>
 </div>
+

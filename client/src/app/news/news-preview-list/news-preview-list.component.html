@@ -3,23 +3,23 @@
 </div>
 <div>
   <!-- pager -->
-  <nav aria-label="Page navigation example" >
-    <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
-      <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
-        <a (click)="setPage(1)" class="page-link">First</a>
-      </li>
-      <li [ngClass]="{disabled:pager.currentPage === 1}" class="page-item">
-        <a (click)="setPage(pager.currentPage - 1)" class="page-link">Previous</a>
-      </li>
-      <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}" class="page-item">
-        <a (click)="setPage(page)" class="page-link">{{page}}</a>
-      </li>
-      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
-        <a (click)="setPage(pager.currentPage + 1)" class="page-link">Next</a>
-      </li>
-      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="page-item">
-        <a (click)="setPage(pager.totalPages)" class="page-link">Last</a>
-      </li>
-    </ul>
-  </nav>
+  <mz-navbar>
+    <mz-navbar-item-container *ngIf="pager.pages && pager.pages.length">
+      <mz-navbar-item [ngClass]="{disabled:pager.currentPage === 1}" >
+        <a (click)="setPage(1)" >First</a>
+      </mz-navbar-item>
+      <mz-navbar-item [ngClass]="{disabled:pager.currentPage === 1}">
+        <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+      </mz-navbar-item>
+      <mz-navbar-item *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+        <a (click)="setPage(page)">{{page}}</a>
+      </mz-navbar-item>
+      <mz-navbar-item [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+        <a (click)="setPage(pager.currentPage + 1)" >Next</a>
+      </mz-navbar-item>
+      <mz-navbar-item [ngClass]="{disabled:pager.currentPage === pager.totalPages}" >
+        <a (click)="setPage(pager.totalPages)">Last</a>
+      </mz-navbar-item>
+    </mz-navbar-item-container>
+  </mz-navbar>
 </div>
