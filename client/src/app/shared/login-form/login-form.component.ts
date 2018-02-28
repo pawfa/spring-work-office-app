@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from "../user";
 import {AuthenticationService} from "../authentication.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {MzToastService} from "ng2-materialize";
 
 @Component({
   selector: 'app-login-form',
@@ -15,7 +16,7 @@ export class LoginFormComponent implements OnInit {
   private loading = false;
   private returnUrl: string;
   private message: string;
-  private errorMessageResources = {
+  errorMessageResources = {
     email: {
       required: 'Email is required.',
       email: 'Email is invalid.',
@@ -25,7 +26,7 @@ export class LoginFormComponent implements OnInit {
     }
   };
 
-  constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute) { }
+  constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private toastService: MzToastService) { }
 
   ngOnInit() {
     let queryParams = this.route.snapshot.queryParams['returnUrl'];
@@ -45,6 +46,7 @@ export class LoginFormComponent implements OnInit {
       }
     },
       (error) =>{
+      this.openSnack();
       if(error.status == 401){
         this.error = "Invalid username or password";
         this.loading = false;
@@ -52,5 +54,8 @@ export class LoginFormComponent implements OnInit {
       });
   }
 
+  openSnack(){
+    this.toastService.show("Invalid username or password", 2000, 'red');
+  }
 
 }

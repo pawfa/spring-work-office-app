@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+#toast-container {
+  top: 30% !important;
+  /*bottom: 0px !important;*/
+  left: 50% !important;
+  right: auto !important;
+  transform: translate(-50%, 0);
+}
+

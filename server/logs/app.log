@@ -7033,3 +7033,762 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2018-02-26 19:17:50.825  INFO 5592 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
 2018-02-26 19:17:50.896  INFO 5592 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : 12334@test.com
 2018-02-26 19:17:50.917  INFO 5592 --- [http-nio-8088-exec-1] com.workoffice.service.UserServiceImpl   : 12334@test.com
+2018-02-28 09:16:34.907  INFO 516 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 516 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:16:34.911  INFO 516 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:16:34.955  INFO 516 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:16:34 CET 2018]; root of context hierarchy
+2018-02-28 09:16:35.956  INFO 516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:16:35.981  INFO 516 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:16:35.986  INFO 516 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:16:36.036  INFO 516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:16:36.054  INFO 516 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:16:36.303  INFO 516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:16:36.353  INFO 516 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:16:36.380  INFO 516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:16:36.954  INFO 516 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:16:36.965  INFO 516 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:16:36.966  INFO 516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:16:37.056  INFO 516 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:16:37.056  INFO 516 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2105 ms
+2018-02-28 09:16:37.236  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:16:37.236  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:16:37.236  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:16:37.236  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:16:37.236  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:16:37.238  INFO 516 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:16:37.239  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:16:37.240  INFO 516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:16:37.425  INFO 516 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:16:37.435  INFO 516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:16:37.524  INFO 516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:16:37.525  INFO 516 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:16:37.527  INFO 516 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:16:37.586  INFO 516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:16:38.259  INFO 516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:16:39.839  INFO 516 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:16:39.961  INFO 516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:16:40.329  INFO 516 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:16:40.329  INFO 516 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:16:41.189  INFO 516 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:16:41.960  INFO 516 --- [cluster-ClusterId{value='5a966568a76329020426e7db', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46821}] to 91.185.191.243:27017
+2018-02-28 09:16:41.990  INFO 516 --- [cluster-ClusterId{value='5a966568a76329020426e7db', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=27161366}
+2018-02-28 09:16:41.992  INFO 516 --- [cluster-ClusterId{value='5a966568a76329020426e7db', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:16:42.552  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:16:42.558  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:16:42.561  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:16:42.562  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:16:42.563  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:16:42.566  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:16:42.567  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:16:42.568  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:16:42.568  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:16:42.568  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:16:42.572  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public com.workoffice.entity.Person com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:16:42.573  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:16:42.573  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public com.workoffice.entity.Emp com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:16:42.593  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:16:42.596  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:16:42.596  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:16:42.659  INFO 516 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:16:42.659  INFO 516 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:16:42.688  INFO 516 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:16:42.741  INFO 516 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 09:16:42.937  INFO 516 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:16:34 CET 2018]; root of context hierarchy
+2018-02-28 09:16:43.300  INFO 516 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:16:43.350  INFO 516 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:16:43.354  INFO 516 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 8.943 seconds (JVM running for 10.291)
+2018-02-28 09:17:55.570  INFO 516 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:17:55.571  INFO 516 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:17:55.583  INFO 516 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-02-28 09:17:55.864  INFO 516 --- [http-nio-8088-exec-3] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:46825}] to 91.185.191.243:27017
+2018-02-28 09:17:55.878  INFO 516 --- [http-nio-8088-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:46826}] to 91.185.191.243:27017
+2018-02-28 09:17:55.921  INFO 516 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:17:55.923  INFO 516 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:19:44.642  INFO 5848 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 5848 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:19:44.644  INFO 5848 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:19:44.676  INFO 5848 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:19:44 CET 2018]; root of context hierarchy
+2018-02-28 09:19:45.579  INFO 5848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:19:45.604  INFO 5848 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:19:45.609  INFO 5848 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:19:45.660  INFO 5848 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:19:45.675  INFO 5848 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:19:45.929  INFO 5848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$3456d4e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:19:45.963  INFO 5848 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:19:45.993  INFO 5848 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8fbf0fe4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:19:46.368  INFO 5848 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:19:46.378  INFO 5848 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:19:46.379  INFO 5848 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:19:46.469  INFO 5848 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:19:46.469  INFO 5848 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1795 ms
+2018-02-28 09:19:46.680  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:19:46.680  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:19:46.680  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:19:46.680  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:19:46.680  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:19:46.681  INFO 5848 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:19:46.682  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:19:46.683  INFO 5848 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:19:46.891  INFO 5848 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:19:46.905  INFO 5848 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:19:46.964  INFO 5848 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:19:46.965  INFO 5848 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:19:46.966  INFO 5848 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:19:47.010  INFO 5848 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:19:47.253  INFO 5848 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:19:47.730  INFO 5848 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:19:47.781  INFO 5848 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:19:47.915  INFO 5848 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:19:47.915  INFO 5848 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:19:48.258  INFO 5848 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:19:48.690  INFO 5848 --- [cluster-ClusterId{value='5a966623a7632916d8e4b58a', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46833}] to 91.185.191.243:27017
+2018-02-28 09:19:48.709  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:19:48.712  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:19:48.714  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:19:48.715  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:19:48.715  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:19:48.717  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:19:48.717  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:19:48.717  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:19:48.718  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:19:48.718  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:19:48.718  INFO 5848 --- [cluster-ClusterId{value='5a966623a7632916d8e4b58a', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=26674509}
+2018-02-28 09:19:48.719  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public com.workoffice.entity.Person com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:19:48.719  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:19:48.719  INFO 5848 --- [cluster-ClusterId{value='5a966623a7632916d8e4b58a', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:19:48.719  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public com.workoffice.entity.Emp com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:19:48.720  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:19:48.722  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:19:48.722  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:19:48.751  INFO 5848 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:19:48.751  INFO 5848 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:19:48.765  INFO 5848 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:19:48.795  INFO 5848 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@42a05533, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@17053b5, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fa879ed, org.springframework.security.web.header.HeaderWriterFilter@794d28a3, org.springframework.web.filter.CorsFilter@3cad24ae, org.springframework.security.web.authentication.logout.LogoutFilter@dbc7e0a, com.workoffice.security.JWTLoginFilter@58021c3c, com.workoffice.security.JWTAuthenticationFilter@18cbc3c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ec082a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b030101, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b25d695, org.springframework.security.web.session.SessionManagementFilter@70ee9d31, org.springframework.security.web.access.ExceptionTranslationFilter@12166229, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50785f86]
+2018-02-28 09:19:48.874  INFO 5848 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:19:44 CET 2018]; root of context hierarchy
+2018-02-28 09:19:49.178  INFO 5848 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:19:49.217  INFO 5848 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:19:49.221  INFO 5848 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 4.932 seconds (JVM running for 7.599)
+2018-02-28 09:22:40.958  INFO 5848 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:22:40.958  INFO 5848 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:22:40.970  INFO 5848 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 12 ms
+2018-02-28 09:22:41.055  INFO 5848 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 09:22:49.940  INFO 5848 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:22:49.942  INFO 5848 --- [http-nio-8088-exec-5] com.workoffice.service.UserServiceImpl   : test@test.com
+2018-02-28 09:25:52.246  INFO 5320 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 5320 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:25:52.246  INFO 5320 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:25:52.340  INFO 5320 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:25:52 CET 2018]; root of context hierarchy
+2018-02-28 09:25:53.315  INFO 5320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:25:53.331  INFO 5320 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:25:53.331  INFO 5320 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:25:53.379  INFO 5320 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:25:53.395  INFO 5320 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:25:53.632  INFO 5320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:25:53.663  INFO 5320 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:25:53.679  INFO 5320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:25:53.977  INFO 5320 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:25:53.993  INFO 5320 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:25:53.993  INFO 5320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:25:54.041  INFO 5320 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:25:54.041  INFO 5320 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1748 ms
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:25:54.181  INFO 5320 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:25:54.337  INFO 5320 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:25:54.353  INFO 5320 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:25:54.399  INFO 5320 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:25:54.399  INFO 5320 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:25:54.399  INFO 5320 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:25:54.431  INFO 5320 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:25:54.588  INFO 5320 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:25:54.939  INFO 5320 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:25:54.986  INFO 5320 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:25:55.096  INFO 5320 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:25:55.096  INFO 5320 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:25:55.439  INFO 5320 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:25:55.486  INFO 5320 --- [cluster-ClusterId{value='5a966793a7632914c8d63201', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46896}] to 91.185.191.243:27017
+2018-02-28 09:25:55.517  INFO 5320 --- [cluster-ClusterId{value='5a966793a7632914c8d63201', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=26789328}
+2018-02-28 09:25:55.517  INFO 5320 --- [cluster-ClusterId{value='5a966793a7632914c8d63201', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:25:55.847  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:25:55.847  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:25:55.862  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:25:55.878  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:25:55.878  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:25:55.893  INFO 5320 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:25:55.893  INFO 5320 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:25:55.909  INFO 5320 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:25:55.940  INFO 5320 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 09:25:56.003  INFO 5320 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:25:52 CET 2018]; root of context hierarchy
+2018-02-28 09:25:56.268  INFO 5320 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:25:56.299  INFO 5320 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:25:56.299  INFO 5320 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 4.368 seconds (JVM running for 5.122)
+2018-02-28 09:26:07.373  INFO 5320 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:26:07.374  INFO 5320 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:26:07.385  INFO 5320 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 11 ms
+2018-02-28 09:26:07.454  INFO 5320 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 09:26:28.356  INFO 5320 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:26:33.293  INFO 5320 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : test1@test.com
+2018-02-28 09:26:33.295  INFO 5320 --- [http-nio-8088-exec-5] com.workoffice.service.UserServiceImpl   : test1@test.com
+2018-02-28 09:29:10.637  INFO 5232 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 5232 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:29:10.639  INFO 5232 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:29:10.923  INFO 5232 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:29:10 CET 2018]; root of context hierarchy
+2018-02-28 09:29:11.931  INFO 5232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:29:11.959  INFO 5232 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:29:11.964  INFO 5232 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:29:12.015  INFO 5232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:29:12.030  INFO 5232 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:29:12.306  INFO 5232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:29:12.345  INFO 5232 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:29:12.374  INFO 5232 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:29:12.713  INFO 5232 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:29:12.720  INFO 5232 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:29:12.721  INFO 5232 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:29:12.793  INFO 5232 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:29:12.793  INFO 5232 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1874 ms
+2018-02-28 09:29:12.952  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:29:12.953  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:29:12.953  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:29:12.953  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:29:12.953  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:29:12.954  INFO 5232 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:29:12.954  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:29:12.955  INFO 5232 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:29:13.119  INFO 5232 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:29:13.129  INFO 5232 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:29:13.182  INFO 5232 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:29:13.184  INFO 5232 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:29:13.185  INFO 5232 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:29:13.214  INFO 5232 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:29:13.384  INFO 5232 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:29:13.764  INFO 5232 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:29:13.803  INFO 5232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:29:13.916  INFO 5232 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:29:13.917  INFO 5232 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:29:14.254  INFO 5232 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:29:14.321  INFO 5232 --- [cluster-ClusterId{value='5a966859a7632914700bfa49', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46910}] to 91.185.191.243:27017
+2018-02-28 09:29:14.349  INFO 5232 --- [cluster-ClusterId{value='5a966859a7632914700bfa49', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=27309862}
+2018-02-28 09:29:14.350  INFO 5232 --- [cluster-ClusterId{value='5a966859a7632914700bfa49', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:29:14.688  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:29:14.693  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:29:14.694  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:29:14.695  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:29:14.695  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:29:14.697  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:29:14.697  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:29:14.697  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:29:14.698  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:29:14.699  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:29:14.700  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:29:14.700  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:29:14.700  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:29:14.700  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:29:14.703  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:29:14.703  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:29:14.730  INFO 5232 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:29:14.730  INFO 5232 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:29:14.744  INFO 5232 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:29:14.777  INFO 5232 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 09:29:14.872  INFO 5232 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:29:10 CET 2018]; root of context hierarchy
+2018-02-28 09:29:15.158  INFO 5232 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:29:15.206  INFO 5232 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:29:15.210  INFO 5232 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 5.12 seconds (JVM running for 5.737)
+2018-02-28 09:29:41.176  INFO 5232 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:29:41.176  INFO 5232 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:29:41.190  INFO 5232 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-02-28 09:29:41.468  INFO 5232 --- [http-nio-8088-exec-3] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:46914}] to 91.185.191.243:27017
+2018-02-28 09:29:41.470  INFO 5232 --- [http-nio-8088-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:46915}] to 91.185.191.243:27017
+2018-02-28 09:29:41.523  INFO 5232 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:29:41.524  INFO 5232 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:31:44.296  INFO 1664 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 1664 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:31:44.299  INFO 1664 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:31:44.377  INFO 1664 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:31:44 CET 2018]; root of context hierarchy
+2018-02-28 09:31:45.644  INFO 1664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:31:45.675  INFO 1664 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:31:45.679  INFO 1664 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:31:45.731  INFO 1664 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:31:45.745  INFO 1664 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:31:45.997  INFO 1664 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:31:46.028  INFO 1664 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:31:46.054  INFO 1664 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:31:46.444  INFO 1664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:31:46.452  INFO 1664 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:31:46.453  INFO 1664 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:31:46.517  INFO 1664 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:31:46.517  INFO 1664 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2148 ms
+2018-02-28 09:31:46.678  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:31:46.678  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:31:46.678  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:31:46.678  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:31:46.678  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:31:46.679  INFO 1664 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:31:46.679  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:31:46.680  INFO 1664 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:31:46.851  INFO 1664 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:31:46.862  INFO 1664 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:31:46.928  INFO 1664 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:31:46.930  INFO 1664 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:31:46.934  INFO 1664 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:31:46.974  INFO 1664 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:31:47.171  INFO 1664 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:31:47.593  INFO 1664 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:31:47.643  INFO 1664 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:31:47.769  INFO 1664 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:31:47.769  INFO 1664 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:31:48.134  INFO 1664 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:31:48.167  INFO 1664 --- [cluster-ClusterId{value='5a9668f3a7632906805cf88e', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46945}] to 91.185.191.243:27017
+2018-02-28 09:31:48.194  INFO 1664 --- [cluster-ClusterId{value='5a9668f3a7632906805cf88e', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=26412159}
+2018-02-28 09:31:48.195  INFO 1664 --- [cluster-ClusterId{value='5a9668f3a7632906805cf88e', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:31:48.599  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:31:48.603  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:31:48.604  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:31:48.604  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:31:48.604  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:31:48.607  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:31:48.607  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:31:48.607  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:31:48.607  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:31:48.608  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:31:48.610  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:31:48.610  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:31:48.610  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:31:48.610  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:31:48.612  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:31:48.613  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:31:48.639  INFO 1664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:31:48.640  INFO 1664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:31:48.652  INFO 1664 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:31:48.689  INFO 1664 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 09:31:48.791  INFO 1664 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:31:44 CET 2018]; root of context hierarchy
+2018-02-28 09:31:49.061  INFO 1664 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:31:49.100  INFO 1664 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:31:49.104  INFO 1664 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 5.215 seconds (JVM running for 5.91)
+2018-02-28 09:32:34.130  INFO 1664 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:32:34.130  INFO 1664 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:32:34.143  INFO 1664 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-02-28 09:32:34.411  INFO 1664 --- [http-nio-8088-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:46947}] to 91.185.191.243:27017
+2018-02-28 09:32:34.411  INFO 1664 --- [http-nio-8088-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:46946}] to 91.185.191.243:27017
+2018-02-28 09:32:34.466  INFO 1664 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:32:34.467  INFO 1664 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:32:59.814  INFO 1664 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 09:33:17.695  INFO 1664 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:33:17.697  INFO 1664 --- [http-nio-8088-exec-9] com.workoffice.service.UserServiceImpl   : test@test.com
+2018-02-28 09:33:19.899  INFO 1664 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:33:22.469  INFO 1664 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:33:29.328  INFO 1664 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : test1@test.com
+2018-02-28 09:33:29.329  INFO 1664 --- [http-nio-8088-exec-3] com.workoffice.service.UserServiceImpl   : test1@test.com
+2018-02-28 09:35:14.519  INFO 148 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 148 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:35:14.523  INFO 148 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:35:14.563  INFO 148 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:35:14 CET 2018]; root of context hierarchy
+2018-02-28 09:35:15.716  INFO 148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:35:15.742  INFO 148 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:35:15.747  INFO 148 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:35:15.796  INFO 148 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:35:15.811  INFO 148 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:35:16.039  INFO 148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:35:16.069  INFO 148 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:35:16.093  INFO 148 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:35:16.415  INFO 148 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:35:16.423  INFO 148 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:35:16.424  INFO 148 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:35:16.495  INFO 148 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:35:16.495  INFO 148 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1935 ms
+2018-02-28 09:35:16.640  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:35:16.640  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:35:16.640  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:35:16.641  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:35:16.641  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:35:16.642  INFO 148 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:35:16.642  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:35:16.643  INFO 148 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:35:16.804  INFO 148 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:35:16.813  INFO 148 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:35:16.862  INFO 148 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:35:16.863  INFO 148 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:35:16.864  INFO 148 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:35:16.899  INFO 148 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:35:17.061  INFO 148 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:35:17.447  INFO 148 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:35:17.486  INFO 148 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:35:17.594  INFO 148 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:35:17.595  INFO 148 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:35:17.915  INFO 148 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:35:17.981  INFO 148 --- [cluster-ClusterId{value='5a9669c5a7632900945a105c', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:46965}] to 91.185.191.243:27017
+2018-02-28 09:35:18.009  INFO 148 --- [cluster-ClusterId{value='5a9669c5a7632900945a105c', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=27001647}
+2018-02-28 09:35:18.010  INFO 148 --- [cluster-ClusterId{value='5a9669c5a7632900945a105c', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:35:18.338  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:35:18.342  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:35:18.343  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:35:18.343  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:35:18.343  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:35:18.346  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:35:18.346  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:35:18.346  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:35:18.346  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:35:18.347  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:35:18.348  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:35:18.348  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:35:18.349  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:35:18.349  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:35:18.353  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:35:18.354  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:35:18.381  INFO 148 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:35:18.381  INFO 148 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:35:18.394  INFO 148 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:35:18.422  INFO 148 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 09:35:18.505  INFO 148 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:35:14 CET 2018]; root of context hierarchy
+2018-02-28 09:35:18.768  INFO 148 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:35:18.808  INFO 148 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:35:18.811  INFO 148 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 4.624 seconds (JVM running for 5.146)
+2018-02-28 09:37:53.995  INFO 148 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:37:53.995  INFO 148 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:37:54.009  INFO 148 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-02-28 09:37:54.099  WARN 148 --- [http-nio-8088-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@e7fa546; line: 1, column: 3]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@e7fa546; line: 1, column: 3]
+2018-02-28 09:38:09.355  WARN 148 --- [http-nio-8088-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@e2ebbba; line: 1, column: 48]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@e2ebbba; line: 1, column: 48]
+2018-02-28 09:38:26.547  WARN 148 --- [http-nio-8088-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Can not construct instance of com.workoffice.entity.Person: no String-argument constructor/factory method to deserialize from String value ('email')
+ at [Source: java.io.PushbackInputStream@5b80a58b; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not construct instance of com.workoffice.entity.Person: no String-argument constructor/factory method to deserialize from String value ('email')
+ at [Source: java.io.PushbackInputStream@5b80a58b; line: 1, column: 1]
+2018-02-28 09:38:43.165  WARN 148 --- [http-nio-8088-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@6aae4993; line: 1, column: 3]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@6aae4993; line: 1, column: 3]
+2018-02-28 09:39:00.903  WARN 148 --- [http-nio-8088-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('i' (code 105)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@64d3449f; line: 1, column: 3]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('i' (code 105)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@64d3449f; line: 1, column: 3]
+2018-02-28 09:39:33.092  INFO 148 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 09:39:54.753  WARN 148 --- [http-nio-8088-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@3690066e; line: 1, column: 3]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@3690066e; line: 1, column: 3]
+2018-02-28 09:40:02.259  WARN 148 --- [http-nio-8088-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@36b47443; line: 1, column: 3]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@36b47443; line: 1, column: 3]
+2018-02-28 09:40:40.663  WARN 148 --- [http-nio-8088-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Can not construct instance of com.workoffice.entity.Emp: no String-argument constructor/factory method to deserialize from String value ('{email: ')
+ at [Source: java.io.PushbackInputStream@3d500342; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not construct instance of com.workoffice.entity.Emp: no String-argument constructor/factory method to deserialize from String value ('{email: ')
+ at [Source: java.io.PushbackInputStream@3d500342; line: 1, column: 1]
+2018-02-28 09:40:53.792  WARN 148 --- [http-nio-8088-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@3ae80689; line: 1, column: 3]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@3ae80689; line: 1, column: 3]
+2018-02-28 09:41:04.810  WARN 148 --- [http-nio-8088-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Failed to read HTTP message: org.springframework.http.converter.HttpMessageNotReadableException: Could not read document: Unexpected character ('p' (code 112)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@e9440f; line: 1, column: 31]; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('p' (code 112)): was expecting double-quote to start field name
+ at [Source: java.io.PushbackInputStream@e9440f; line: 1, column: 31]
+2018-02-28 09:41:11.751  INFO 148 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 09:41:26.640  INFO 148 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : test@firma.com
+2018-02-28 09:41:26.642  INFO 148 --- [http-nio-8088-exec-5] com.workoffice.service.UserServiceImpl   : test@firma.com
+2018-02-28 09:52:11.344  INFO 5824 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 5824 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 09:52:11.349  INFO 5824 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 09:52:11.397  INFO 5824 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:52:11 CET 2018]; root of context hierarchy
+2018-02-28 09:52:12.558  INFO 5824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:52:12.589  INFO 5824 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 09:52:12.589  INFO 5824 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 09:52:12.649  INFO 5824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 09:52:12.663  INFO 5824 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 09:52:12.906  INFO 5824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:52:12.952  INFO 5824 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 09:52:12.968  INFO 5824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 09:52:13.353  INFO 5824 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 09:52:13.363  INFO 5824 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 09:52:13.364  INFO 5824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 09:52:13.436  INFO 5824 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 09:52:13.436  INFO 5824 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2052 ms
+2018-02-28 09:52:13.591  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 09:52:13.591  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 09:52:13.592  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 09:52:13.592  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 09:52:13.592  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 09:52:13.593  INFO 5824 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 09:52:13.593  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 09:52:13.594  INFO 5824 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 09:52:13.839  INFO 5824 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:52:13.855  INFO 5824 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 09:52:13.928  INFO 5824 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 09:52:13.928  INFO 5824 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 09:52:13.928  INFO 5824 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 09:52:13.959  INFO 5824 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 09:52:14.194  INFO 5824 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 09:52:15.187  INFO 5824 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 09:52:15.280  INFO 5824 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 09:52:15.436  INFO 5824 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 09:52:15.436  INFO 5824 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 09:52:15.842  INFO 5824 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 09:52:15.920  INFO 5824 --- [cluster-ClusterId{value='5a966dbfa7632916c05231c8', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:47089}] to 91.185.191.243:27017
+2018-02-28 09:52:15.936  INFO 5824 --- [cluster-ClusterId{value='5a966dbfa7632916c05231c8', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=27089524}
+2018-02-28 09:52:15.936  INFO 5824 --- [cluster-ClusterId{value='5a966dbfa7632916c05231c8', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 09:52:16.313  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 09:52:16.329  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 09:52:16.329  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 09:52:16.329  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 09:52:16.360  INFO 5824 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:52:16.360  INFO 5824 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:52:16.360  INFO 5824 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 09:52:16.391  INFO 5824 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 09:52:17.031  INFO 5824 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 09:52:11 CET 2018]; root of context hierarchy
+2018-02-28 09:52:17.297  INFO 5824 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 09:52:17.345  INFO 5824 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 09:52:17.361  INFO 5824 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 6.33 seconds (JVM running for 7.077)
+2018-02-28 09:52:25.473  INFO 5824 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 09:52:25.475  INFO 5824 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 09:52:25.488  INFO 5824 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-02-28 09:52:25.785  INFO 5824 --- [http-nio-8088-exec-3] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:47091}] to 91.185.191.243:27017
+2018-02-28 09:52:25.785  INFO 5824 --- [http-nio-8088-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:47090}] to 91.185.191.243:27017
+2018-02-28 09:52:25.839  INFO 5824 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:52:25.840  INFO 5824 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:52:28.276  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:52:28.278  INFO 5824 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:52:34.106  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 09:52:40.658  INFO 5824 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:52:40.663  INFO 5824 --- [http-nio-8088-exec-4] com.workoffice.service.UserServiceImpl   : test@test.com
+2018-02-28 09:53:30.784  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : test1@test.com
+2018-02-28 09:53:30.786  INFO 5824 --- [http-nio-8088-exec-6] com.workoffice.service.UserServiceImpl   : test1@test.com
+2018-02-28 09:54:14.259  INFO 5824 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:54:14.260  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:54:17.596  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 09:54:17.598  INFO 5824 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 09:54:28.686  INFO 5824 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:54:31.001  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : test@test.com
+2018-02-28 09:54:36.714  INFO 5824 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : test1@test.com
+2018-02-28 09:54:40.383  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : test11@test.com
+2018-02-28 09:54:40.386  INFO 5824 --- [http-nio-8088-exec-7] com.workoffice.service.UserServiceImpl   : test11@test.com
+2018-02-28 09:59:55.720  INFO 5824 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : test@firma.com
+2018-02-28 10:00:00.252  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : test1@firma.com
+2018-02-28 10:00:00.254  INFO 5824 --- [http-nio-8088-exec-2] com.workoffice.service.UserServiceImpl   : test1@firma.com
+2018-02-28 10:00:32.248  INFO 5824 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 10:00:32.249  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 10:04:33.111  INFO 5824 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 10:04:33.112  INFO 5824 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 10:04:57.675  INFO 5824 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : adasd@asddasda
+2018-02-28 10:04:57.676  INFO 5824 --- [http-nio-8088-exec-3] com.workoffice.service.UserServiceImpl   : adasd@asddasda
+2018-02-28 10:05:03.750  INFO 5824 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : adasd@asddasda
+2018-02-28 10:06:30.340  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : 324@asd
+2018-02-28 10:06:30.341  INFO 5824 --- [http-nio-8088-exec-7] com.workoffice.service.UserServiceImpl   : 324@asd
+2018-02-28 10:07:13.884  INFO 5824 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : asd3@asd
+2018-02-28 10:07:13.886  INFO 5824 --- [http-nio-8088-exec-1] com.workoffice.service.UserServiceImpl   : asd3@asd
+2018-02-28 10:08:25.130  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 10:08:29.022  INFO 5824 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma123@firma.com
+2018-02-28 10:08:29.025  INFO 5824 --- [http-nio-8088-exec-3] com.workoffice.service.UserServiceImpl   : firma123@firma.com
+2018-02-28 10:09:10.880  INFO 5824 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 10:09:14.436  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma33@firma.com
+2018-02-28 10:09:14.439  INFO 5824 --- [http-nio-8088-exec-10] com.workoffice.service.UserServiceImpl   : firma33@firma.com
+2018-02-28 10:11:40.042  INFO 5824 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firm333a@firma.com
+2018-02-28 10:11:40.043  INFO 5824 --- [http-nio-8088-exec-9] com.workoffice.service.UserServiceImpl   : firm333a@firma.com
+2018-02-28 12:35:04.118  INFO 5824 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 12:35:04.120  INFO 5824 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 12:48:47.287  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 12:49:28.953  INFO 5824 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 12:50:49.317  INFO 5824 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 13:06:27.041  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 13:06:27.041  INFO 5824 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 14:07:36.735  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:08:09.224  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:38:22.017  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:38:23.178  INFO 5824 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:38:45.659  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:38:53.376  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:39:37.161  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:39:58.331  INFO 5824 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:40:20.000  INFO 5824 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:41:06.106  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:41:19.595  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:44:26.495  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:45:00.503  INFO 5824 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:45:15.865  INFO 5824 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:47:03.436  INFO 5824 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:47:19.691  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 14:47:35.496  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:08:37.801  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:15:22.818  INFO 5824 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:15:33.844  INFO 5824 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma1@firma.com
+2018-02-28 15:15:33.846  INFO 5824 --- [http-nio-8088-exec-1] com.workoffice.service.UserServiceImpl   : firma1@firma.com
+2018-02-28 15:15:35.421  INFO 5824 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 15:15:35.422  INFO 5824 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 15:16:04.709  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:16:40.907  INFO 5824 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:20:44.035  INFO 5824 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:21:44.901  INFO 5824 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 15:21:50.153  INFO 5824 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma1@firma.com
+2018-02-28 15:21:54.464  INFO 5824 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma11@firma.com
+2018-02-28 15:21:54.466  INFO 5824 --- [http-nio-8088-exec-2] com.workoffice.service.UserServiceImpl   : firma11@firma.com
+2018-02-28 15:22:04.953  INFO 5824 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 15:22:04.954  INFO 5824 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 17:37:35.334  INFO 3728 --- [main] com.workoffice.WorkofficeApplication     : Starting WorkofficeApplication on Pawel-PC with PID 3728 (C:\Projekty\spring-work-office\server\target\classes started by Pawel in C:\Projekty\spring-work-office)
+2018-02-28 17:37:35.337  INFO 3728 --- [main] com.workoffice.WorkofficeApplication     : No active profile set, falling back to default profiles: default
+2018-02-28 17:37:35.391  INFO 3728 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 17:37:35 CET 2018]; root of context hierarchy
+2018-02-28 17:37:36.665  INFO 3728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 17:37:36.693  INFO 3728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.NewsRepository.
+2018-02-28 17:37:36.697  INFO 3728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.OffersRepository.
+2018-02-28 17:37:36.757  INFO 3728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-02-28 17:37:36.775  INFO 3728 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.workoffice.repository.UserRepository.
+2018-02-28 17:37:37.056  INFO 3728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [class org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$23616f5f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 17:37:37.105  INFO 3728 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2018-02-28 17:37:37.130  INFO 3728 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ec9aa60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-28 17:37:37.505  INFO 3728 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8088 (http)
+2018-02-28 17:37:37.517  INFO 3728 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2018-02-28 17:37:37.518  INFO 3728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.6
+2018-02-28 17:37:37.595  INFO 3728 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-28 17:37:37.595  INFO 3728 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2209 ms
+2018-02-28 17:37:37.772  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'myCorsFilter' to: [/*]
+2018-02-28 17:37:37.773  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-28 17:37:37.773  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-28 17:37:37.773  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-28 17:37:37.773  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-28 17:37:37.775  INFO 3728 --- [localhost-startStop-1] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-02-28 17:37:37.775  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-28 17:37:37.776  INFO 3728 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'messageDispatcherServlet' to [/services/*]
+2018-02-28 17:37:38.010  INFO 3728 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-28 17:37:38.022  INFO 3728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-28 17:37:38.120  INFO 3728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.11.Final}
+2018-02-28 17:37:38.122  INFO 3728 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-28 17:37:38.124  INFO 3728 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-28 17:37:38.176  INFO 3728 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-28 17:37:38.481  INFO 3728 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-02-28 17:37:39.056  INFO 3728 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2018-02-28 17:37:39.100  INFO 3728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-28 17:37:39.235  INFO 3728 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[91.185.191.243:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-02-28 17:37:39.235  INFO 3728 --- [main] org.mongodb.driver.cluster               : Adding discovered server 91.185.191.243:27017 to client view of cluster
+2018-02-28 17:37:39.717  INFO 3728 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2018-02-28 17:37:39.761  INFO 3728 --- [cluster-ClusterId{value='5a96dad3a763290e90000fb2', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:50354}] to 91.185.191.243:27017
+2018-02-28 17:37:39.789  INFO 3728 --- [cluster-ClusterId{value='5a96dad3a763290e90000fb2', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=91.185.191.243:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 9]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=27338726}
+2018-02-28 17:37:39.790  INFO 3728 --- [cluster-ClusterId{value='5a96dad3a763290e90000fb2', description='null'}-91.185.191.243:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2018-02-28 17:37:40.197  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.util.List<java.lang.Object> com.workoffice.controller.MainController.getHomePageData()
+2018-02-28 17:37:40.201  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news],methods=[GET]}" onto public java.util.List<com.workoffice.entity.News> com.workoffice.controller.NewsController.getNews()
+2018-02-28 17:37:40.203  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/news/{id}],methods=[GET]}" onto public com.workoffice.entity.News com.workoffice.controller.NewsController.getNewsFromId(java.lang.String)
+2018-02-28 17:37:40.204  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.putNews(com.workoffice.entity.News)
+2018-02-28 17:37:40.204  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/save/news],methods=[POST]}" onto public void com.workoffice.controller.NewsController.saveNews(com.workoffice.entity.News)
+2018-02-28 17:37:40.206  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/search],methods=[GET],params=[searchTerm && category]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOfferFromSearchTerm(java.lang.String,java.lang.String)
+2018-02-28 17:37:40.206  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getOffers()
+2018-02-28 17:37:40.206  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/offer/{id}],methods=[GET]}" onto public com.workoffice.entity.Offer com.workoffice.controller.OffersController.getOfferFromId(java.lang.String)
+2018-02-28 17:37:40.207  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/put/offer],methods=[POST]}" onto public void com.workoffice.controller.OffersController.putOffer(com.workoffice.entity.Offer)
+2018-02-28 17:37:40.207  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/get/newestOffers],methods=[GET]}" onto public java.util.List<com.workoffice.entity.Offer> com.workoffice.controller.OffersController.getNewstOffers()
+2018-02-28 17:37:40.208  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/person],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addUser(com.workoffice.entity.Person) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 17:37:40.209  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/all],methods=[GET]}" onto public java.lang.Iterable<com.workoffice.entity.User> com.workoffice.controller.UsersController.getAllEmployees()
+2018-02-28 17:37:40.209  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/add/emp],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.workoffice.controller.UsersController.addEmployee(com.workoffice.entity.Emp) throws com.workoffice.service.Exceptions.UserExistsException
+2018-02-28 17:37:40.209  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/profile],methods=[GET]}" onto public com.workoffice.entity.User com.workoffice.controller.UsersController.getUser()
+2018-02-28 17:37:40.211  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-28 17:37:40.211  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-28 17:37:40.242  INFO 3728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 17:37:40.243  INFO 3728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 17:37:40.257  INFO 3728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-28 17:37:40.290  INFO 3728 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [com.workoffice.security.MyCorsFilter@164dea80, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4392362c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2b4829aa, org.springframework.security.web.header.HeaderWriterFilter@23c05889, org.springframework.web.filter.CorsFilter@338a4c61, org.springframework.security.web.authentication.logout.LogoutFilter@2558f65c, com.workoffice.security.JWTLoginFilter@839755f, com.workoffice.security.JWTAuthenticationFilter@71d99732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a55e82a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ec082a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2328ec73, org.springframework.security.web.session.SessionManagementFilter@208e5b23, org.springframework.security.web.access.ExceptionTranslationFilter@32d22650, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e6acec2]
+2018-02-28 17:37:40.440  INFO 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@78b66d36: startup date [Wed Feb 28 17:37:35 CET 2018]; root of context hierarchy
+2018-02-28 17:37:40.802  INFO 3728 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-28 17:37:40.873  INFO 3728 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8088 (http)
+2018-02-28 17:37:40.878  INFO 3728 --- [main] com.workoffice.WorkofficeApplication     : Started WorkofficeApplication in 5.882 seconds (JVM running for 7.701)
+2018-02-28 17:37:59.214  INFO 3728 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-02-28 17:37:59.214  INFO 3728 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-02-28 17:37:59.227  INFO 3728 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 13 ms
+2018-02-28 17:37:59.514  INFO 3728 --- [http-nio-8088-exec-3] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:50356}] to 91.185.191.243:27017
+2018-02-28 17:37:59.515  INFO 3728 --- [http-nio-8088-exec-4] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:50355}] to 91.185.191.243:27017
+2018-02-28 17:37:59.572  INFO 3728 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 17:37:59.574  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 17:38:09.780  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:39:02.839  INFO 3728 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:39:21.932  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:39:43.195  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:40:44.075  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:41:01.249  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:41:07.866  INFO 3728 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:41:11.599  INFO 3728 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:41:15.819  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:41:32.276  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:41:57.780  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:43:04.871  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:43:41.581  INFO 3728 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:44:08.603  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:44:31.206  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:45:09.345  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:45:41.196  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:45:59.892  INFO 3728 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:46:25.010  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:46:41.161  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:47:38.622  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:48:45.305  INFO 3728 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:48:56.968  INFO 3728 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 17:48:56.972  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 17:49:59.964  INFO 3728 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 17:49:59.965  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 17:50:04.888  INFO 3728 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:50:37.274  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:51:15.969  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:52:47.206  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:53:38.400  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:54:06.525  INFO 3728 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:54:38.751  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:55:02.466  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:56:04.587  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:56:43.276  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:57:07.207  INFO 3728 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:57:53.254  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:58:06.998  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:58:54.830  INFO 3728 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:58:57.638  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:59:21.030  INFO 3728 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:59:35.390  INFO 3728 --- [http-nio-8088-exec-1] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:59:47.681  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:59:53.504  INFO 3728 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 17:59:56.657  INFO 3728 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 18:00:00.244  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 18:00:32.373  INFO 3728 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 18:00:32.375  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 18:30:51.849  INFO 3728 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving all offers from database
+2018-02-28 18:30:55.148  INFO 3728 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 18:30:55.151  INFO 3728 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 18:32:32.025  INFO 3728 --- [cluster-ClusterId{value='5a96dad3a763290e90000fb2', description='null'}-91.185.191.243:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:50742}] to 91.185.191.243:27017
+2018-02-28 18:36:25.348  INFO 3728 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 18:36:29.581  INFO 3728 --- [http-nio-8088-exec-8] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:50356}] to 91.185.191.243:27017 because there was a socket exception raised on another connection from this pool.
+2018-02-28 18:36:29.581  INFO 3728 --- [http-nio-8088-exec-9] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:50355}] to 91.185.191.243:27017 because there was a socket exception raised on another connection from this pool.
+2018-02-28 18:36:29.805  INFO 3728 --- [http-nio-8088-exec-9] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:50775}] to 91.185.191.243:27017
+2018-02-28 18:36:29.806  INFO 3728 --- [http-nio-8088-exec-8] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:50776}] to 91.185.191.243:27017
+2018-02-28 18:36:29.832  INFO 3728 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 18:36:29.835  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 18:36:40.572  INFO 3728 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 18:36:40.574  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 18:37:04.224  INFO 3728 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 18:37:37.179  INFO 3728 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 18:37:39.918  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.UsersController  : firma@firma.com
+2018-02-28 18:37:42.869  INFO 3728 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 18:37:42.870  INFO 3728 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-02-28 18:37:53.816  INFO 3728 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving all offers from database
+2018-02-28 18:37:55.532  INFO 3728 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-02-28 18:37:55.532  INFO 3728 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy

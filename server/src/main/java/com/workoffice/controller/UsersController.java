@@ -42,15 +42,17 @@ public class UsersController {
     }
 
     @PostMapping("/add/person")
-    public Person addUser(@RequestBody Person person) throws UserExistsException {
+    public ResponseEntity addUser(@RequestBody Person person) throws UserExistsException {
         logger.info(person.getEmail());
-        return userService.save(person);
+        userService.save(person);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @PostMapping("/add/emp")
-    public Emp addEmployee(@RequestBody Emp emp) throws UserExistsException {
+    public ResponseEntity addEmployee(@RequestBody Emp emp) throws UserExistsException {
         logger.info(emp.getEmail());
-        return userService.save(emp);
+        userService.save(emp);
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping("/profile")
