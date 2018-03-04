@@ -15,8 +15,8 @@ export class EditorComponent implements OnInit {
   id: string = null;
   categories: string[];
 
-  private newsModel = new News();
-  private offerModel = new Offer();
+  newsModel = new News();
+  offerModel = new Offer();
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {

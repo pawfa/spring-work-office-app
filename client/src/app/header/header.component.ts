@@ -3,6 +3,12 @@ import {Observable} from "rxjs/Observable";
 import {AuthenticationService} from "../shared/authentication.service";
 import {linkAnimation} from "../shared/animations/link.animation";
 import {loginAnimation} from "../shared/animations/login.animation";
+declare var $ :any;
+
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+});
+
 
 @Component({
   selector: 'app-header',
@@ -11,10 +17,12 @@ import {loginAnimation} from "../shared/animations/login.animation";
   animations: [linkAnimation, loginAnimation],
   host: { '[@linkAnimation]': '' }
 })
+
 export class HeaderComponent implements OnInit {
 
   isLoggedIn: Observable<boolean>;
   typeOfUser: Observable<string[]>;
+  screenSize: number;
 
   constructor(private authService: AuthenticationService) { }
 
@@ -25,6 +33,10 @@ export class HeaderComponent implements OnInit {
 
   onLogout(){
     this.authService.logout();
+  }
+
+  onResize(event) {
+    this.screenSize = event.target.innerWidth;
   }
 
 }

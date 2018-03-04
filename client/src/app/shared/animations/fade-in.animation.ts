@@ -1,4 +1,4 @@
-import {trigger, animate, transition, style, query, animateChild} from '@angular/animations';
+import {trigger, animate, transition, style, query } from '@angular/animations';
 
 export const fadeInAnimation =
 
@@ -28,12 +28,6 @@ export const fadeInAnimation =
         ],
         { optional: true }
       ),
-      query('@childAnimation', [
-        animateChild()
-      ], { optional: true })
-
-    ]),
-
-
+    ])
   ]);
 

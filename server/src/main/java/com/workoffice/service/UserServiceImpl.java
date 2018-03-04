@@ -6,12 +6,16 @@ import com.workoffice.service.Exceptions.UserExistsException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     private final Log logger = LogFactory.getLog(getClass());
     private UserRepository userRepository;
@@ -32,6 +36,7 @@ public class UserServiceImpl implements UserService {
             throw new UserExistsException("User already exists in database");
         }
         logger.info(s.getEmail());
+        s.setPassword(passwordEncoder.encode(s.getPassword()));
         return userRepository.save(s);
     }
 

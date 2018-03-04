@@ -60,8 +60,7 @@ public class UsersController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentPrincipalName = authentication.getName();
         logger.info(currentPrincipalName);
-        User us = userService.findByEmail(authentication.getName());
-        return us;
+        return userService.findByEmail(authentication.getName());
     }
 
 

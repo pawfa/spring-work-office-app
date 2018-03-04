@@ -12,6 +12,7 @@ export class NewsPreviewListComponent implements OnInit {
   data: any[];
   pager: any = {};
   pagedItems: any[];
+  state: string = 'show';
 
   constructor(private dataService: DataService, private pagerService: PagerService) {
   }
@@ -28,6 +29,7 @@ export class NewsPreviewListComponent implements OnInit {
     if (page < 1 || page > this.pager.totalPages) {
       return;
     }
+
     // get pager object from service
     this.pager = this.pagerService.getPager(this.data.length, page);
 

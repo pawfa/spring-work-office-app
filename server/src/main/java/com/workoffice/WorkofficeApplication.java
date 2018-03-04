@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.web.ErrorViewResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Collections;
@@ -20,5 +22,10 @@ public class WorkofficeApplication {
 	public ErrorViewResolver customErrorViewResolver() {
 		final ModelAndView redirectToIndexHtml = new ModelAndView("forward:/resources/index.html", Collections.emptyMap(), HttpStatus.OK);
 		return (request, status, model) -> status == HttpStatus.NOT_FOUND ? redirectToIndexHtml : null;
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
 	}
 }
