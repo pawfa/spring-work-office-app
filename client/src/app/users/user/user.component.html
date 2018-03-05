@@ -1,18 +1,16 @@
 <div class="container">
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-  <div class="form-group">
-    <label for="inputEmail">Email</label>
-    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email" [(ngModel)]="user.email" [disabled]="disable" required minlength="4" #inputEmailVal="ngModel">
-    <div *ngIf="inputEmailVal.invalid && (inputEmailVal.dirty || inputEmailVal.touched)"
-         class="alert alert-danger">
-    <div *ngIf="inputEmailVal.errors.required">
-      Name is required.
-    </div>
-      <div *ngIf="inputEmailVal.errors.minlength">
-        Name must be at least 4 characters long.
-      </div>
-    </div>
-  </div>
+    <mz-input-container>
+      <input mz-input mz-validation email required
+             type="email"
+             [(ngModel)]="user.email"
+             [errorMessageResource]="errorMessageResources.email"
+             [label]="'Email'"
+             name="email"
+             id="email"
+      >
+    </mz-input-container>
+
   <!--<div class="form-group">-->
     <!--<label for="inputPassword">Password</label>-->
     <!--<input type="password" class="form-control" name ="inputPassword" id="inputPassword" placeholder="Password" [(ngModel)]="user.password" [disabled]="disable" required minlength="4" #inputPasswordVal="ngModel">-->
@@ -26,49 +24,40 @@
       <!--</div>-->
     <!--</div>-->
   <!--</div>-->
-  <div class="form-group" *ngIf="type == 'emp'">
-    <label for="inputCompanyName">Company name</label>
-    <input type="text" class="form-control" name ="inputCompanyName" id="inputCompanyName" placeholder="Company name" [(ngModel)]="user.name" [disabled]="disable" required minlength="2" #inputCompanyName="ngModel">
-    <div *ngIf="inputCompanyName.invalid && (inputCompanyName.dirty || inputCompanyName.touched)"
-         class="alert alert-danger">
-      <div *ngIf="inputCompanyName.errors.required">
-        First name is required.
-      </div>
-      <div *ngIf="inputCompanyName.errors.minlength">
-        First name must be at least 2 characters long.
-      </div>
-    </div>
-  </div>
-  <div class="form-group" *ngIf="type == 'person'">
-    <label for="inputFirstName">First name</label>
-    <input type="text" class="form-control" name ="inputFirstName" id="inputFirstName" placeholder="First name" [(ngModel)]="user.firstName" [disabled]="disable" required minlength="2" #inputFirstNameVal="ngModel">
-    <div *ngIf="inputFirstNameVal.invalid && (inputFirstNameVal.dirty || inputFirstNameVal.touched)"
-         class="alert alert-danger">
-      <div *ngIf="inputFirstNameVal.errors.required">
-        First name is required.
-      </div>
-      <div *ngIf="inputFirstNameVal.errors.minlength">
-        First name must be at least 2 characters long.
-      </div>
-    </div>
-  </div>
-  <div class="form-group" *ngIf="type == 'person'">
-    <label for="inputLastName">Last name</label>
-    <input type="text" class="form-control" name ="inputLastName" id="inputLastName" placeholder="Last name" [(ngModel)]="user.lastName" [disabled]="disable" required minlength="2" #inputLastName="ngModel">
-    <div *ngIf="inputLastName.invalid && (inputLastName.dirty || inputLastName.touched)"
-         class="alert alert-danger">
-      <div *ngIf="inputLastName.errors.required">
-        Last name is required.
-      </div>
-      <div *ngIf="inputLastName.errors.minlength">
-        Last name must be at least 2 characters long.
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="cvDescription">Opis CV</label>
-    <textarea class="form-control" id="cvDescription" rows="6" name="cvDescription" [(ngModel)]="user.cv"></textarea>
-  </div>
+  <mz-input-container *ngIf="type == 'emp'">
+    <input mz-input mz-validation minlength="2"
+           type="text"
+           [(ngModel)]="user.name"
+           [errorMessageResource]="errorMessageResources.companyName"
+           [label]="'Company name'"
+           name="companyName"
+           id="companyName"
+    >
+  </mz-input-container>
+  <mz-input-container  *ngIf="type == 'person'">
+    <input mz-input mz-validation minlength="2"
+           type="text"
+           [(ngModel)]="user.firstName"
+           [errorMessageResource]="errorMessageResources.firstName"
+           [label]="'First name'"
+           name="firstName"
+           id="firstName"
+    >
+  </mz-input-container>
+  <mz-input-container  *ngIf="type == 'person'">
+    <input mz-input mz-validation minlength="2"
+           type="text"
+           [(ngModel)]="user.lastName"
+           [errorMessageResource]="errorMessageResources.lastName"
+           [label]="'Last name'"
+           name="lastName"
+           id="lastName"
+    >
+  </mz-input-container>
+
+  <mz-textarea-container>
+    <textarea mz-textarea [label]="'CV text'" placeholder="Cv text" id="cvText" rows="3" name="cvText" [(ngModel)]="user.cv"></textarea>
+  </mz-textarea-container>
   <div class="file-field input-field">
     <div class="btn">
       <span>File</span>
@@ -78,7 +67,6 @@
       <input class="file-path validate" type="text" placeholder="Upload poster">
     </div>
   </div>
-  <button type="button" (click)="disable = !disable" class="btn btn-primary">Edit</button>
   <button type="submit"  class="btn btn-primary" [disabled]="!form.form.valid">Submit</button>
 </form>
 </div>

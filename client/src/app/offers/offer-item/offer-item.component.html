@@ -9,8 +9,10 @@
       <p class="card-text">{{description}}</p>
     </mz-card-content>
     <mz-card-action>
+      <div *ngIf="userId === offerUserId">
       <button [routerLink]="['/offers/editor', id]" type="button" class="btn btn-primary mx-3">Edit</button>
-      <button type="button" class="btn btn-primary">Primary</button>
+      <button (click)="removeOffer()" type="button" class="btn btn-primary mx-3">Remove</button>
+      </div>
     </mz-card-action>
   </mz-card>
 

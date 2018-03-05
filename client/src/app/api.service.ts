@@ -53,6 +53,10 @@ export class ApiService {
     return this.http.get(this.server + "get/offers",{headers: this.headers});
   }
 
+  deleteOffer(id: string) {
+    return this.http.delete(this.server+"delete/offer/"+id, {headers: this.headers}).subscribe();
+  }
+
   /*-------- News part --------*/
 
   createNews(news: News) {
@@ -70,6 +74,10 @@ export class ApiService {
   getOfferFromSearchTerm(searchTerm: string, category: string) {
     let params = new HttpParams().set('searchTerm', searchTerm).set('category',category);
     return this.http.get(this.server + "search",{headers: this.headers, params: params});
+
+  }
+
+  deleteNews(id: string) {
 
   }
 }

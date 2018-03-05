@@ -76,12 +76,12 @@
     </ul>
 
     <ul class="right hide-on-med-and-down">
-      <li *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)">
+      <li *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)">
         <app-login-header></app-login-header>
       </li>
     </ul>
 
-    <ul id="profile" *ngIf="(isLoggedIn | async)" [@loginAnimation]="(isLoggedIn | async)">
+    <ul id="profile" *ngIf="(isLoggedIn | async)" [@linkAnimation]="(isLoggedIn | async)">
       <li><a routerLink="/profile">Profile</a></li>
       <li><a type="button" (click)="onLogout()">Logout</a></li>
     </ul>

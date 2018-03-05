@@ -1,5 +1,5 @@
 <div class="container" *ngIf="type === 'news'">
-  <form #form="ngForm" (ngSubmit)="onSubmit()">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
     <div class="file-field input-field">
       <div class="btn">
         <span>File</span>
@@ -10,18 +10,18 @@
       </div>
     </div>
     <mz-input-container >
-      <input mz-input id="header" [label]="'Header'" placeholder="This is header" name="header" [(ngModel)]="newsModel.header">
+      <input mz-input mz-validation id="header" [label]="'Header'" placeholder="This is header" name="header" [errorMessageResource]="errorMessageResources.header" [(ngModel)]="newsModel.header">
     </mz-input-container>
     <mz-textarea-container>
-      <textarea mz-textarea id="paragraph" rows="3" name="paragraph" [(ngModel)]="newsModel.paragraph" [label]="'News content'" placeholder="News content"></textarea>
+      <textarea mz-textarea mz-validation id="paragraph" rows="3" name="paragraph" [(ngModel)]="newsModel.paragraph" [errorMessageResource]="errorMessageResources.paragraph" [label]="'News content'" placeholder="News content"></textarea>
     </mz-textarea-container>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
 <div class="container" *ngIf="type === 'offers'">
-  <form #form="ngForm" (ngSubmit)="onSubmit()">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
     <mz-input-container>
-      <input mz-input id="title" [label]="'Title'" placeholder="This is title" name="title" [(ngModel)]="offerModel.title">
+      <input mz-input mz-validation id="title" [label]="'Title'" placeholder="This is title" name="title" [errorMessageResource]="errorMessageResources.title" [(ngModel)]="offerModel.title" required>
     </mz-input-container>
 
     <!--not using ng2-materialize tags because animations are not working with nested child-->
@@ -33,7 +33,7 @@
     </div>
 
     <mz-textarea-container>
-      <textarea mz-textarea [label]="'Description'" placeholder="Offer description" id="description" rows="3" name="description" [(ngModel)]="offerModel.description"></textarea>
+      <textarea mz-textarea mz-validation [label]="'Description'" placeholder="Offer description" id="description" rows="3" name="description" [errorMessageResource]="errorMessageResources.description" [(ngModel)]="offerModel.description" required></textarea>
     </mz-textarea-container>
 
     <button type="submit" class="btn btn-primary">Submit</button>

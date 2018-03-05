@@ -10,4 +10,5 @@ public interface OffersService {
     Offer findOfferById(String id);
     List<Offer> searchOffer(String category,String searchTerm);
     List<Offer> findTwoNewest();
+    void deleteOffer(String id);
 }

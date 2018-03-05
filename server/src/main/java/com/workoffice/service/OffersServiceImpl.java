@@ -45,4 +45,9 @@ public class OffersServiceImpl implements OffersService {
     public List<Offer> findTwoNewest() {
         return offersRepository.findFirst2ByOrderByIdDesc();
     }
+
+    @Override
+    public void deleteOffer(String id) {
+        offersRepository.deleteOfferById(id);
+    }
 }

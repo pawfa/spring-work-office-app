@@ -29,10 +29,16 @@ public class OffersController {
     }
 
     @GetMapping("/get/newestOffers")
-    public List<Offer> getNewstOffers() {
+    public List<Offer> getNewestOffers() {
         List<Offer> lista = offersService.findTwoNewest();
         logger.info("Retrieving two newest offers from database");
         return lista;
+    }
+
+    @GetMapping("/get/offer/{id}")
+    public Offer getOfferFromId(@PathVariable(value = "id") String id) {
+        Offer offer = offersService.findOfferById(id);
+        return offer;
     }
 
     @PostMapping("/put/offer")
@@ -40,10 +46,10 @@ public class OffersController {
         offersService.insert(offer);
     }
 
-    @GetMapping("/get/offer/{id}")
-    public Offer getOfferFromId(@PathVariable(value = "id") String id) {
-        Offer offer = offersService.findOfferById(id);
-        return offer;
+    @DeleteMapping("/delete/offer/{id}")
+    public void deleteOffer(@PathVariable(value = "id") String id) {
+        logger.info(id);
+        offersService.deleteOffer(id);
     }
 
 

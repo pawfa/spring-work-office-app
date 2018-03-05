@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../data.service";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/Rx';
 import {Offer} from "../../shared/offer";
+import {AuthenticationService} from "../../shared/authentication.service";
+import {UsersService} from "../../users/users.service";
 
 @Component({
   selector: 'app-offer-item',
@@ -16,8 +18,13 @@ export class OfferItemComponent implements OnInit {
   title: string;
   description: string;
   category: string;
+  userId: number;
+  offerUserId: number;
 
-  constructor(private dataService : DataService,private route: ActivatedRoute) {
+  constructor(private dataService : DataService,
+              private route: ActivatedRoute,
+              private usersService: UsersService,
+              private router: Router) {
 
   }
 
@@ -28,7 +35,18 @@ export class OfferItemComponent implements OnInit {
       {
         this.title = data.title;
         this.description = data.description;
-        this.category = data.category;});
+        this.category = data.category;
+        this.offerUserId = data.userId;
+      });
+    this.usersService.getUserId().subscribe(
+      data => {
+          this.userId = data;
+      }
+    )
   }
 
+  removeOffer(){
+    this.dataService.removeOffer(this.id);
+    this.router.navigate(['/'])
+  }
 }

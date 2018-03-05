@@ -47,7 +47,6 @@ export class RegistrationComponent implements OnInit {
         (error )=>{this.responseErrorMsg = error.error; this.openSnack()}
       );
     }
-    // return;
   }
 
   openSnack(){

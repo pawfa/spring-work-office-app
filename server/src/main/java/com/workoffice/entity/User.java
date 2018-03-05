@@ -1,6 +1,4 @@
 package com.workoffice.entity;
-
-import org.hibernate.annotations.DiscriminatorFormula;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
@@ -8,7 +6,6 @@ import javax.persistence.*;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "user_type", discriminatorType = DiscriminatorType.STRING)
-//@DiscriminatorFormula("case when user_type='person' then 'person' when user_type='emp' then 'emp' when user_type='admin' then 'admin' end")
 public abstract class User {
 
         @Id
