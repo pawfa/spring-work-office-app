@@ -46,7 +46,9 @@ export class OfferItemComponent implements OnInit {
   }
 
   removeOffer(){
-    this.dataService.removeOffer(this.id);
+    this.dataService.removeOffer(this.id).finally(
+      ()=>{this.dataService.getTwoNewestOffers()}
+    ).subscribe();
     this.router.navigate(['/'])
   }
 }

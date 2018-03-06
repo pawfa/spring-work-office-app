@@ -11,10 +11,9 @@ import {MzToastService} from 'ng2-materialize'
 })
 export class LoginHeaderComponent implements OnInit {
 
-  private userModel = new User();
+  userModel = new User();
   private error : string;
   private returnUrl;
-  private focus :boolean = false;
 
   constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private toastService: MzToastService){}
 

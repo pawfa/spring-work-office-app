@@ -1,4 +1,4 @@
-<form #myForm="ngForm">
+<form #myForm="ngForm" (submit)="loginUser(myForm)">
   <mz-input-container class="col s12 l4 xl4">
     <input mz-input
            placeholder="Email"
@@ -18,6 +18,8 @@
   </mz-input-container>
 
   <mz-input-container class="col s12 l4 xl4 center-align">
+    <!--hidden input for submitting form by pressing enter-->
+    <input type="submit" style="display: none;">
     <a type="button" (click)="loginUser(myForm)">Submit</a>
   </mz-input-container>
 </form>

@@ -38,7 +38,7 @@ export class ApiService {
   /*-------- Offer part --------*/
 
   createOffer(offer: Offer) {
-    this.http.post(this.server + "put/offer", offer, {headers: this.headers}).subscribe();
+    return this.http.post(this.server + "put/offer", offer, {headers: this.headers});
   }
 
   getOfferFromId(id: string){
@@ -54,13 +54,19 @@ export class ApiService {
   }
 
   deleteOffer(id: string) {
-    return this.http.delete(this.server+"delete/offer/"+id, {headers: this.headers}).subscribe();
+    return this.http.delete(this.server+"delete/offer/"+id, {headers: this.headers});
+  }
+
+  getOfferFromSearchTerm(searchTerm: string, category: string) {
+    let params = new HttpParams().set('searchTerm', searchTerm).set('category',category);
+    return this.http.get(this.server + "search",{headers: this.headers, params: params});
+
   }
 
   /*-------- News part --------*/
 
   createNews(news: News) {
-    this.http.post(this.server + "put/news",  news, {headers: this.headers}).subscribe();
+    return this.http.post(this.server + "put/news",  news, {headers: this.headers});
   }
 
   getAllNews(): Observable<any> {
@@ -69,12 +75,6 @@ export class ApiService {
 
   getNewsFromId(id: string){
     return this.http.get(this.server + "get/news/"+id,{headers: this.headers});
-  }
-
-  getOfferFromSearchTerm(searchTerm: string, category: string) {
-    let params = new HttpParams().set('searchTerm', searchTerm).set('category',category);
-    return this.http.get(this.server + "search",{headers: this.headers, params: params});
-
   }
 
   deleteNews(id: string) {

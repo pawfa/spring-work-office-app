@@ -3,7 +3,6 @@ import {ApiService} from './api.service';
 import {News} from "./shared/news";
 import {Offer} from "./shared/offer";
 import {Observable} from "rxjs/Observable";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {ReplaySubject} from "rxjs/ReplaySubject";
 
 
@@ -11,6 +10,8 @@ import {ReplaySubject} from "rxjs/ReplaySubject";
 export class DataService {
 
   categories: string[] = ["All","Architecture","Chemistry","Finances","Information Technology","Logistics"];
+
+  //used subject for updating offer list after making delete call to server
   private twoNewestOffers = new ReplaySubject<Offer[]>();
 
   constructor(private apiService: ApiService) {
@@ -28,21 +29,13 @@ export class DataService {
     );
     return this.twoNewestOffers.asObservable();
   }
-  // refreshTwoOffers(){
-  //   this.apiService.getTwoNewestOffers().subscribe(
-  //     (data: Offer[]) => {
-  //       this.twoNewestOffers.next(data);
-  //       this.twoNewestOffers.publishLast();
-  //     }
-  //   );
-  // }
 
   getOfferFromId(id: string){
     return this.apiService.getOfferFromId(id);
   }
 
   saveOffer(offer: Offer) {
-    this.apiService.createOffer(offer);
+    return this.apiService.createOffer(offer);
   }
 
   search(terms: Observable<string[]>){
@@ -60,7 +53,7 @@ export class DataService {
   }
 
   removeOffer(id: string){
-    this.apiService.deleteOffer(id);
+    return this.apiService.deleteOffer(id);
   }
 
   /*-------- News part --------*/
@@ -70,7 +63,7 @@ export class DataService {
   }
 
   saveNews(news: News) {
-    this.apiService.createNews(news);
+    return this.apiService.createNews(news);
   }
 
   getNewsFromId(id: string) {

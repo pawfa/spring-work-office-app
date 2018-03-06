@@ -19,7 +19,6 @@ export class OfferPreviewListComponent implements OnInit {
       (data:Offer[]) => {
         this.data = data
       });
-    this.dataService.getTwoNewestOffers();
   }
 
 }

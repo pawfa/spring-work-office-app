@@ -61,9 +61,15 @@ export class EditorComponent implements OnInit {
     if (!submittedForm.invalid) {
       if (this.type === "offers") {
         this.offerModel.userId = this.userId;
-        this.dataService.saveOffer(this.offerModel)
+
+        //finally call to refresh two newest offers after making save call to server
+        this.dataService.saveOffer(this.offerModel).finally(
+          () => this.dataService.getTwoNewestOffers()
+        ).subscribe();
       } else {
-        this.dataService.saveNews(this.newsModel);
+        this.dataService.saveNews(this.newsModel).finally(
+          () => this.dataService.getNews()
+        ).subscribe();;
       }
       this.router.navigate(['/'])
     }

@@ -1,4 +1,9 @@
-<div class="container">
+
+<ul id="tabs-swipe-demo" class="tabs">
+  <li class="tab col s6"><a class="active" href="#">Profile information</a></li>
+  <li class="tab col s6"><a  href="#">Your offers</a></li>
+</ul>
+<div class="container" id="profileInfo">
 <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <mz-input-container>
       <input mz-input mz-validation email required
@@ -69,4 +74,7 @@
   </div>
   <button type="submit"  class="btn btn-primary" [disabled]="!form.form.valid">Submit</button>
 </form>
+</div>
+
+<div class="container" id="profileOffers">
 </div>

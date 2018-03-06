@@ -45,4 +45,8 @@ export class UserComponent implements OnInit {
 
     this.usersService.addUser(this.user, this.type);
   }
+
+  callbackFunction() {
+
+  }
 }

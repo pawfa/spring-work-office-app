@@ -28,7 +28,8 @@ import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
-  MzButtonModule, MzCardModule, MzInputModule, MzNavbarModule, MzSelectModule, MzTextareaModule, MzToastService,
+  MzButtonModule, MzCardModule, MzInputModule, MzNavbarModule, MzSelectModule, MzTabModule, MzTextareaModule,
+  MzToastService,
   MzValidationModule
 } from "ng2-materialize";
 import {MaterializeModule} from "angular2-materialize";
@@ -66,7 +67,8 @@ import {MaterializeModule} from "angular2-materialize";
     MzButtonModule,
     MzSelectModule,
     MzTextareaModule,
-    MaterializeModule
+    MaterializeModule,
+    MzTabModule
   ],
   providers: [
     AuthGuard,
