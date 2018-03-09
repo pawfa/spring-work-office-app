@@ -22,7 +22,6 @@ import {AuthGuard} from "./shared/auth.guard";
 import {PagerService} from "./shared/pager.service";
 import {TokenInterceptor} from "./shared/token-interceptor";
 import { UserComponent } from './users/user/user.component';
-import { EmpComponent } from './users/emp/emp.component';
 import { RegistrationComponent } from './users/registration/registration.component';
 import {UsersService} from "./users/users.service";
 import { OfferSearchComponent } from './offers/offer-search/offer-search.component';
@@ -33,6 +32,8 @@ import {
   MzValidationModule
 } from "ng2-materialize";
 import {MaterializeModule} from "angular2-materialize";
+import { ProfileComponent } from './users/profile/profile.component';
+import { ProfileOffersComponent } from './users/profile-offers/profile-offers.component';
 
 
 @NgModule({
@@ -50,9 +51,10 @@ import {MaterializeModule} from "angular2-materialize";
     EditorComponent,
     LoginFormComponent,
     UserComponent,
-    EmpComponent,
     RegistrationComponent,
-    OfferSearchComponent
+    OfferSearchComponent,
+    ProfileComponent,
+    ProfileOffersComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,7 @@ import {MaterializeModule} from "angular2-materialize";
     MzSelectModule,
     MzTextareaModule,
     MaterializeModule,
-    MzTabModule
+    MzTabModule,
   ],
   providers: [
     AuthGuard,

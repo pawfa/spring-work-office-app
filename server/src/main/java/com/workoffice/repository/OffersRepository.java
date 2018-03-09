@@ -23,6 +23,9 @@ public interface OffersRepository extends MongoRepository<Offer, String> {
 
     @Query("{'$and':[{'category' : ?0}, {'$or':[ {'description' : {$regex : '.*?1.*', $options: 'i'}}, {'title' : {$regex : '.*?1.*', $options: 'i'}}]}]}")
     List<Offer> findOfferByCategoryAndDescriptionOrTitleContaining(String category, String searchTerm);
+
     void deleteOfferById(String id);
+
+    List<Offer> findOfferByUserId(int id);
 
 }

@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {DataService} from "../../data.service";
 import {PagerService} from "../../shared/pager.service";
+import {DOCUMENT} from "@angular/common";
 
 @Component({
   selector: 'app-news-preview-list',
@@ -12,9 +13,10 @@ export class NewsPreviewListComponent implements OnInit {
   data: any[];
   pager: any = {};
   pagedItems: any[];
-  state: string = 'show';
 
-  constructor(private dataService: DataService, private pagerService: PagerService) {
+  constructor(private dataService: DataService,
+              private pagerService: PagerService,
+              @Inject(DOCUMENT) private document: Document) {
   }
 
   ngOnInit() {
@@ -35,6 +37,11 @@ export class NewsPreviewListComponent implements OnInit {
 
     // get current page of items
     this.pagedItems = this.data.slice(this.pager.startIndex, this.pager.endIndex + 1);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
 }

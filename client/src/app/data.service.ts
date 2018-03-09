@@ -34,6 +34,10 @@ export class DataService {
     return this.apiService.getOfferFromId(id);
   }
 
+  getAllOfersFromUserId(){
+    return this.apiService.getAllOfersFromUserId();
+  }
+
   saveOffer(offer: Offer) {
     return this.apiService.createOffer(offer);
   }

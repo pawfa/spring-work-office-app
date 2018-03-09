@@ -50,4 +50,9 @@ public class OffersServiceImpl implements OffersService {
     public void deleteOffer(String id) {
         offersRepository.deleteOfferById(id);
     }
+
+    @Override
+    public List<Offer> findOfferByUserId(int id) {
+        return offersRepository.findOfferByUserId(id);
+    }
 }

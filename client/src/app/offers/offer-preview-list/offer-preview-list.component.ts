@@ -9,7 +9,7 @@ import {Offer} from "../../shared/offer";
   styleUrls: ['./offer-preview-list.component.css']
 })
 export class OfferPreviewListComponent implements OnInit {
-  data : any[];
+  data : Offer[];
 
   constructor(private dataService : DataService) {
   }

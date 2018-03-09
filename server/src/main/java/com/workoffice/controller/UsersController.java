@@ -25,8 +25,8 @@ public class UsersController {
     private final Log logger = LogFactory.getLog(getClass());
 
     @ExceptionHandler({ UserExistsException.class })
-    public ResponseEntity<Object> handleAccessDeniedException(Exception ex, WebRequest request) {
-        return new ResponseEntity<Object>(
+    public ResponseEntity<Object> handleAccessDeniedException(Exception ex) {
+        return new ResponseEntity<>(
                 ex.getMessage(), new HttpHeaders(), HttpStatus.FORBIDDEN);
     }
 
@@ -62,6 +62,5 @@ public class UsersController {
         logger.info(currentPrincipalName);
         return userService.findByEmail(authentication.getName());
     }
-
 
 }

@@ -38,29 +38,32 @@ export class ApiService {
   /*-------- Offer part --------*/
 
   createOffer(offer: Offer) {
-    return this.http.post(this.server + "put/offer", offer, {headers: this.headers});
-  }
-
-  getOfferFromId(id: string){
-    return this.http.get(this.server+"get/offer/"+id, {headers: this.headers});
-  }
-
-  getTwoNewestOffers() {
-    return this.http.get(this.server + "get/newestOffers",{headers: this.headers});
+    return this.http.post(this.server + "offers/", offer, {headers: this.headers});
   }
 
   getAllOffers(): Observable<any> {
-    return this.http.get(this.server + "get/offers",{headers: this.headers});
+    return this.http.get(this.server + "offers/all",{headers: this.headers});
+  }
+
+  getOfferFromId(id: string){
+    return this.http.get(this.server+"offers/"+id, {headers: this.headers});
+  }
+
+  getAllOfersFromUserId() {
+    return this.http.get(this.server+"offers/profile", {headers: this.headers});
+  }
+
+  getTwoNewestOffers() {
+    return this.http.get(this.server + "offers/newest",{headers: this.headers});
   }
 
   deleteOffer(id: string) {
-    return this.http.delete(this.server+"delete/offer/"+id, {headers: this.headers});
+    return this.http.delete(this.server+"offers/"+id, {headers: this.headers});
   }
 
   getOfferFromSearchTerm(searchTerm: string, category: string) {
     let params = new HttpParams().set('searchTerm', searchTerm).set('category',category);
-    return this.http.get(this.server + "search",{headers: this.headers, params: params});
-
+    return this.http.get(this.server + "offers/search",{headers: this.headers, params: params});
   }
 
   /*-------- News part --------*/

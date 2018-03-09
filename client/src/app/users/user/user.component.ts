@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {UsersService} from "../users.service";
 import {User} from "../../shared/user";
+import {DataService} from "../../data.service";
 
 
 @Component({
-  selector: 'app-person',
+  selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
   user =  new User();
   type: string;
+
   errorMessageResources = {
     email: {
       required: 'Email is required.',
@@ -30,7 +32,8 @@ export class UserComponent implements OnInit {
     },
   };
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService,
+              private dataService: DataService) { }
 
   ngOnInit() {
     this.usersService.getUser().subscribe(
@@ -42,11 +45,7 @@ export class UserComponent implements OnInit {
   }
 
   onSubmit(){
-
     this.usersService.addUser(this.user, this.type);
   }
 
-  callbackFunction() {
-
-  }
 }
