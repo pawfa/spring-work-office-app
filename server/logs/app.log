@@ -21657,3 +21657,99 @@ java.net.SocketTimeoutException: Read timed out
 2018-03-09 14:32:03.917  INFO 4936 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
 2018-03-09 14:32:07.784  INFO 4936 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
 2018-03-09 14:32:07.787  INFO 4936 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:33:07.708  INFO 4936 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:33:07.708  INFO 4936 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:33:10.200  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:33:10.201  INFO 4936 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:33:13.450  WARN 4936 --- [http-nio-8088-exec-3] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2018-03-09 14:33:21.560  INFO 4936 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:33:21.571  INFO 4936 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:35:12.291  INFO 4936 --- [http-nio-8088-exec-9] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:35:12.292  INFO 4936 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:35:15.247  INFO 4936 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:35:15.249  INFO 4936 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:36:00.622  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:36:00.624  INFO 4936 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:36:05.539  INFO 4936 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:36:05.540  INFO 4936 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:38:14.533  INFO 4936 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:38:14.533  INFO 4936 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:38:43.338  INFO 4936 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:38:43.338  INFO 4936 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:41:57.694  INFO 4936 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:41:57.695  INFO 4936 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:42:17.595  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:42:17.597  INFO 4936 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:42:21.024  WARN 4936 --- [http-nio-8088-exec-4] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2018-03-09 14:43:19.725  INFO 4936 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:43:19.727  INFO 4936 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:43:35.941  INFO 4936 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:43:35.945  INFO 4936 --- [http-nio-8088-exec-10] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:43:39.300  WARN 4936 --- [http-nio-8088-exec-9] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2018-03-09 14:43:52.961  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:43:52.963  INFO 4936 --- [http-nio-8088-exec-2] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:43:56.478  INFO 4936 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:43:56.480  INFO 4936 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:44:00.024  WARN 4936 --- [http-nio-8088-exec-6] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2018-03-09 14:44:08.576  INFO 4936 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:44:08.577  INFO 4936 --- [http-nio-8088-exec-7] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:44:12.147  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:44:12.149  INFO 4936 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:44:16.061  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:44:16.063  INFO 4936 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:48:41.010  INFO 4936 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:48:41.010  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:48:44.738  INFO 4936 --- [http-nio-8088-exec-3] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:48:44.737  INFO 4936 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:48:50.961  INFO 4936 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:48:50.963  INFO 4936 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:50:13.662  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:50:13.663  INFO 4936 --- [http-nio-8088-exec-9] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:50:31.852  INFO 4936 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:50:31.854  INFO 4936 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:50:37.766  INFO 4936 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:50:37.768  INFO 4936 --- [http-nio-8088-exec-8] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:50:41.113  WARN 4936 --- [http-nio-8088-exec-2] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2018-03-09 14:51:09.513  INFO 4936 --- [http-nio-8088-exec-6] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:51:09.514  INFO 4936 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:51:10.568  INFO 4936 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:51:10.570  INFO 4936 --- [http-nio-8088-exec-5] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:51:15.990  WARN 4936 --- [http-nio-8088-exec-8] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2018-03-09 14:51:18.193  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : Retrieving all offers from database
+2018-03-09 14:51:18.987  INFO 4936 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:51:20.278  INFO 4936 --- [http-nio-8088-exec-6] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:51:20.292  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:51:20.294  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : 34
+2018-03-09 14:51:21.577  INFO 4936 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:51:21.580  INFO 4936 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : 34
+2018-03-09 14:51:22.389  INFO 4936 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:51:23.506  INFO 4936 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:51:23.508  INFO 4936 --- [http-nio-8088-exec-8] c.w.controller.OffersController          : 34
+2018-03-09 14:51:24.764  INFO 4936 --- [http-nio-8088-exec-10] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:51:25.845  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:51:25.849  INFO 4936 --- [http-nio-8088-exec-1] c.w.controller.OffersController          : 34
+2018-03-09 14:51:27.536  INFO 4936 --- [http-nio-8088-exec-9] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:51:28.594  INFO 4936 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:51:28.602  INFO 4936 --- [http-nio-8088-exec-2] c.w.controller.OffersController          : 34
+2018-03-09 14:51:29.851  INFO 4936 --- [http-nio-8088-exec-3] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:52:27.555  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:52:27.555  INFO 4936 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:52:27.556  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : 34
+2018-03-09 14:52:29.193  INFO 4936 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:52:29.196  INFO 4936 --- [http-nio-8088-exec-5] c.w.controller.OffersController          : 34
+2018-03-09 14:52:29.973  INFO 4936 --- [http-nio-8088-exec-8] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:52:30.757  INFO 4936 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:52:30.758  INFO 4936 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : 34
+2018-03-09 14:52:31.495  INFO 4936 --- [http-nio-8088-exec-2] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:52:33.602  INFO 4936 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:52:33.605  INFO 4936 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : 34
+2018-03-09 14:52:36.291  INFO 4936 --- [http-nio-8088-exec-7] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:52:37.325  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : firma@firma.com
+2018-03-09 14:52:37.328  INFO 4936 --- [http-nio-8088-exec-4] c.w.controller.OffersController          : 34
+2018-03-09 14:52:39.635  INFO 4936 --- [http-nio-8088-exec-5] c.workoffice.controller.UsersController  : firma@firma.com
+2018-03-09 14:52:41.208  INFO 4936 --- [http-nio-8088-exec-1] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:52:41.209  INFO 4936 --- [http-nio-8088-exec-10] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:52:46.576  INFO 4936 --- [http-nio-8088-exec-3] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:52:46.578  INFO 4936 --- [http-nio-8088-exec-6] c.workoffice.controller.NewsController   : Pobieram newsy
+2018-03-09 14:52:49.102  INFO 4936 --- [http-nio-8088-exec-7] c.w.controller.OffersController          : Retrieving two newest offers from database
+2018-03-09 14:52:49.104  INFO 4936 --- [http-nio-8088-exec-4] c.workoffice.controller.NewsController   : Pobieram newsy

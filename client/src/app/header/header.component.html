@@ -1,46 +1,7 @@
-<!--<mz-navbar (window:resize)="onResize($event)">-->
-<!--<mz-navbar-item-container>-->
-<!--<mz-navbar-item>-->
-<!--<a href="#" routerLink="/">Start</a>-->
-<!--</mz-navbar-item>-->
-
-<!--<mz-navbar-item>-->
-<!--<a routerLink="/offers">Offers</a>-->
-<!--</mz-navbar-item>-->
-
-<!--<mz-navbar-item>-->
-<!--<a *ngIf="!(isLoggedIn | async)" [@linkAnimation]="!(isLoggedIn | async)" id="registration"-->
-<!--routerLink="/registration">Registration</a>-->
-<!--<a *ngIf="(typeOfUser | async).includes('emp') || (typeOfUser | async).includes('admin')"-->
-<!--[@linkAnimation]="(isLoggedIn | async)" id="editor" routerLink="/offers/editor">Add offer</a>-->
-<!--</mz-navbar-item>-->
-<!--<mz-navbar-item>-->
-<!--<a routerLink="/news/editor" *ngIf="(typeOfUser | async).includes('admin')"-->
-<!--[@linkAnimation]="(isLoggedIn | async)">News editor</a>-->
-<!--</mz-navbar-item>-->
-<!--</mz-navbar-item-container>-->
-
-<!--<mz-navbar-item-container [align]="'right'" >-->
-<!--<mz-navbar-item-container >-->
-<!--<mz-navbar-item *ngIf="!(isLoggedIn | async)" [@loginAnimation]="!(isLoggedIn | async)">-->
-<!--<app-login-header ></app-login-header>-->
-<!--</mz-navbar-item>-->
-<!--</mz-navbar-item-container>-->
-<!--<mz-navbar-item-container id="profile" *ngIf="(isLoggedIn | async)" [@loginAnimation]="(isLoggedIn | async)">-->
-<!--<mz-navbar-item>-->
-<!--<a routerLink="/profile">Profile</a>-->
-<!--</mz-navbar-item>-->
-<!--<mz-navbar-item>-->
-<!--<a type="button" (click)="onLogout()">Logout</a>-->
-<!--</mz-navbar-item>-->
-<!--</mz-navbar-item-container>-->
-<!--</mz-navbar-item-container>-->
-<!--</mz-navbar>-->
-
 <nav>
   <div class="nav-wrapper">
     <ul id="slide-out" class="side-nav">
-      <li><a href="#" routerLink="/">Start</a></li>
+      <li><a href="#" routerLink="/" >Start</a></li>
       <li><a routerLink="/offers">Offers</a></li>
       <li>
         <a *ngIf="!(isLoggedIn | async)" id="registrationSide"
