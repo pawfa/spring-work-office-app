@@ -22,8 +22,11 @@ Server Build Tools| Maven(Java)
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+- Java 8
+- Maven 3.3.9+ or Gradle 3.3+
+- Node 6.0 or above,  
+- npm 5 or above,   
+- Angular-cli 1.6.3
 
 ### Installing
 
