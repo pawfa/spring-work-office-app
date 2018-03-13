@@ -8,6 +8,18 @@ An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
+### Technology Stack
+Component         | Technology
+---               | ---
+Frontend          | [Angular 5](https://github.com/angular/angular)
+Backend (REST)    | [SpringBoot](https://projects.spring.io/spring-boot) (Java)
+Security          | Token Based (Spring Security and [JWT](https://github.com/auth0/java-jwt) )
+In Memory DB      | H2
+Persistence       | JPA (Using Spring Data)
+Client Build Tools| [angular-cli](https://github.com/angular/angular-cli), Webpack, npm
+Server Build Tools| Maven(Java)
+
+
 ### Dependencies
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
