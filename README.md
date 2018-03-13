@@ -1,6 +1,6 @@
 # Work Office
 
-Simple overview of use/purpose.
+Work Office web application in REST architecture using Spring Boot and Angular.
 
 ## Description
 
