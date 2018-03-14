@@ -35,10 +35,16 @@ Server Build Tools| Maven(Java)
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+To run the server, cd into the `server` folder and run:
+ 
+```bash
+mvn spring-boot:run
 ```
-code blocks for commands
+
+To run the client, cd into the `client` folder and run:
+ 
+```bash
+npm install && npm start
 ```
 
 ## Help
