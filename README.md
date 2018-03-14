@@ -30,8 +30,11 @@ Server Build Tools| Maven(Java)
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+To install this application, run the following commands:
+
+git clone git@github.com:pawfa/work-office-app.git
+cd spring-work-office
+This will get a copy of the project installed locally.
 
 ### Executing program
 
