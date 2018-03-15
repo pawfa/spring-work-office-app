@@ -4,7 +4,7 @@ Work Office web application in REST architecture using Spring Boot and Angular.
 
 ## Description
 
-Example application to learn how integrate Spring Boot and Angular. It simulates employment office website with registration and funcionality of adding news. Every code review and criticism is welcome.
+Example application to learn how integrate Spring Boot and Angular. It simulates employment office website with registration and functionality of adding news. Every code review and criticism is welcome.
 
 ## Getting Started
 
