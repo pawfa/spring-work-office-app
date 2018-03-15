@@ -14,6 +14,7 @@ Component         | Technology
 Frontend          | [Angular 5](https://github.com/angular/angular)
 Backend (REST)    | [SpringBoot](https://projects.spring.io/spring-boot) (Java)
 Security          | Token Based (Spring Security and [JWT](https://github.com/auth0/java-jwt) )
+Database          | MongoDb
 In Memory DB      | H2
 Persistence       | JPA (Using Spring Data)
 Client Build Tools| [angular-cli](https://github.com/angular/angular-cli), Webpack, npm
@@ -23,10 +24,11 @@ Server Build Tools| Maven(Java)
 ### Dependencies
 
 - Java 8
-- Maven 3.3.9+ or Gradle 3.3+
-- Node 6.0 or above,  
-- npm 5 or above,   
+- Maven 3.3.9+
+- Node 6.0 or above,
+- npm 5 or above,
 - Angular-cli 1.6.3
+- MongoDb
 
 ### Installing
 
