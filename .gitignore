@@ -1,3 +1,7 @@
+# ignore all logs
+*.log
+# ignore properties
+application-dev.properties
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
