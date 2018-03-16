@@ -1,7 +1,8 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
 import {DataService} from "../../data.service";
 import {PagerService} from "../../shared/pager.service";
 import {DOCUMENT} from "@angular/common";
+import {ScrollToConfigOptions, ScrollToService} from "@nicky-lenaers/ngx-scroll-to";
 
 @Component({
   selector: 'app-news-preview-list',
@@ -14,9 +15,14 @@ export class NewsPreviewListComponent implements OnInit {
   pager: any = {};
   pagedItems: any[];
 
+
+  @ViewChild('container')
+  private container: ElementRef;
+
   constructor(private dataService: DataService,
               private pagerService: PagerService,
-              @Inject(DOCUMENT) private document: Document) {
+              @Inject(DOCUMENT) private document: any,
+              private _scrollToService: ScrollToService) {
   }
 
   ngOnInit() {
@@ -28,6 +34,7 @@ export class NewsPreviewListComponent implements OnInit {
   }
 
   setPage(page: number) {
+
     if (page < 1 || page > this.pager.totalPages) {
       return;
     }
@@ -37,11 +44,17 @@ export class NewsPreviewListComponent implements OnInit {
 
     // get current page of items
     this.pagedItems = this.data.slice(this.pager.startIndex, this.pager.endIndex + 1);
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
+
+
+  }
+
+  myClick(){
+    var offsetHeight = document.getElementById('head').offsetHeight;
+    const config: ScrollToConfigOptions = {
+      target: 'head',
+      offset: -offsetHeight-100
+    };
+    this._scrollToService.scrollTo(config);
   }
 
 }

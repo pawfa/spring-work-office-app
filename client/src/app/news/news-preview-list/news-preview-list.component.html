@@ -1,11 +1,10 @@
-<div id="head"></div>
-<div class="newsPreview" *ngFor="let news of pagedItems" >
+<div id="head" class="newsPreview" *ngFor="let news of pagedItems" >
   <app-news-preview [newsData]="news"></app-news-preview>
 </div>
 <div>
   <!-- pager -->
   <mz-navbar>
-    <mz-navbar-item-container *ngIf="pager.pages && pager.pages.length">
+    <mz-navbar-item-container *ngIf="pager.pages && pager.pages.length" (click)="myClick()">
       <mz-navbar-item [ngClass]="{disabled:pager.currentPage === 1}" >
         <a (click)="setPage(1)" >First</a>
       </mz-navbar-item>

@@ -34,6 +34,7 @@ import {
 import {MaterializeModule} from "angular2-materialize";
 import { ProfileComponent } from './users/profile/profile.component';
 import { ProfileOffersComponent } from './users/profile-offers/profile-offers.component';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 
 @NgModule({
@@ -54,7 +55,7 @@ import { ProfileOffersComponent } from './users/profile-offers/profile-offers.co
     RegistrationComponent,
     OfferSearchComponent,
     ProfileComponent,
-    ProfileOffersComponent,
+    ProfileOffersComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +72,7 @@ import { ProfileOffersComponent } from './users/profile-offers/profile-offers.co
     MzTextareaModule,
     MaterializeModule,
     MzTabModule,
+    ScrollToModule.forRoot()
   ],
   providers: [
     AuthGuard,

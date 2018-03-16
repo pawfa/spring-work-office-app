@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs/Observable";
-import {HttpClient, HttpHeaders, HttpParams, HttpResponse} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {News} from "./shared/news";
 import {Offer} from "./shared/offer";
 import {Emp} from "./users/emp";
@@ -9,8 +9,8 @@ import {Person} from "./users/person";
 @Injectable()
 export class ApiService {
 
-  // private server = "http://back_office.pawfa.usermd.net:8088/";
-  private server = "http://localhost:8088/";
+  private server = "http://back_office.pawfa.usermd.net:8088/";
+  // private server = "http://localhost:8088/";
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
