@@ -1,7 +1,7 @@
 # ignore all logs
 *.log
 # ignore properties
-application-prod.properties
+application-production.properties
 # ignore jar
 *.jar
 target/
