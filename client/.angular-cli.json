@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "target/webapp",
+      "outDir": "public_nodejs/public",
       "assets": [
         "assets",
         "favicon.ico"
