@@ -17,7 +17,7 @@ Security          | Token Based (Spring Security and [JWT](https://github.com/au
 Database          | MongoDb
 In Memory DB      | H2
 Persistence       | JPA (Using Spring Data)
-Client Build Tools| [angular-cli](https://github.com/angular/angular-cli), Webpack, npm
+Client Build Tools| [angular-cli](https://github.com/angular/angular-cli), npm
 Server Build Tools| Maven(Java)
 
 
