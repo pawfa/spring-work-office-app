@@ -2,7 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
+<profiles>
+    <profile>
+        <id>production</id>
+        <properties>
+            <activatedProperties>production</activatedProperties>
+        </properties>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+    </profile>
+</profiles>
     <parent>
         <artifactId>workoffice</artifactId>
         <groupId>com</groupId>
@@ -19,12 +29,6 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>com</groupId>-->
-            <!--<artifactId>client</artifactId>-->
-            <!--<version>0.0.1-SNAPSHOT</version>-->
-            <!--<type>zip</type>-->
-        <!--</dependency>-->
         <!-- its for error Invocation of init method failed; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -96,6 +100,7 @@
                 <configuration>
                     <fork>true</fork>
                     <mainClass>com.workoffice.WorkofficeApplication</mainClass>
+                    <outputDirectory>./</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -105,30 +110,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-dependency-plugin</artifactId>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<id>unpack</id>-->
-                        <!--<phase>generate-resources</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>unpack</goal>-->
-                        <!--</goals>-->
-                        <!--<configuration>-->
-                            <!--<artifactItems>-->
-                                <!--<artifactItem>-->
-                                    <!--<groupId>com</groupId>-->
-                                    <!--<artifactId>client</artifactId>-->
-                                    <!--<version>0.0.1-SNAPSHOT</version>-->
-                                    <!--<type>zip</type>-->
-                                <!--</artifactItem>-->
-                            <!--</artifactItems>-->
-                            <!--<outputDirectory>${project.build.directory}/classes/resources</outputDirectory>-->
-                        <!--</configuration>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-            <!--</plugin>-->
         </plugins>
     </build>
 </project>
+
