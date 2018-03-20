@@ -68,19 +68,19 @@ export class ApiService {
 
   /*-------- News part --------*/
 
-  createNews(news: News) {
-    return this.http.post(this.server + "put/news",  news, {headers: this.headers});
+  getAllNews(): Observable<any> {
+    return this.http.get(this.server + "news/all",{headers: this.headers});
   }
 
-  getAllNews(): Observable<any> {
-    return this.http.get(this.server + "get/news",{headers: this.headers});
+  createNews(news: News) {
+    return this.http.post(this.server + "news/save",  news, {headers: this.headers});
   }
 
   getNewsFromId(id: string){
-    return this.http.get(this.server + "get/news/"+id,{headers: this.headers});
+    return this.http.get(this.server + "news/"+id,{headers: this.headers});
   }
 
   deleteNews(id: string) {
-
+    return this.http.delete(this.server+"news/"+id, {headers: this.headers});
   }
 }

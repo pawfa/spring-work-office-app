@@ -11,4 +11,5 @@ public interface NewsService {
     <S extends News> S save(S s);
 
     News findNewsById(String id);
+    void deleteNews(String id);
 }

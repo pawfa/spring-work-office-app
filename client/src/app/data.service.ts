@@ -75,7 +75,7 @@ export class DataService {
   }
 
   removeNews(id: string){
-    this.apiService.deleteNews(id);
+    return this.apiService.deleteNews(id);
   }
 
 }

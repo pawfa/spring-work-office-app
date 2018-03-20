@@ -79,7 +79,7 @@ public class OffersController {
         offersService.insert(offer);
     }
 
-    @DeleteMapping("/delete/offer/{id}")
+    @DeleteMapping("/{id}")
     public void deleteOffer(@PathVariable(value = "id") String id) {
         logger.info(id);
         offersService.deleteOffer(id);

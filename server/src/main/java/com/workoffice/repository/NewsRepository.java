@@ -15,6 +15,6 @@ public interface NewsRepository extends MongoRepository<News, String> {
 
     @Override
     <S extends News> S save(S s);
-
     News findNewsById(String id);
+    void deleteNewsById(String s);
 }

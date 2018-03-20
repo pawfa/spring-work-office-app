@@ -7,6 +7,6 @@
   </mz-card-content>
   <mz-card-action>
     <button [routerLink]="['/news/editor', id]" type="button" class="btn btn-primary mx-3">Edit</button>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <button *ngIf="(typeOfUser | async).includes('admin')" (click)="removeNews()" type="button" class="btn btn-primary">Remove</button>
   </mz-card-action>
 </mz-card>
