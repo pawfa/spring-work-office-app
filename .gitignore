@@ -4,6 +4,7 @@
 application-production.properties
 # ignore jar
 *.jar
+server/src/main/resources/database
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
