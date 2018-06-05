@@ -15,7 +15,7 @@ export class ProfileOffersComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.getAllOfersFromUserId().subscribe(
-      (data: Offer[])=> {this.data = data}
+      (data: Offer[])=> this.data = data
     )
   }
 

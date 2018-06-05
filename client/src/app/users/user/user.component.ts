@@ -10,10 +10,10 @@ import {DataService} from "../../data.service";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user =  new User();
-  type: string;
+  private user =  new User();
+  private type: string;
 
-  errorMessageResources = {
+  private errorMessageResources = {
     email: {
       required: 'Email is required.',
       email: 'Email is invalid.',
@@ -32,8 +32,7 @@ export class UserComponent implements OnInit {
     },
   };
 
-  constructor(private usersService: UsersService,
-              private dataService: DataService) { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
     this.usersService.getUser().subscribe(

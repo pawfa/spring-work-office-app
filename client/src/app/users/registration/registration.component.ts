@@ -4,8 +4,7 @@ import {User} from "../../shared/user";
 import {fadeInAnimation} from "../../shared/animations/fade-in.animation";
 import {HttpResponse} from "@angular/common/http";
 import {Router} from "@angular/router";
-import {animate, style, transition, trigger} from "@angular/animations";
-import {MzToastService} from "ng2-materialize";
+import {SnackService} from "../../shared/snack.service";
 
 
 @Component({
@@ -16,9 +15,9 @@ import {MzToastService} from "ng2-materialize";
 })
 
 export class RegistrationComponent implements OnInit {
-  user: User;
-  typeOfAccunt: string;
-  errorMessageResources = {
+  private user: User;
+  private typeOfAccunt: string;
+  private errorMessageResources = {
     email: {
       required: 'Email is required.',
       email: 'Email is invalid.',
@@ -27,9 +26,11 @@ export class RegistrationComponent implements OnInit {
       required: 'Password is required.',
     }
   };
-  responseErrorMsg: string = "";
+  private responseErrorMsg: string = "";
 
-  constructor(private usersService: UsersService, private router: Router, private toastService: MzToastService) {
+  constructor(private usersService: UsersService,
+              private router: Router,
+  private snackService: SnackService) {
   }
 
   ngOnInit() {
@@ -44,12 +45,11 @@ export class RegistrationComponent implements OnInit {
         (data: HttpResponse<Object>) => {
           if (data.ok) this.router.navigate(['/login'])
         },
-        (error )=>{this.responseErrorMsg = error.error; this.openSnack()}
+        (error) => {
+          this.responseErrorMsg = error.error;
+          this.snackService.openSnack('Username already exists');
+        }
       );
     }
-  }
-
-  openSnack(){
-    this.toastService.show('Username already exists', 2000, 'red');
   }
 }

@@ -19,27 +19,28 @@ export class UsersService implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser(user: User, typeOfAccount: string){
-      if(typeOfAccount === 'emp' || typeOfAccount === 'Company'){
-        return this.apiService.addEmp(<Emp>user);
-      }else{
-        return this.apiService.addPerson(<Person>user)
-      }
+  addUser(user: User, typeOfAccount: string) {
+    if (typeOfAccount === 'emp' || typeOfAccount === 'Company') {
+      return this.apiService.addEmp(<Emp>user);
+    } else {
+      return this.apiService.addPerson(<Person>user)
+    }
   }
 
-
-  getUser(){
+  getUser() {
     this.apiService.getUserData().subscribe(
       (data: User) => {
-        this.userData.next(data)}
+        this.userData.next(data)
+      }
     );
     return this.userData.asObservable();
   }
 
-  getUserId(){
+  getUserId() {
     this.apiService.getUserData().subscribe(
       (data: User) => {
-        this.userId.next(data.id)}
+        this.userId.next(data.id)
+      }
     );
     return this.userId.asObservable();
   }

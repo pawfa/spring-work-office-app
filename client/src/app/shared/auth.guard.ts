@@ -7,7 +7,8 @@ import {AuthenticationService} from "./authentication.service";
 export class AuthGuard implements CanActivate {
 
 
-  constructor(private router: Router, private authService: AuthenticationService) {
+  constructor(private router: Router,
+              private authService: AuthenticationService) {
   }
 
   canActivate(
@@ -19,9 +20,8 @@ export class AuthGuard implements CanActivate {
       .map((isLoggedIn: boolean) => {
         if (!isLoggedIn){
           this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});  // {4}
-          return false;
         }
-        return true;
+        return isLoggedIn;
       });
   }
 }

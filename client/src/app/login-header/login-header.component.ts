@@ -3,6 +3,8 @@ import {AuthenticationService} from "../shared/authentication.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../shared/user";
 import {MzToastService} from 'ng2-materialize'
+import {Observable} from "rxjs/Observable";
+import {SnackService} from "../shared/snack.service";
 
 @Component({
   selector: 'app-login-header',
@@ -11,11 +13,14 @@ import {MzToastService} from 'ng2-materialize'
 })
 export class LoginHeaderComponent implements OnInit {
 
-  userModel = new User();
+  private userModel = new User();
   private error : string;
   private returnUrl;
 
-  constructor(private authService: AuthenticationService, private router : Router, private route: ActivatedRoute, private toastService: MzToastService){}
+  constructor(private authService: AuthenticationService,
+              private router : Router,
+              private route: ActivatedRoute,
+              private snackService: SnackService){}
 
   ngOnInit() {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -23,29 +28,19 @@ export class LoginHeaderComponent implements OnInit {
 
   loginUser(event) {
 
-    if(event.valid){
-      this.authService.login(this.userModel).subscribe(response => {
-          if (response === true) {
+      if (event.valid) {
+        this.authService.login(this.userModel).subscribe(response => {
             this.router.navigateByUrl(this.returnUrl);
-          } else {
-            this.error = 'Invalid username or password';
-            this.openSnack();
-          }
-        },
-        (error) =>{
-          if(error.status == 401){
-            this.error = "Invalid username or password";
-            this.openSnack();
-          }
-        });
-    }else{
-      this.error = "Invalid username or password";
-      this.openSnack();
-    }
-  }
-
-  //wrong username or password snackbar
-  openSnack(){
-    this.toastService.show('Invalid username or password', 2000, 'red');
+          },
+          (error) => {
+            if (error.status == 401) {
+              this.error = "Invalid username or password";
+              this.snackService.openSnack(this.error);
+            }
+          });
+      } else {
+        this.error = "Invalid username or password";
+        this.snackService.openSnack(this.error);
+      }
   }
 }

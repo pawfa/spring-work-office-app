@@ -1,5 +1,5 @@
 <div id="head" class="newsPreview" *ngFor="let news of pagedItems" >
-  <app-news-preview [newsData]="news"></app-news-preview>
+  <app-news-preview [id]="news.id" [header]="news.header" [paragraph]="news.paragraph"></app-news-preview>
 </div>
 <div>
   <!-- pager -->

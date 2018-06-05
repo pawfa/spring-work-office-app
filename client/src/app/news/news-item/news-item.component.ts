@@ -11,32 +11,34 @@ import {Observable} from "rxjs/Observable";
   styleUrls: ['./news-item.component.css']
 })
 export class NewsItemComponent implements OnInit {
-  id : string;
-  header : string;
-  paragraph : string;
-  typeOfUser: Observable<String[]>;
+  private id: string;
+  private header: string;
+  private paragraph: string;
+  private typeOfUser: Observable<String[]>;
 
-  constructor(private dataService : DataService,
+  constructor(private dataService: DataService,
               private route: ActivatedRoute,
               private authService: AuthenticationService,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-
     this.typeOfUser = this.authService.getTypeOfUser();
     this.dataService.getNewsFromId(this.id)
-      .subscribe((data: News)=>
-      {
+      .subscribe((data: News) => {
         this.header = data.header;
-        this.paragraph = data.paragraph});
+        this.paragraph = data.paragraph;
+      });
   }
-  removeNews(){
 
+  removeNews() {
     this.dataService.removeNews(this.id).finally(
-      ()=>{this.dataService.getNews()}
+      () => {
+        this.dataService.getNews()
+      }
     ).subscribe();
-    this.router.navigate(['/'])
+    this.router.navigate(['/']);
 
   }
 

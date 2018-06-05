@@ -1,24 +1,19 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-offer-preview',
   templateUrl: './offer-preview.component.html',
   styleUrls: ['./offer-preview.component.css']
 })
-export class OfferPreviewComponent implements OnInit {
-  id: String;
-  category: String;
-  title: String;
-  description : String;
-  @Input() offerData: any;
+export class OfferPreviewComponent {
+  @Input() id: string;
+  @Input() category: string;
+  @Input() title: string;
+  @Input() description : string;
 
   constructor() { }
 
   ngOnInit() {
-    this.id = this.offerData.id;
-    this.title = this.offerData.title;
-    this.description = this.offerData.description;
-    this.category = this.offerData.category;
   }
 
 }

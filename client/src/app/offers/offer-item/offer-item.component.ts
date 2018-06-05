@@ -14,12 +14,12 @@ import {UsersService} from "../../users/users.service";
   styleUrls: ['./offer-item.component.css']
 })
 export class OfferItemComponent implements OnInit {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  userId: number;
-  offerUserId: number;
+  private id: string;
+  private title: string;
+  private description: string;
+  private category: string;
+  private userId: number;
+  private offerUserId: number;
 
   constructor(private dataService : DataService,
               private route: ActivatedRoute,

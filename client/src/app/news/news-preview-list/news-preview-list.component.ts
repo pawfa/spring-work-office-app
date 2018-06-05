@@ -11,9 +11,9 @@ import {ScrollToConfigOptions, ScrollToService} from "@nicky-lenaers/ngx-scroll-
 })
 export class NewsPreviewListComponent implements OnInit {
 
-  data: any[];
-  pager: any = {};
-  pagedItems: any[];
+  private data: any[];
+  private pager: any = {};
+  private pagedItems: any[];
 
 
   @ViewChild('container')
@@ -49,7 +49,7 @@ export class NewsPreviewListComponent implements OnInit {
   }
 
   myClick(){
-    var offsetHeight = document.getElementById('head').offsetHeight;
+    let offsetHeight = document.getElementById('head').offsetHeight;
     const config: ScrollToConfigOptions = {
       target: 'head',
       offset: -offsetHeight-100

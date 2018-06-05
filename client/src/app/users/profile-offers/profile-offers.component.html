@@ -1,5 +1,9 @@
 
   <div class="col s5 m5 l5 xl5" *ngFor="let off of data">
-    <app-offer-preview [offerData]="off"></app-offer-preview>
+    <app-offer-preview [id]="off.id"
+                       [category]="off.category"
+                       [title]="off.title"
+                       [description]="off.description">
+    </app-offer-preview>
   </div>
 

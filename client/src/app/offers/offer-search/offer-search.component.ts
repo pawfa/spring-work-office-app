@@ -12,26 +12,25 @@ import {fadeInAnimation} from "../../shared/animations/fade-in.animation";
   styleUrls: ['./offer-search.component.css']
 })
 export class OfferSearchComponent implements OnInit {
-  searchTerm: string = "";
-  categories: string[];
-  selectedCategory: string;
-  offers: Offer[];
-  searchTerms = new Subject<string[]>();
+  private searchTerm: string = "";
+  private categories: string[];
+  private selectedCategory: string;
+  private offers: Offer[];
+  private searchTerms = new Subject<string[]>();
 
   constructor(private dataService: DataService) {
     this.categories = this.dataService.getCategories();
     this.selectedCategory = this.categories[0];
     this.dataService.search(this.searchTerms)
-      .subscribe((results: Offer[]) => {
-        this.offers = results;
-      });
+      .subscribe((results: Offer[]) =>
+        this.offers = results
+      );
   }
 
   ngOnInit() {
     this.dataService.getOffers().subscribe(
-      (data:Offer[]) =>{
-        this.offers = data;
-      }
+      (data:Offer[]) =>
+        this.offers = data
     )
   }
 

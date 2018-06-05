@@ -6,18 +6,11 @@ import {Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./news-preview.component.css']
 })
 
-export class NewsPreviewComponent implements OnInit {
-  id: String;
-  header: String;
-  paragraph : String;
-  @Input() newsData: any;
+export class NewsPreviewComponent {
+  @Input() id: string;
+  @Input() header: string;
+  @Input() paragraph: string;
 
   constructor() { }
-
-  ngOnInit() {
-    this.id = this.newsData.id;
-    this.header = this.newsData.header;
-    this.paragraph = this.newsData.paragraph;
-  }
 
 }

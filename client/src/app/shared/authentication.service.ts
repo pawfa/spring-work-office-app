@@ -21,20 +21,13 @@ export class AuthenticationService {
       (resp) => {
         let token = resp.headers.get('Authorization').substr(7);
         if (token) {
-          // this.userType.next(user.user_type);
-          // set token property
           this.token = token;
-          // store username and jwt token in local storage to keep user logged in between page refreshes
           localStorage.setItem('currentUser', token);
 
-          // return true to indicate successful login
           this.getTypeOfUser();
           this.loggedIn.next(true);
-          return true;
-        } else {
-          // return false to indicate failed login
-          return false;
         }
+        return !!token;
       }
     ).catch((error) => Observable.throw(error));
   }
@@ -61,7 +54,7 @@ export class AuthenticationService {
 
   logout(): void {
     // clear token remove user from local storage to log user out
-    this.loggedIn.next(false)
+    this.loggedIn.next(false);
     this.token = null;
     localStorage.removeItem('currentUser');
     this.userType.next([]);

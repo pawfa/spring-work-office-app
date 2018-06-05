@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Offer} from "../../shared/offer";
 import {DataService} from "../../data.service";
 
@@ -9,15 +9,14 @@ import {DataService} from "../../data.service";
 })
 export class ProfileComponent implements OnInit {
 
-  usersOffers: Offer[];
+  private usersOffers: Offer[];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
 
     this.dataService.getAllOfersFromUserId().subscribe(
-      (data: Offer[]) => {this.usersOffers = data; console.log(data);}
-    )
+      (data: Offer[]) => this.usersOffers = data)
   }
 
 }

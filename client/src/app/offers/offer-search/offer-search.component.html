@@ -23,7 +23,11 @@
 </form>
   <div class="row">
     <div class="col s12 m6 l6 xl6" *ngFor="let off of offers">
-      <app-offer-preview [offerData]="off"></app-offer-preview>
+      <app-offer-preview [id]="off.id"
+                         [category]="off.category"
+                         [title]="off.title"
+                         [description]="off.description">
+      </app-offer-preview>
     </div>
   </div>
 
