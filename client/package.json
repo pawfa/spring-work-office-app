@@ -26,7 +26,7 @@
     "angular2-materialize": "^15.1.10",
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jwt-decode": "^2.2.0",
     "materialize-css": "^0.100.2",
     "mdi": "^2.1.19",
